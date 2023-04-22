@@ -17,7 +17,7 @@ export default defineConfig({
             sizes: "512x512",
           }
         ],
-        start_url: '/',
+        start_url: '/lcc/',
         background_color: "#1e1e20",
         display: "standalone",
         theme_color: "#1e1e20",
