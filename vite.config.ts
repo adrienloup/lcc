@@ -12,7 +12,7 @@ export default defineConfig({
         name: 'Life Cycle Calculator',
         icons: [
           {
-            src: "/icon-512x512.png",
+            src: "/lcc/icon-512x512.png",
             type: "image/svg+xml",
             sizes: "512x512",
           }
