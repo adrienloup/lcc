@@ -1,0 +1,47 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-bg: #1e1e20;
+  --dark-fg: rgba(255, 255, 245, .86);
+  --light-bg: #fff;
+  --light-fg: rgba(60, 60, 67);
+  /* --button-bg: -webkit-linear-gradient(120deg, rgb(251, 176, 30) 30%, rgb(229, 2, 18), rgb(192, 6, 156)); */
+  /* --button-bg: -webkit-linear-gradient(120deg, rgb(102, 102, 255), rgb(0, 152, 240), rgb(0, 242, 195)); */
+  --button-bg: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  /* --title-fg: #747bff; */
+  /* --title-fg: #535bf2; */
+  /* --title-fg: #41d1ff; */
+  --title-fg: #646cff;
+  --ease: cubic-bezier(.43, .195, .02, 1);
+  --svg-fill: rgba(60, 60, 67, .75);
+  --vp-c-bg-alt: #f6f6f7;
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  // --font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  
+  font-family: var(--font-family);
+  /* font-family: Futura, "Trebuchet MS", Arial, sans-serif; */
+  line-height: 1.5;
+  // font-weight: 400;
+
+  color-scheme: light dark;
+  /* color: var(--dark-fg);
+  background-color: var(--dark-bg); */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
