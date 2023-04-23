@@ -1,34 +1,53 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Path } from './utils/path'
+import { Mode } from './contexts/mode'
+import NotFound from './pages/NotFound/NotFound'
+import Resources from './pages/Resources/Resources'
+import Course from './pages/Questions/Course/Course'
+import Visitors from './pages/Questions/Visitors/Visitors'
+import Duration from './pages/Questions/Duration/Duration'
+import Home from './pages/Home/Home'
+
+const getMode = (): string => {
+  const localStorageMode = localStorage.getItem('mode')
+  return localStorageMode || 'dark'
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [mode, setMode] = useState(getMode())
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Mode.Provider value={{ mode, setMode }}>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path={Path}
+            element={<Home mode={mode}/>}
+          />
+          <Route
+            path={`${Path}ressources`}
+            element={<Resources mode={mode}/>}
+          />
+          <Route
+            path={`${Path}question/quel-parcours`}
+            element={<Course mode={mode}/>}
+          />
+          <Route
+            path={`${Path}question/nombre-de-visiteurs`}
+            element={<Visitors mode={mode}/>}
+          />
+          <Route
+            path={`${Path}question/temps-moyen`}
+            element={<Duration mode={mode}/>}
+          />
+          <Route
+            path='*'
+            element={<NotFound />}
+          /> 
+        </Routes>
+      </BrowserRouter>
+    </Mode.Provider>
   )
 }
 
