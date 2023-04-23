@@ -2,11 +2,9 @@
 
 What is the impact of your website on the planet?
 
-This calculator is an eco-design and Life Cycle Assessment (LCA) tool to help you eco-design your zero carbon website.
-The calculation gives a result per user, per year and per raw data.
-The tool uses several key data: website traffic, energy intensity, carbon intensity of electricity and energy source used.
+This calculator is an eco-design and Life Cycle Assessment (LCA) tool to help you eco-design your zero carbon website. The calculation gives a result per user, per year and per raw data. The tool uses several key data: website traffic, energy intensity, carbon intensity of electricity and energy source used.
 
-[Life Cycle Calculator Demo](https://adrienloup.github.io/life-cycle-calculator/)
+[Demo](https://adrienloup.github.io/lcc/)
 
 ## Installing
 
