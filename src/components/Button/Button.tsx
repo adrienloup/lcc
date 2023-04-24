@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import Icon from '../Icon/Icon'
 import './Button.scss'
 
-function Button({ cssClass, label, to, href, icon, ariaLabel, ariaExpanded, click }: ButtonProps) {  
+function Button({ cssClass, label, to, href, icon, ariaLabel, ariaExpanded, click }: ButtonProps) {
+  console.log('button');
   const button = () => {
     if (to) {
       return (
