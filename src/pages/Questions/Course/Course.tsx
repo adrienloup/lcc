@@ -1,12 +1,20 @@
 // import { resources } from '../../datas/resources.json'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { Data } from '../../../contexts/data'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
 // import './Resources.scss'
 
 function Course({ mode }: { mode: string }) {
+  console.log('course')
   const navigate = useNavigate()
+  const { data, setData } = useContext(Data)
+
+  const handleData = () => {
+    setData({ ...data, q1: 'answer1' })
+  }
 
   return (
     <div className={`question ${mode}`}>
@@ -16,6 +24,7 @@ function Course({ mode }: { mode: string }) {
         role='main'
       >
         <div className='inner'>
+          <div onClick={handleData}>{data.q1}</div>
           <h1 className='question_title'>De quel parcours mesure-t-on l'impact ?</h1>
           {/* <Button
             label='Retour'
