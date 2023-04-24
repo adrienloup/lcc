@@ -1,12 +1,20 @@
 // import { resources } from '../../datas/resources.json'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { Data } from '../../../contexts/data'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
 // import './Resources.scss'
 
 function Duration({ mode }: { mode: string }) {
+  console.log('duration')
   const navigate = useNavigate()
+  const { data, setData } = useContext(Data)
+
+  const handleData = () => {
+    setData({ ...data, q3: 'answer3' })
+  }
 
   return (
     <div className={`question ${mode}`}>
@@ -16,6 +24,7 @@ function Duration({ mode }: { mode: string }) {
         role='main'
       >
         <div className='inner'>
+          <div onClick={handleData}>{data.q3}</div>
           <h1 className='question_title'>Temps passé en moyenne par utilisateur par parcours ?</h1>
           <nav className='buttons'>
             <Button
