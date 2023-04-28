@@ -1,6 +1,6 @@
 import { Path } from '../../utils/path'
 import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
+// import Footer from '../../components/Footer/Footer'
 import Button from '../../components/Button/Button'
 import './Home.scss'
 
@@ -17,12 +17,13 @@ function Home({ mode }: { mode: string }) {
           <Button
             label='Démarrer'
             cssClass='button'
+            role='button'
             ariaLabel='Démarrer le parcours'
             to={`${Path}question/quel-parcours`}
           />
         </div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

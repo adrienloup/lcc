@@ -23,29 +23,29 @@
     text-align: center;
     line-height: 3.6rem;
     font-size: 3.4rem;
-    // background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
-    // background: -webkit-linear-gradient(120deg, #bd34fe 30%, rgb(0, 152, 240));
-    // background: -webkit-linear-gradient(120deg, rgb(102, 102, 255), rgb(0, 152, 240), rgb(0, 242, 195));
-    // -webkit-background-clip: text;
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // color: transparent;
+    background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+    // background: -webkit-linear-gradient(120deg, #bd34fe 30%, rgb(0, 157, 249));
+    // background: -webkit-linear-gradient(120deg, #bd34fe, rgb(0, 152, 240), rgb(0, 242, 195));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 
-    .dark & {
-      background: -webkit-linear-gradient(120deg, rgb(102, 102, 255), rgb(0, 152, 240), rgb(0, 242, 195));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
+    // .dark & {
+    //   background: -webkit-linear-gradient(120deg, rgb(102, 102, 255), rgb(0, 152, 240), rgb(0, 242, 195));
+    //   -webkit-background-clip: text;
+    //   background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    //   color: transparent;
+    // }
 
-    .light & {
-      background: -webkit-linear-gradient(120deg, rgb(251, 176, 30) 30%, rgb(229, 2, 18), rgb(192, 6, 156));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
+    // .light & {
+    //   background: -webkit-linear-gradient(120deg, rgb(251, 176, 30) 30%, rgb(229, 2, 18), rgb(192, 6, 156));
+    //   -webkit-background-clip: text;
+    //   background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    //   color: transparent;
+    // }
   }
   
   .button {
