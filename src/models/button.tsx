@@ -4,6 +4,7 @@ export interface ButtonProps {
   to?: string;
   href?: string;
   icon?: string;
+  role?: string;
   ariaLabel?: string;
   ariaExpanded?: boolean;
   click?: () => void;
