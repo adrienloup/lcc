@@ -1,6 +1,5 @@
 import { FC, useContext } from 'react'
 import { Mode } from '../../contexts/mode'
-import { Path } from '../../utils/path'
 import Button from '../Button/Button'
 import './Header.scss'
 
