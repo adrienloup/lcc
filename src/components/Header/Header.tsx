@@ -19,14 +19,9 @@ const Header: FC = () => {
       role='banner'
     >
       <Button
-        cssClass='link'
-        label='LCC'
-        ariaLabel='Accéder à la page d’accueil'
-        to={Path}
-      />
-      <Button
         cssClass='switch'
         icon={mode === 'dark' ? 'moon' : 'sun'}
+        role='switch'
         ariaLabel={mode === 'dark' ? 'Naviguer en mode clair' : 'Naviguer en mode sombre'}
         click={() => handleMode()}
       />
