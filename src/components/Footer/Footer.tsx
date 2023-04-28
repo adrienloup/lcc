@@ -21,6 +21,7 @@ function Footer() {
             <Button
               label='Ressources'
               cssClass='link'
+              role='button'
               ariaLabel='Voir les ressources utilisées pour le calcul'
               to='/lcc/ressources'
             />
