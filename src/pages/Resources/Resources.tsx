@@ -11,23 +11,21 @@ function Resources({ mode }: { mode: string }) {
         className='main'
         role='main'
       >
-        <div className='inner'>
-          resources
-          {/* {resources.map((resource, key) => {
-            return (
-              <div
-                key={key}
-                className={style.tutu}
-              >
-                <h2 className={style.title}>{resource.title}</h2>
-                <List
-                  cssClass={style}
-                  list={resource.list}
-                />
-              </div>
-            )
-          })} */}
-        </div>
+        resources
+        {/* {resources.map((resource, key) => {
+          return (
+            <div
+              key={key}
+              className={style.tutu}
+            >
+              <h2 className={style.title}>{resource.title}</h2>
+              <List
+                cssClass={style}
+                list={resource.list}
+              />
+            </div>
+          )
+        })} */}
       </main>
       <Footer />
     </div>
