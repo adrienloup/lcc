@@ -13,3 +13,55 @@
   color: var(--light-fg);
   background-color: var(--light-bg);
 }
+
+.title {
+
+  .dark & {
+    background: var(--dark-title-bg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .light & {
+    background: var(--light-title-bg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+
+.icon {
+
+  .dark & {
+    fill: var(--dark-fg);
+  }
+  
+  .light & {
+    fill: var(--light-fg);
+  }
+}
+
+.button {
+
+  .dark & {
+    background-color: var(--dark-button-bg);
+  }
+
+  .light & {
+    background-color: var(--light-button-bg);
+  }
+}
+
+input[type="range"] {
+
+  .dark & {
+    background-color: var(--dark-switch-fg);
+  }
+
+  .light & {
+    background-color: var(--light-switch-fg);
+  }
+}
