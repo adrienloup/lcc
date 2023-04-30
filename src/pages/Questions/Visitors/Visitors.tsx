@@ -1,19 +1,22 @@
-// import { resources } from '../../datas/resources.json'
 import { useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { Data } from '../../../contexts/data'
+import Information from '../../../components/Information/Information'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
-// import './Resources.scss'
+import Title from '../../../components/Title/Title'
+import '../Question.scss'
 
 function Visitors({ mode }: { mode: string }) {
-  console.log('visitors')
   const navigate = useNavigate()
   const { data, setData } = useContext(Data)
+  const [ value, setValue ] = useState(data.q2)
 
-  const handleData = () => {
-    setData({ ...data, q2: 'answer2' })
+  const handleChange = (e: { target: { value: string } }) => {
+    const a2 = e.target.value
+    setData({ ...data, q2: a2 })
+    setValue(a2)
   }
 
   return (
@@ -23,24 +26,44 @@ function Visitors({ mode }: { mode: string }) {
         className='main'
         role='main'
       >
-        <div className='inner'>
-          <div onClick={handleData}>{data.q2}</div>
-          <h1 className='question_title'>Quel est le nombre de visiteurs par mois ?</h1>
-          <nav className='buttons'>
-            <Button
-              label='Retour'
-              cssClass='button'
-              ariaLabel={'Retourner à la page précédente'}
-              click={() => navigate(-1)}
-            />
-            <Button
-              label='Continuer'
-              cssClass='button'
-              ariaLabel='Continuer le parcours'
-              to={`/lcc/question/temps-moyen`}
-            />
-          </nav>
-        </div>
+        <Title
+          cssClass='title'
+          label='Quel est le nombre de visiteurs par mois&nbsp;?'
+        />
+        <form className='form' action=''>
+          <label htmlFor='i1'>{value} visiteurs</label>
+          <input
+            id='i1'
+            type='range'
+            min='1000'
+            max='10000'
+            step='1'
+            style={{backgroundSize: `${(Number(value) * 100) / 10000}% 100%`}}
+            value={value}
+            onChange={handleChange}
+          />
+        </form>
+        <nav
+          className='navigation'
+          role='navigation'
+        >
+          <Button
+            label='Retour'
+            cssClass='button'
+            ariaLabel={'Retourner à la page précédente'}
+            click={() => navigate(-1)}
+          />
+          <Button
+            label='Continuer'
+            cssClass='button'
+            ariaLabel='Continuer le parcours'
+            to='/lcc/question/temps-moyen'
+          />
+        </nav>
+        <Information
+          cssClass='information'
+          label={'Le nombre de visiteurs par mois permet de connaître la quantité de teminaux <strong>utilisateur, équipements réseau, serveur</strong> nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette info dans votre outil Google Analytics ou équivalent.'}
+        />
       </main>
       <Footer />
     </div>
