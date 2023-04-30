@@ -1,19 +1,22 @@
-// import { resources } from '../../datas/resources.json'
 import { useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { Data } from '../../../contexts/data'
+import Information from '../../../components/Information/Information'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
-// import './Resources.scss'
+import Title from '../../../components/Title/Title'
+import '../Question.scss'
 
 function Course({ mode }: { mode: string }) {
-  console.log('course')
   const navigate = useNavigate()
   const { data, setData } = useContext(Data)
+  const [ value, setValue ] = useState(data.q1)
 
-  const handleData = () => {
-    setData({ ...data, q1: 'answer1' })
+  const handleChange = (e: { target: { value: string } }) => {
+    const a1 = e.target.value
+    setData({ ...data, q1: a1 })
+    setValue(a1)
   }
 
   return (
@@ -23,36 +26,42 @@ function Course({ mode }: { mode: string }) {
         className='main'
         role='main'
       >
-        <div className='inner'>
-          <div onClick={handleData}>{data.q1}</div>
-          <h1 className='question_title'>De quel parcours mesure-t-on l'impact ?</h1>
-          {/* <Button
+        <Title
+          cssClass='title'
+          label='De quel parcours mesure-t-on l’impact&nbsp;?'
+        />
+        <form className='form' action=''>
+          <div className='text'>
+            <label htmlFor='i1'>Nom du projet</label>
+            <input
+              id='i1'
+              type='text'
+              value={value}
+              onChange={handleChange}
+            />
+          </div>
+        </form>
+        <nav
+          className='navigation'
+          role='navigation'
+        >
+          <Button
             label='Retour'
             cssClass='button'
-            ariaLabel='Retourner à la question précédente'
-            to={`/lcc/question/quel-parcours-mesure-t-on`}
-          /> */}
-          <nav className='buttons'>
-            {/* <Button
-              label='Retour'
-              cssClass='button'
-              ariaLabel='Retourner à la page précédente'
-              to={`/lcc/`}
-            /> */}
-            <Button
-              label='Retour'
-              cssClass='button'
-              ariaLabel={'Retourner à la page précédente'}
-              click={() => navigate(-1)}
-            />
-            <Button
-              label='Continuer'
-              cssClass='button'
-              ariaLabel='Continuer le parcours'
-              to={`/lcc/question/nombre-de-visiteurs`}
-            />
-          </nav>
-        </div>
+            ariaLabel={'Retourner à la page précédente'}
+            click={() => navigate(-1)}
+          />
+          <Button
+            label='Continuer'
+            cssClass='button'
+            ariaLabel='Continuer le parcours'
+            to='/lcc/question/nombre-de-visiteurs'
+          />
+        </nav>
+        <Information
+          cssClass='information'
+          label={'L’écoconception part toujours d’un besoin utilisateur clairement <strong>identifié</strong> et dont le service numérique cherche à apporter une <strong>solution</strong>.'}
+        />
       </main>
       <Footer />
     </div>
