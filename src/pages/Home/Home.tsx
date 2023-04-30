@@ -1,29 +1,30 @@
-import { Path } from '../../utils/path'
 import Header from '../../components/Header/Header'
-// import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/Footer/Footer'
 import Button from '../../components/Button/Button'
+import Title from '../../components/Title/Title'
 import './Home.scss'
 
 function Home({ mode }: { mode: string }) {
   return (
-    <div className={`${mode}`}>
+    <div className={`home ${mode}`}>
       <Header />
       <main
         className='main'
         role='main'
       >
-        <div className='inner'>
-          <h1 className='title'>Quel est l'impact de votre site web sur la planète ?</h1>
-          <Button
-            label='Démarrer'
-            cssClass='button'
-            role='button'
-            ariaLabel='Démarrer le parcours'
-            to={`${Path}question/quel-parcours`}
-          />
-        </div>
+        <Title
+          cssClass='title'
+          label='Quel est<br />l’impact de votre<br />site web sur<br />la planète&nbsp;?'
+        />
+        <Button
+          label='Démarrer'
+          cssClass='button'
+          role='button'
+          ariaLabel='Démarrer le parcours'
+          to='/lcc/question/quel-parcours'
+        />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

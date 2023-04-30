@@ -1,69 +1,12 @@
-.main {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  animation: .25s Appear var(--ease);
-  will-change: transform, opacity;
+.home {
 
-  .inner {
-    max-width: 26rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
   .title {
     text-align: center;
-    line-height: 3.6rem;
-    font-size: 3.4rem;
-    background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
-    // background: -webkit-linear-gradient(120deg, #bd34fe 30%, rgb(0, 157, 249));
-    // background: -webkit-linear-gradient(120deg, #bd34fe, rgb(0, 152, 240), rgb(0, 242, 195));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-
-    // .dark & {
-    //   background: -webkit-linear-gradient(120deg, rgb(102, 102, 255), rgb(0, 152, 240), rgb(0, 242, 195));
-    //   -webkit-background-clip: text;
-    //   background-clip: text;
-    //   -webkit-text-fill-color: transparent;
-    //   color: transparent;
-    // }
-
-    // .light & {
-    //   background: -webkit-linear-gradient(120deg, rgb(251, 176, 30) 30%, rgb(229, 2, 18), rgb(192, 6, 156));
-    //   -webkit-background-clip: text;
-    //   background-clip: text;
-    //   -webkit-text-fill-color: transparent;
-    //   color: transparent;
-    // }
+    line-height: 3.8rem;
+    font-size: 3.6rem;
   }
-  
+
   .button {
-    display: inline-block;
     margin-top: 6vh;
-    padding: .8rem 1.6rem;
-    font-size: 1.8rem;
-  }
-
-  .buttons {
-    margin-top: 6vh;
-
-    .button {
-      display: inline-block;
-      margin: 0 1rem;
-      padding: .8rem 1.2rem;
-      line-height: 1.4rem;
-      font-size: 1.4rem;
-    }
   }
 }
