@@ -25,7 +25,7 @@ function Where({ mode }: { mode: string }) {
       >
         <Title
           cssClass='title'
-          label='Où se situe la majeure partie des utilisateurs&nbsp;?'
+          label='<span>4/8</span> Où se situe la majeure partie<br />des utilisateurs&nbsp;?'
         />
         <form className='form' action=''>
           <div className='radio'>
