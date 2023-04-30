@@ -28,7 +28,7 @@ function Visitors({ mode }: { mode: string }) {
       >
         <Title
           cssClass='title'
-          label='Quel est le nombre de visiteurs par mois&nbsp;?'
+          label='<span>2/8</span> Quel est le nombre<br />de visiteurs par mois&nbsp;?'
         />
         <form className='form' action=''>
           <label htmlFor='i1'>{value} visiteurs</label>
