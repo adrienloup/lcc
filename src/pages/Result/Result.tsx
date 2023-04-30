@@ -19,7 +19,7 @@ function Result({ mode }: { mode: string }) {
       >
         <Title
           cssClass='title'
-          label='Voici les impacts du parcours "lire une page de contenu", dans le but "de choisir une agence".'
+          label={`Voici les impacts du parcours ${data.q1}`}
         />
         <Tabs data={data} />
         <Button
