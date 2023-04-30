@@ -1,7 +1,6 @@
 import './Icon.scss'
 
 function Icon(icon: { icon: string }) {
-  console.log('icon', icon.icon)
   const svg = () => {
     switch (icon.icon) {
       case 'moon':
