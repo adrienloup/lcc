@@ -5,32 +5,25 @@
 }
 
 :root {
-  --dark-bg: #1e1e20;
-  --dark-fg: rgba(255, 255, 245, .86);
-  --light-bg: #fff;
-  --light-fg: rgba(60, 60, 67);
-  /* --button-bg: -webkit-linear-gradient(120deg, rgb(251, 176, 30) 30%, rgb(229, 2, 18), rgb(192, 6, 156)); */
-  /* --button-bg: -webkit-linear-gradient(120deg, rgb(102, 102, 255), rgb(0, 152, 240), rgb(0, 242, 195)); */
-  --button-bg: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
-  /* --title-fg: #747bff; */
-  /* --title-fg: #535bf2; */
-  /* --title-fg: #41d1ff; */
-  --title-fg: #646cff;
-  --ease: cubic-bezier(.43, .195, .02, 1);
-  --svg-fill: rgba(60, 60, 67, .75);
-  --vp-c-bg-alt: #f6f6f7;
   --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   // --font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-  
+  --dark-bg: rgb(30, 30, 32);
+  --dark-fg: rgb(218, 224, 224);
+  --dark-title-bg: -webkit-linear-gradient(120deg, rgb(102, 102, 255) 30%, rgb(0, 152, 240), rgb(0, 242, 195));
+  --light-bg: rgb(255, 255, 255);
+  --light-fg: rgb(30, 30, 32);
+  --light-title-bg: -webkit-linear-gradient(120deg, rgb(238, 0, 255) 30%, rgb(174, 0, 255), rgb(136, 0, 255));
+  --text-bg: rgb(0, 242, 195);
+  --text-fg: rgb(30, 30, 32);
+  --dark-button-bg: rgb(102, 102, 255);
+  --light-button-bg: rgb(238, 0, 255);
+  --button-fg: rgb(255, 255, 255);
+  --dark-switch-fg: rgba(60, 60, 67, .75);
+  --light-switch-fg: rgb(234, 234, 236);
+  --ease: cubic-bezier(.43, .195, .02, 1);
+
   font-family: var(--font-family);
-  /* font-family: Futura, "Trebuchet MS", Arial, sans-serif; */
-  line-height: 1.5;
-  // font-weight: 400;
-
   color-scheme: light dark;
-  /* color: var(--dark-fg);
-  background-color: var(--dark-bg); */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
