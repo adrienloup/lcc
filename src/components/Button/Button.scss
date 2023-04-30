@@ -1,18 +1,14 @@
 .button {
   display: inline-block;
-  // background: var(--title-fg);
-  // background: #646cff;
-  background: rgb(102, 102, 255);
-  // background: -webkit-linear-gradient(120deg, rgb(102, 102, 255), rgb(0, 152, 240), rgb(0, 242, 195));
-  // background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
-  // background: #fff;
+  padding: 1.2rem 1.6rem;
+  line-height: 1.6rem;
   border: 0;
-  border-radius: .2rem;
-  // text-transform: uppercase;
+  border-radius: 1rem;
   text-decoration: none;
   font-family: var(--font-family);
   font-weight: bold;
-  color: rgba(255, 255, 245, .86);
+  font-size: 1.4rem;
+  color: var(--button-fg);
   cursor: pointer;
 
   // &:hover {
@@ -20,9 +16,9 @@
   //   color: $color-5;
   // }
 
-  &:focus-visible {
-    outline-offset: -.01rem;
-  }
+  // &:focus-visible {
+  //   outline-offset: -.01rem;
+  // }
 
   // &:active {
   //   background-color: $color-1;
@@ -30,20 +26,40 @@
   // }
 }
 
-// // .link {
-// //   position: relative;
-// //   text-decoration: none;
-// //   color: $color-1;
+.link {
+  display: inline-block;
+  padding: .6rem .8rem;
+  border-radius: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
 
-// //   &:hover {
-// //     border-bottom: 2px solid $color-1;
-// //   }
-  
-// //   &:focus-visible {
-// //     border-radius: .25rem;
-// //     outline: .2rem solid $color-4;
-// //   }
-// // }
+  .dark & {
+    background-color: var(--dark-switch-fg);
+    color: var(--dark-fg);
+  }
+
+  .light & {
+    background-color: var(--light-switch-fg);
+    color: var(--light-fg);
+  }
+
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 1px;
+
+  //   .dark & {
+  //     background-color: var(--dark-fg);
+  //   }
+
+  //   .light & {
+  //     background-color: var(--light-fg);
+  //   }
+  // }
+}
 
 .switch {
   display: flex;
@@ -54,14 +70,12 @@
   border: 0;
   border-radius: 50%;
   cursor: pointer;
-  // background: var(--button-bg);
 
   .dark & {
-    background-color: rgba(60, 60, 67, .75);
-    // background-color: rgba(60, 60, 67, .9);
+    background-color: var(--dark-switch-fg);
   }
 
   .light & {
-    background-color: #eaeaec;
+    background-color: var(--light-switch-fg);
   }
 }

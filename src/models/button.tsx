@@ -7,5 +7,6 @@ export interface ButtonProps {
   role?: string;
   ariaLabel?: string;
   ariaExpanded?: boolean;
+  ariaChecked?: boolean;
   click?: () => void;
 }
