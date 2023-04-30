@@ -2,14 +2,13 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     VitePWA({
       manifest: {
         short_name: 'lcc',
-        name: 'Life Cycle Calculator',
+        name: 'Calculateur de cycle de vie',
         icons: [
           {
             src: "/lcc/vite-192x192.svg",
@@ -36,7 +35,7 @@ export default defineConfig({
         background_color: "#1e1e20",
         display: "standalone",
         theme_color: "#1e1e20",
-        description: "What is the impact of your website on the planet?",
+        description: "Calculateur de cycle de vie est un outil d'éco-conception et d'Analyse du Cycle de Vie (ACV) pour vous aider à éco-concevoir votre site web zéro carbone.",
       },
     }),
   ],
