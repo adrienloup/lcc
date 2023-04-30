@@ -13,16 +13,16 @@ function Footer() {
             <Button
               label='v1.0.0'
               cssClass='link'
-              ariaLabel='Voir la dernière version sur GitHub'
-              href='https://github.com/adrienloup/life-cycle-calculator'
+              ariaLabel='Voir la version v1.0.0 sur GitHub'
+              href='https://github.com/adrienloup/lcc'
             />
           </li>
           <li>
             <Button
-              label='Ressources'
+              label='ACV'
               cssClass='link'
               role='button'
-              ariaLabel='Voir les ressources utilisées pour le calcul'
+              ariaLabel='Voir les ressources utilisées pour le calcul ACV'
               to='/lcc/ressources'
             />
           </li>
