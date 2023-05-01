@@ -17,16 +17,22 @@ function TabList({ active, click }: TabProps) {
       <Button
         key={id}
         cssClass={`tab${id === active ? ' active' : ''}`}
-        role='button'
+        role='tab'
         label={title}
         ariaLabel={text}
+        ariaSelected={id === active}
+        ariaControls={`tabpanel-${id}`}
         click={() => click!(id)}
       />
     )
   }
 
   return (
-    <div className='tab-list'>
+    <div
+      className='tab-list'
+      role='tablist'
+      aria-labelledby='result'
+    >
       <Tab
         id='1'
         title='Par utilisateur'
