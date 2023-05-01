@@ -3,8 +3,20 @@ import { Link } from 'react-router-dom'
 import Icon from '../Icon/Icon'
 import './Button.scss'
 
-function Button({ cssClass, label, to, href, icon, role, ariaLabel, ariaExpanded, ariaChecked, click }: ButtonProps) {
-  console.log('button');
+function Button({
+    cssClass,
+    label,
+    to,
+    href,
+    icon,
+    role,
+    ariaLabel,
+    ariaExpanded,
+    ariaChecked,
+    ariaSelected,
+    ariaControls,
+    click
+  }: ButtonProps) {
   const button = () => {
     if (to) {
       return (
@@ -41,6 +53,8 @@ function Button({ cssClass, label, to, href, icon, role, ariaLabel, ariaExpanded
           aria-label={ariaLabel}
           aria-expanded={ariaExpanded}
           aria-checked={ariaChecked}
+          aria-selected={ariaSelected}
+          aria-controls={ariaControls}
           onClick={click}
         >
           {label}

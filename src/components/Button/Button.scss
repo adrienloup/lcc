@@ -1,81 +1,55 @@
 .button {
   display: inline-block;
-  padding: 1.2rem 1.6rem;
-  line-height: 1.6rem;
   border: 0;
   border-radius: 1rem;
   text-decoration: none;
+  text-transform: uppercase;
   font-family: var(--font-family);
   font-weight: bold;
-  font-size: 1.4rem;
   color: var(--button-fg);
   cursor: pointer;
 
-  // &:hover {
-  //   background-color: $color-4;
-  //   color: $color-5;
-  // }
-
-  // &:focus-visible {
-  //   outline-offset: -.01rem;
-  // }
-
-  // &:active {
-  //   background-color: $color-1;
-  //   color: $color-5;
-  // }
+  &:active,
+  &:focus-visible {
+    outline: 2px solid red;
+    outline-offset: -.01rem;
+  }
 }
 
-.link {
-  display: inline-block;
-  padding: .6rem .8rem;
-  border-radius: 1rem;
-  line-height: 1rem;
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-
-  .dark & {
-    background-color: var(--dark-switch-fg);
-    color: var(--dark-fg);
-  }
-
-  .light & {
-    background-color: var(--light-switch-fg);
-    color: var(--light-fg);
-  }
-
-  // &::after {
-  //   content: "";
-  //   display: block;
-  //   width: 100%;
-  //   height: 1px;
-
-  //   .dark & {
-  //     background-color: var(--dark-fg);
-  //   }
-
-  //   .light & {
-  //     background-color: var(--light-fg);
-  //   }
-  // }
-}
-
-.switch {
+.link,
+.switch,
+.tooltip {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 3rem;
+  height: 2.6rem;
+  border-radius: 1rem;
+
+  &:active,
+  &:focus-visible {
+    outline: 2px solid red;
+    outline-offset: -.01rem;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.switch {
   border: 0;
-  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tooltip {
+  margin-top: .25rem;
+  background-color: transparent;
+  border: 0;
   cursor: pointer;
 
-  .dark & {
-    background-color: var(--dark-switch-fg);
-  }
-
-  .light & {
-    background-color: var(--light-switch-fg);
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }

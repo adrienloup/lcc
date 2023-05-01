@@ -8,5 +8,7 @@ export interface ButtonProps {
   ariaLabel?: string;
   ariaExpanded?: boolean;
   ariaChecked?: boolean;
+  ariaSelected?: boolean;
+  ariaControls?: string;
   click?: () => void;
 }
