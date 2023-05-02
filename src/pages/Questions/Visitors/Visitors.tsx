@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useContext, useState } from 'react'
 import { Data } from '../../../contexts/data'
-import Information from '../../../components/Information/Information'
+import Notebook from '../../../components/Notebook/Notebook'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
@@ -20,28 +20,28 @@ function Visitors({ mode }: { mode: string }) {
   }
 
   return (
-    <div className={`question ${mode}`}>
+    <div className={`page question ${mode}`}>
       <Header />
       <main
         className='main'
         role='main'
       >
-        <Title
-          cssClass='title'
-          label='<span>2/8</span> Quel est le nombre<br />de visiteurs par mois&nbsp;?'
-        />
+        <Title label='<span>2/8</span> Quel est le nombre<br />de visiteurs par mois&nbsp;?' />
+        <Notebook label={'Le nombre de visiteurs par mois permet de connaître la quantité de teminaux <strong>utilisateur, équipements réseau, serveur</strong> nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette info dans votre outil Google Analytics ou équivalent.'} />
         <form className='form' action=''>
-          <label htmlFor='i1'>{value} visiteurs</label>
-          <input
-            id='i1'
-            type='range'
-            min='1000'
-            max='10000'
-            step='1'
-            style={{backgroundSize: `${(Number(value) * 100) / 10000}% 100%`}}
-            value={value}
-            onChange={handleChange}
-          />
+          <div className='range'>
+            <label htmlFor='i1'>{value} visiteurs</label>
+            <input
+              id='i1'
+              type='range'
+              min='1000'
+              max='10000'
+              step='1'
+              style={{backgroundSize: `${(Number(value) * 100) / 10000}% 100%`}}
+              value={value}
+              onChange={handleChange}
+            />
+          </div>
         </form>
         <nav
           className='navigation'
@@ -60,10 +60,6 @@ function Visitors({ mode }: { mode: string }) {
             to='/lcc/question/temps-moyen'
           />
         </nav>
-        <Information
-          cssClass='information'
-          label={'Le nombre de visiteurs par mois permet de connaître la quantité de teminaux <strong>utilisateur, équipements réseau, serveur</strong> nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette info dans votre outil Google Analytics ou équivalent.'}
-        />
       </main>
       <Footer />
     </div>

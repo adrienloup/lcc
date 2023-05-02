@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useContext, useState } from 'react'
 import { Data } from '../../../contexts/data'
-import Information from '../../../components/Information/Information'
+import Notebook from '../../../components/Notebook/Notebook'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
@@ -20,16 +20,14 @@ function Course({ mode }: { mode: string }) {
   }
 
   return (
-    <div className={`question ${mode}`}>
+    <div className={`page question ${mode}`}>
       <Header />
       <main
         className='main'
         role='main'
       >
-        <Title
-          cssClass='title'
-          label='De quel parcours mesure-t-on l’impact&nbsp;?'
-        />
+        <Title label='<span>1/8</span> De quel parcours<br />mesure-t-on l’impact&nbsp;?' />
+        <Notebook label={'L’écoconception part toujours d’un besoin utilisateur clairement <strong>identifié</strong> et dont le service numérique cherche à apporter une <strong>solution</strong>.'} />
         <form className='form' action=''>
           <div className='text'>
             <label htmlFor='i1'>Nom du projet</label>
@@ -48,7 +46,7 @@ function Course({ mode }: { mode: string }) {
           <Button
             label='Retour'
             cssClass='button'
-            ariaLabel={'Retourner à la page précédente'}
+            ariaLabel={'Retour à la page précédente'}
             click={() => navigate(-1)}
           />
           <Button
@@ -58,10 +56,6 @@ function Course({ mode }: { mode: string }) {
             to='/lcc/question/nombre-de-visiteurs'
           />
         </nav>
-        <Information
-          cssClass='information'
-          label={'L’écoconception part toujours d’un besoin utilisateur clairement <strong>identifié</strong> et dont le service numérique cherche à apporter une <strong>solution</strong>.'}
-        />
       </main>
       <Footer />
     </div>

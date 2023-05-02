@@ -9,15 +9,15 @@ function TabPanel({ data, active }: TabProps) {
   const B6 = Number(data!.q6)
   const B7 = Number(data!.q7)
   const B8 = data!.q8
-  // const energeticMix = {
-  //   eu: 0.5,
-  //   fr: 0.1,
-  //   as: 1,
-  //   oc: 0.8,
-  //   na: 0.4,
-  //   sa: 0.5,
-  //   ww: 0.5,
-  // }
+  const energeticMix = {
+    eu: 0.5,
+    fr: 0.1,
+    as: 1,
+    oc: 0.8,
+    na: 0.4,
+    sa: 0.5,
+    ww: 0.5,
+  }
   // const B11 = (((B2 * 12 * B3) / 60) * (1 - (B5 / 100))) / (220 * 7) * 75 + (((B2 * 12 * B3) / 60) * (B5 / 100)) / (365 * 4) * 30 + (((B2 * 12 * B3) / 60) * (1 - (B5 / 100))) / (220 * 7) * 30.8;
   // const B12 = (((B2 * 12 * B3) / 60) / (24 * 365)) * 150;
   // const B13 = (((450 * 365 * 24) / 1000) * (60 / 100)) * B7 * 1.8;
@@ -41,8 +41,10 @@ function TabPanel({ data, active }: TabProps) {
   // const D16 = Math.round((D11 + D12 + D13) / (B2 * 12) / 0.0075) || 0;
   // const E16 = (E11 / (B2 * 12) / 0.18).toFixed(1) || 0;
 
-  console.log(B2, B3, B4, B5, B6, B7, B8)
-  // console.log(energeticMix)
+  // console.log(B2, B3, B4, B5, B6, B7, B8)
+  // console.log(B4)
+  // console.log(energeticMix.fr)
+  console.log(energeticMix[B4])
 
   const Panel = ({ id, text }: { id: number; text: string; }) => {
     return (

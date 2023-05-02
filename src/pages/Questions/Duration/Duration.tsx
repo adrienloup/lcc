@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useContext, useState } from 'react'
 import { Data } from '../../../contexts/data'
-import Information from '../../../components/Information/Information'
+import Notebook from '../../../components/Notebook/Notebook'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
@@ -20,16 +20,14 @@ function Duration({ mode }: { mode: string }) {
   }
 
   return (
-    <div className={`question ${mode}`}>
+    <div className={`page question ${mode}`}>
       <Header />
       <main
         className='main'
         role='main'
       >
-        <Title
-          cssClass='title'
-          label='Temps passé en moyenne par utilisateur&nbsp;?'
-        />
+        <Title label='<span>3/8</span> Temps passé en moyenne<br />par utilisateur&nbsp;?' />
+        <Notebook label={'Le temps qu’il passent sur votre service numérique permet de connaître la quantité de teminaux <strong>utilisateur, équipements réseau, serveur</strong> nécessaire pour servir, transiter et consulter les contenus ou les services que vous délivrez.'} />
         <form className='form' action=''>
           <label htmlFor='i1'>{value} {Number(value) > 1 ? 'minutes' : 'minute'}</label>
           <input
@@ -60,10 +58,6 @@ function Duration({ mode }: { mode: string }) {
             to='/lcc/question/localisation-des-visiteurs'
           />
         </nav>
-        <Information
-          cssClass='information'
-          label={'Le temps qu’il passent sur votre service numérique permet de connaître la quantité de teminaux <strong>utilisateur, équipements réseau, serveur</strong> nécessaire pour servir, transiter et consulter les contenus ou les services que vous délivrez.'}
-        />
       </main>
       <Footer />
     </div>

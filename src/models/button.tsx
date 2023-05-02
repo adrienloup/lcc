@@ -10,5 +10,6 @@ export interface ButtonProps {
   ariaChecked?: boolean;
   ariaSelected?: boolean;
   ariaControls?: string;
+  tabindex?: number;
   click?: () => void;
 }

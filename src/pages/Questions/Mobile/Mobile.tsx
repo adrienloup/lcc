@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { Data } from '../../../contexts/data'
-import Information from '../../../components/Information/Information'
+import Notebook from '../../../components/Notebook/Notebook'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
@@ -10,23 +10,36 @@ import Title from '../../../components/Title/Title'
 function Mobile({ mode }: { mode: string }) {
   const navigate = useNavigate()
   const { data, setData } = useContext(Data)
+  const [ value, setValue ] = useState(data.q5)
 
-  const handleData = () => {
-    setData({ ...data, q5: 'answer5' })
+  const handleChange = (e: { target: { value: string } }) => {
+    const a5 = e.target.value
+    setData({ ...data, q5: a5 })
+    setValue(a5)
   }
 
   return (
-    <div className={`question ${mode}`}>
+    <div className={`page question ${mode}`}>
       <Header />
       <main
         className='main'
         role='main'
       >
-        <div onClick={handleData}>{data.q5}</div>
-        <Title
-          cssClass='title'
-          label='Proportion d’utilisateurs en mobile&nbsp;?'
-        />
+        <Title label='<span>5/8</span> Proportion d’utilisateurs<br />en mobile&nbsp;?' />
+        <Notebook label={'Les conditions d’utilisation de votre service numérique, en mobilité ou au bureau, ont des impacts bien différents.'} />
+        <form className='form' action=''>
+          <label htmlFor='i1'>{value} %</label>
+          <input
+            id='i1'
+            type='range'
+            min='0'
+            max='100'
+            step='1'
+            style={{backgroundSize: `${(Number(value) * 100) / 100}% 100%`}}
+            value={value}
+            onChange={handleChange}
+          />
+        </form>
         <nav
           className='navigation'
           role='navigation'
@@ -44,10 +57,6 @@ function Mobile({ mode }: { mode: string }) {
             to='/lcc/question/nombre-de-pages'
           />
         </nav>
-        <Information
-          cssClass='information'
-          label={'Le parcours utilisateur, après l’identification du besoin utilisateurs, est le deuxième point crutial en éco-conception. Plus le parcours, entre l’utilisateur et le contenu ou le service pour lequel il est venu, est plus faible réduit l’<strong>impact écologique</strong>. En 2021, le poids moyen d’une page web est de <strong>2,1Mo</strong> (contre 0,013Mo en 1995).'}
-        />
       </main>
       <Footer />
     </div>

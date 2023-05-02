@@ -1,4 +1,4 @@
 export interface TitleProps {
-  cssClass: string;
+  id?: string;
   label: string;
 }

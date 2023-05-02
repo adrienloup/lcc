@@ -6,20 +6,16 @@ import './Home.scss'
 
 function Home({ mode }: { mode: string }) {
   return (
-    <div className={`home ${mode}`}>
+    <div className={`page home ${mode}`}>
       <Header />
       <main
         className='main'
         role='main'
       >
-        <Title
-          cssClass='title'
-          label='Quel est<br />l’impact de votre<br />site web sur<br />la planète&nbsp;?'
-        />
+        <Title label='Quel est<br />l’impact de votre<br />site web sur<br />la planète&nbsp;?' />
         <Button
           label='Démarrer'
           cssClass='button'
-          role='button'
           ariaLabel='Démarrer le parcours'
           to='/lcc/question/quel-parcours'
         />

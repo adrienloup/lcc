@@ -15,6 +15,7 @@ function Button({
     ariaChecked,
     ariaSelected,
     ariaControls,
+    tabindex,
     click
   }: ButtonProps) {
   const button = () => {
@@ -55,6 +56,7 @@ function Button({
           aria-checked={ariaChecked}
           aria-selected={ariaSelected}
           aria-controls={ariaControls}
+          tabIndex={tabindex}
           onClick={click}
         >
           {label}

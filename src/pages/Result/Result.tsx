@@ -11,14 +11,14 @@ function Result({ mode }: { mode: string }) {
   const { data } = useContext(Data)
 
   return (
-    <div className={`result ${mode}`}>
+    <div className={`page result ${mode}`}>
       <Header />
       <main
         className='main'
         role='main'
       >
         <Title
-          cssClass='title'
+          id='result'
           label={`Voici les impacts du parcours ${data.q1}`}
         />
         <Tabs data={data} />
@@ -27,7 +27,7 @@ function Result({ mode }: { mode: string }) {
           cssClass='button'
           role='button'
           ariaLabel='Recommencer le parcours'
-          to='/lcc/'
+          to='/lcc/question/quel-parcours'
         />
       </main>
       <Footer />

@@ -1,9 +1,3 @@
-.dark,
-.light {
-  width: 100%;
-  height: 100%;
-}
-
 .dark {
   color: var(--dark-fg);
   background-color: var(--dark-bg);
@@ -14,54 +8,82 @@
   background-color: var(--light-bg);
 }
 
-.title {
+// .title {
 
-  .dark & {
-    background: var(--dark-title-bg);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
+//   .dark & {
+//     background: var(--dark-title-bg);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     color: transparent;
+//   }
 
-  .light & {
-    background: var(--light-title-bg);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
-}
+//   .light & {
+//     background: var(--light-title-bg);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     color: transparent;
+//   }
+// }
 
-.icon {
+.footer {
 
-  .dark & {
-    fill: var(--dark-fg);
-  }
+  .icon {
   
-  .light & {
-    fill: var(--light-fg);
+    .dark & {
+      fill: var(--dark-fg);
+    }
+    
+    .light & {
+      fill: var(--light-fg);
+    }
   }
 }
 
-.button {
+// .button {
+
+//   .dark & {
+//     background-color: var(--dark-button-bg);
+//   }
+
+//   .light & {
+//     background-color: var(--light-button-bg);
+//   }
+// }
+
+.link {
 
   .dark & {
-    background-color: var(--dark-button-bg);
+    background-color: var(--dark-link-fg);
   }
 
   .light & {
-    background-color: var(--light-button-bg);
+    background-color: var(--light-link-fg);
   }
 }
 
-input[type="range"] {
+.radio {
 
   .dark & {
-    background-color: var(--dark-switch-fg);
+    color: var(--dark-fg);
   }
 
   .light & {
-    background-color: var(--light-switch-fg);
+    color: var(--light-fg);
+  }
+}
+
+.range {
+
+  input[type="range"] {
+  
+    .dark & {
+      background-color: var(--dark-input-bg);
+    }
+  
+    .light & {
+      background-color: var(--light-input-bg);
+    }
   }
 }

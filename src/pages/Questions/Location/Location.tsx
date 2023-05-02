@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { Data } from '../../../contexts/data'
-import Information from '../../../components/Information/Information'
+import Notebook from '../../../components/Notebook/Notebook'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
@@ -12,22 +12,57 @@ function Location({ mode }: { mode: string }) {
   const navigate = useNavigate()
   const { data, setData } = useContext(Data)
 
-  const handleData = () => {
-    setData({ ...data, q8: 'answer8' })
+  const inputs = [
+    { label: 'France', value: 'fr' },
+    { label: 'Europe', value: 'eu' },
+    { label: 'Amérique du nord', value: 'na' },
+    { label: 'Amérique du sud', value: 'sa' },
+    { label: 'Asie', value: 'as' },
+    { label: 'Océanie', value: 'oc' },
+    { label: 'Mondial', value: 'ww' },
+  ]
+  
+  const handleChange = (e: { target: { value: string } }) => {
+    setData({ ...data, q8: e.target.value })
+  }
+
+  const InputList = (inputs: { label: string; value: string; }[]) => {
+    return inputs.map(
+      (input: { label: string; value: string; }, index) => (
+        <div
+          key={index}
+          className='radio'
+        >
+          <input
+            id={`i${index + 1}`}
+            type='radio'
+            name='radio'
+            value={input.value}
+            checked={data.q8 === input.value}
+            aria-checked={data.q8 === input.value}
+            onChange={handleChange}
+          />
+          <label
+            htmlFor={`i${index + 1}`}
+            tabIndex={0}
+          >{input.label}</label>
+        </div>
+      )
+    )
   }
 
   return (
-    <div className={`question ${mode}`}>
+    <div className={`page question ${mode}`}>
       <Header />
       <main
         className='main'
         role='main'
       >
-        <div onClick={handleData}>{data.q8}</div>
-        <Title
-          cssClass='title'
-          label='Où sont localisés les serveurs&nbsp;?'
-        />
+        <Title label='<span>8/8</span> Où sont localisés<br />les serveurs&nbsp;?' />
+        <Notebook label={'Le mix énergétique du pays dans lequel se situent les serveurs fait varier l’<strong>impact écologique</strong>.'} />
+        <form className='form' action=''>
+          {InputList(inputs)}
+        </form>
         <nav
           className='navigation'
           role='navigation'
@@ -45,10 +80,6 @@ function Location({ mode }: { mode: string }) {
             to='/lcc/resultat'
           />
         </nav>
-        <Information
-          cssClass='information'
-          label={'Le mix énergétique du pays dans lequel se situent les serveurs fait varier l’<strong>impact écologique</strong>.'}
-        />
       </main>
       <Footer />
     </div>

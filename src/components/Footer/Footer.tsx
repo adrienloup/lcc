@@ -1,29 +1,49 @@
+import { useContext } from 'react'
+import { Mode } from '../../contexts/mode'
 import Button from '../Button/Button'
 import './Footer.scss'
 
-function Footer() {  
+function Footer() {
+  const { mode, setMode } = useContext(Mode)
+
+  const handleMode = () => {
+    const isDark = mode === 'dark'
+    setMode(isDark ? 'light' : 'dark')
+    localStorage.setItem('mode', isDark ? 'light' : 'dark')
+  }
+
   return (
     <footer
       className='footer'
       role='contentinfo'
     >
       <nav role='navigation'>
-        <ul>
+        <ul className='list'>
           <li>
             <Button
-              label='v1.0.0'
               cssClass='link'
-              ariaLabel='Voir la version v1.0.0 sur GitHub'
-              href='https://github.com/adrienloup/lcc'
+              role='button'
+              icon='resources'
+              ariaLabel='Ouvrir les ressources'
+              to='/lcc/ressources'
             />
           </li>
           <li>
             <Button
-              label='ACV'
               cssClass='link'
-              role='button'
-              ariaLabel='Voir les ressources utilisées pour le calcul ACV'
-              to='/lcc/ressources'
+              role='switch'
+              icon={mode === 'dark' ? 'moon' : 'sun'}
+              ariaLabel={mode === 'dark' ? 'Mode clair' : 'Mode sombre'}
+              ariaChecked={mode === 'dark'}
+              click={() => handleMode()}
+            />
+          </li>
+          <li>
+            <Button
+              cssClass='link'
+              icon='github'
+              ariaLabel='Ouvrir sur GitHub'
+              href='https://github.com/adrienloup/lcc'
             />
           </li>
         </ul>

@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -6,10 +8,22 @@
   width: 100%;
   padding: 1rem;
 
-  ul {
+  .list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     list-style: none;
+
+    @media screen and (max-width: $mobile-landscape) {
+      justify-content: center;
+    }
+  }
+
+  .link {
+    margin-left: .5rem;
+
+    @media screen and (max-width: $mobile-landscape) {
+      margin: 0 .5rem;
+    }
   }
 }
