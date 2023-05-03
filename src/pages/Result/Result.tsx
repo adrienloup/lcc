@@ -19,7 +19,7 @@ function Result({ mode }: { mode: string }) {
       >
         <Title
           id='result'
-          label={`Voici les impacts du parcours ${data.q1}`}
+          label={`Voici les impacts du parcours<br />"${data.q1}"`}
         />
         <Tabs data={data} />
         <Button
