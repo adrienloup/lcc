@@ -27,20 +27,6 @@
 //   }
 // }
 
-.footer {
-
-  .icon {
-  
-    .dark & {
-      fill: var(--dark-fg);
-    }
-    
-    .light & {
-      fill: var(--light-fg);
-    }
-  }
-}
-
 // .button {
 
 //   .dark & {
@@ -84,6 +70,41 @@
   
     .light & {
       background-color: var(--light-input-bg);
+    }
+  }
+}
+
+.tab-list {
+
+  .tab {
+   
+    .dark & {
+      background-color: var(--dark-tab-bg);
+      color: var(--dark-fg);
+    }
+    
+    .light & {
+      background-color: var(--light-tab-bg);
+      color: var(--light-fg);
+    }
+
+    &.active {
+      background-color: var(--tab-active-bg);
+      color: var(--tab-active-fg);
+    }
+  }
+}
+
+.footer {
+
+  .icon {
+  
+    .dark & {
+      fill: var(--dark-fg);
+    }
+    
+    .light & {
+      fill: var(--light-fg);
     }
   }
 }
