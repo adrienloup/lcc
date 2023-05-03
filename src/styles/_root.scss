@@ -6,7 +6,6 @@
 
 :root {
   --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  // --font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   --dark-bg: rgb(30, 30, 32);
   --dark-fg: rgb(234, 234, 236);
   --dark-title-bg: -webkit-linear-gradient(120deg, rgb(238, 0, 255) 30%, rgb(0, 152, 240), rgb(0, 242, 195));
@@ -15,8 +14,6 @@
   --light-title-bg: -webkit-linear-gradient(120deg, rgb(238, 0, 255) 30%, rgb(174, 0, 255), rgb(136, 0, 255));
   --notebook-bg: rgb(255, 200, 0);
   --notebook-fg: rgb(30, 30, 32);
-  // --dark-button-bg: rgb(102, 102, 255);
-  // --light-button-bg: rgb(238, 0, 255);
   --button-bg: rgb(238, 0, 255);
   --button-fg: rgb(255, 255, 255);
   --dark-link-fg: rgba(60, 60, 67, .75);
