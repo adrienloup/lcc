@@ -14,7 +14,7 @@
     justify-content: flex-end;
     list-style: none;
 
-    @media screen and (max-width: $mobile-landscape) {
+    @media screen and (max-width: $tablet-portrait) {
       justify-content: center;
     }
   }
@@ -22,7 +22,7 @@
   .link {
     margin-left: .5rem;
 
-    @media screen and (max-width: $mobile-landscape) {
+    @media screen and (max-width: $tablet-portrait) {
       margin: 0 .5rem;
     }
   }
