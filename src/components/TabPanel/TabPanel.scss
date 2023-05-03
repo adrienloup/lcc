@@ -1,3 +1,43 @@
+@import '../../styles/variables.scss';
+
 .tab-panel {
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60rem;
+  height: 15rem;
+  padding: 1rem;
+  background-color: var(--tab-panel-bg);
+  border-radius: .25rem;
+
+  @media screen and (max-width: $tablet-landscape) {
+    width: 50rem;
+  }
+
+  @media screen and (max-width: $tablet-portrait) {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .panel {
+    width: calc(100% / 4);
+    padding: 1rem;
+    text-align: center;
+
+    @media screen and (max-width: $tablet-portrait) {
+      width: 100%;
+    }
+
+    p {
+      line-height: 1.6rem;
+      font-size: 1.2rem;
+      color: var(--tab-panel-fg);
+
+      @media screen and (max-width: $tablet-portrait) {
+        line-height: 1.2rem;
+        font-size: .8rem;
+      }
+    }
+  }
 }
