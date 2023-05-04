@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .home {
 
   .title {
@@ -11,5 +13,9 @@
     padding: 1.4rem;
     line-height: 1.4rem;
     font-size: 1.4rem;
+
+    @media screen and (max-width: $tablet-portrait) {
+      margin-top: 1rem;
+    }
   }
 }
