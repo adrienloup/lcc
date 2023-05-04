@@ -2,7 +2,7 @@
 
 .tab-panel {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 60rem;
   height: 15rem;
@@ -23,21 +23,25 @@
   .panel {
     width: calc(100% / 4);
     padding: 1rem;
-    text-align: center;
 
     @media screen and (max-width: $tablet-portrait) {
       width: 100%;
     }
 
-    p {
-      line-height: 1.6rem;
-      font-size: 1.2rem;
-      color: var(--tab-panel-fg);
+    @media screen and (max-width: $tablet-landscape) {
+      padding: .5rem;
+    }
+  }
 
-      @media screen and (max-width: $tablet-portrait) {
-        line-height: 1.2rem;
-        font-size: .8rem;
-      }
+  p {
+    text-align: center;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    color: var(--tab-panel-fg);
+
+    @media screen and (max-width: $tablet-landscape) {
+      line-height: 1.4rem;
+      font-size: 1rem;
     }
   }
 }

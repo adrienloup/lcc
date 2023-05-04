@@ -3,6 +3,7 @@
 .tab-list {
   display: flex;
   justify-content: center;
+  margin-top: 6vh;
 
   .tab {
     padding: 1rem;
@@ -15,7 +16,7 @@
     font-size: 1rem;
     cursor: pointer;
 
-    @media screen and (max-width: $tablet-landscape) {
+    @media screen and (max-width: $tablet-portrait) {
       line-height: 1rem;
       font-size: .8rem;
     }

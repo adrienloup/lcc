@@ -47,7 +47,10 @@ function TabPanel({ data, active }: TabProps) {
         id={`tabpanel-${id}`}
         className='panel'
       >
-        <p dangerouslySetInnerHTML={{__html: text}}></p>
+        <p
+          className='text'
+          dangerouslySetInnerHTML={{__html: text}}
+        ></p>
       </div>
     )
   }
