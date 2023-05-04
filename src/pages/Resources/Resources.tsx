@@ -1,13 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 import { resources } from '../../datas/resources.json'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import Button from '../../components/Button/Button'
 import Title from '../../components/Title/Title'
 import List from '../../components/List/List'
 import './Resources.scss'
 
 function Resources({ mode }: { mode: string }) {
+  const navigate = useNavigate()
+
   return (
-    <div className={`page ${mode}`}>
+    <div className={`page resources ${mode}`}>
       <Header />
       <main
         className='main'
@@ -31,6 +35,12 @@ function Resources({ mode }: { mode: string }) {
             )
           })}
         </div>
+        <Button
+          label='Retour'
+          cssClass='button'
+          ariaLabel={'Retour à la page précédente'}
+          click={() => navigate(-1)}
+        />
       </main>
       <Footer />
     </div>
