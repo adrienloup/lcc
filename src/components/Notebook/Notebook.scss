@@ -3,7 +3,6 @@
 .notebook {
   position: relative;
   z-index: 2;
-  margin-top: 1rem;
 
   .inner {
     position: fixed;
@@ -30,14 +29,14 @@
     }
 
     p {
-      line-height: 1.6rem;
-      font-size: 1.2rem;
+      line-height: 1.2rem;
+      font-size: 1rem;
       color: var(--notebook-fg);
     }
   }
 
   .close {
-    margin: 0 0 1rem auto;
+    margin: 0 0 .5rem auto;
   }
 
   &.active .inner {
