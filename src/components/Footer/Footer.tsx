@@ -32,16 +32,6 @@ function Footer() {
           <li>
             <Button
               cssClass='link'
-              role='switch'
-              icon={mode === 'dark' ? 'moon' : 'sun'}
-              ariaLabel={mode === 'dark' ? 'Mode clair' : 'Mode sombre'}
-              ariaChecked={mode === 'dark'}
-              click={() => handleMode()}
-            />
-          </li>
-          <li>
-            <Button
-              cssClass='link'
               role='button'
               icon='resources'
               ariaLabel='Ouvrir les ressources'
