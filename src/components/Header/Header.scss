@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+
+  @media screen and (max-width: $tablet-portrait) {
+    justify-content: center;
+  }
+}

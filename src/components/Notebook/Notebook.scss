@@ -1,0 +1,62 @@
+@import '../../styles/variables.scss';
+
+.notebook {
+  position: relative;
+  z-index: 2;
+
+  .inner {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: var(--notebook-bg);
+    border-radius: .5rem;
+    transition-property: width, height;
+    transition-duration: 0s;
+    transition-timing-function: var(--ease);
+    transition-delay: 0s;
+    will-change: width, height;
+    
+    @media screen and (max-width: $mobile-landscape) {
+      top: 4.6rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      opacity: 0;
+      transition: opacity 0s var(--ease) 0s;
+      will-change: opacity;
+    }
+
+    p {
+      line-height: 1.4rem;
+      font-size: 1rem;
+      color: var(--notebook-fg);
+    }
+  }
+
+  .close {
+    margin: 0 0 .5rem auto;
+  }
+
+  &.active .inner {
+    width: 15rem;
+    height: calc(100vh - 5.6rem);
+    transition-duration: .25s;
+
+    @media screen and (max-width: $mobile-landscape) {
+      width: calc(100vw - 2rem);
+      height: calc(100vh - 9rem);
+    }
+
+    div {
+      opacity: 1;
+      transition-duration: .25s;
+      transition-delay: .25s;
+    }
+  }
+}

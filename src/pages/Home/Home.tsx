@@ -1,27 +1,22 @@
-import Notebook from '../../components/molecules/Notebook/Notebook'
-import Header from '../../components/organisms/Header/Header'
-import Footer from '../../components/organisms/Footer/Footer'
-import Button from '../../components/molecules/Button/Button'
-import Title from '../../components/atoms/Title/Title'
-import Text from '../../components/atoms/Text/Text'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
+import Button from '../../components/Button/Button'
+import Title from '../../components/Title/Title'
+import './Home.scss'
 
-function Home() {
+function Home({ mode }: { mode: string }) {
   return (
-    <div className='page'>
+    <div className={`page home ${mode}`}>
       <Header />
       <main
         className='main'
         role='main'
       >
-        <div className='top'>
-          <Title label='Quel est l’impact de votre site web sur la planète&nbsp;?' />
-          <Notebook label='tutu' />
-        </div>
-        <Text label='<p>Obtenez une estimation de votre empreinte carbone de consommation. Chaque calcul que vous faite est sauvegardé dans votre navigateur Web. Vous êtes le seul à y avoir accès.</p>' />
+        <Title label='Quel est<br />l’impact de votre<br />site web sur<br />la planète&nbsp;?' />
         <Button
           label='Démarrer'
-          cssClass='start'
-          ariaLabel='Démarrer le calculateur de cycle de vie'
+          cssClass='button'
+          ariaLabel='Démarrer le parcours'
           to='/lcc/question/quel-parcours'
         />
       </main>

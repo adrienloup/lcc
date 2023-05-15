@@ -1,0 +1,80 @@
+.dark {
+  color: var(--dark-fg);
+  background-color: var(--dark-bg);
+}
+
+.light {
+  color: var(--light-fg);
+  background-color: var(--light-bg);
+}
+
+.link {
+
+  .dark & {
+    background-color: var(--dark-link-fg);
+  }
+
+  .light & {
+    background-color: var(--light-link-fg);
+  }
+}
+
+.radio {
+
+  .dark & {
+    color: var(--dark-fg);
+  }
+
+  .light & {
+    color: var(--light-fg);
+  }
+}
+
+.range {
+
+  input[type="range"] {
+  
+    .dark & {
+      background-color: var(--dark-input-bg);
+    }
+  
+    .light & {
+      background-color: var(--light-input-bg);
+    }
+  }
+}
+
+.tab-list {
+
+  .tab {
+   
+    .dark & {
+      background-color: var(--dark-tab-bg);
+      color: var(--dark-fg);
+    }
+    
+    .light & {
+      background-color: var(--light-tab-bg);
+      color: var(--light-fg);
+    }
+
+    &.active {
+      background-color: var(--tab-active-bg);
+      color: var(--tab-active-fg);
+    }
+  }
+}
+
+.footer {
+
+  .icon {
+  
+    .dark & {
+      fill: var(--dark-fg);
+    }
+    
+    .light & {
+      fill: var(--light-fg);
+    }
+  }
+}

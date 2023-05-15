@@ -10,7 +10,7 @@ console.log(
   'padding: 4px 3px 3px; background: #1e1e20; border-radius: 0 3px 3px 0; font-weight: bold; color: #fff;'
 );
 
-ReactDOM.createRoot(document.getElementById('lcc') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
