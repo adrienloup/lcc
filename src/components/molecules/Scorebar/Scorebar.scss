@@ -1,0 +1,54 @@
+.scorebar {
+  display: flex;
+
+  .score-by-year,
+  .score-by-user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem 0 1rem;
+    text-decoration: none;
+    color: var(--neutralColor);
+
+    &:active,
+    &:focus-visible {
+      z-index: 2;
+      outline: 4px solid var(--alertColor);
+      outline-offset: -1px;
+    }
+
+    .icon {
+      margin-right: .75rem;
+    }
+  }
+
+  .score-by-year {
+    background-color: var(--darkColor);
+
+    .icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  .score-by-user {
+    background-color: var(--lightColor);
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .label {
+    line-height: 1.75rem;
+    font-size: 1rem;
+  
+    strong {
+      display: block;
+      font-family: var(--fontButton);
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}

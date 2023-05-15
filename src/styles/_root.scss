@@ -1,48 +1,23 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
-  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --dark-bg: rgb(30, 30, 32);
-  --dark-fg: rgb(234, 234, 236);
-  --light-bg: rgb(245, 244, 244);
-  --light-fg: rgb(30, 30, 32);
-  --title-bg: -webkit-linear-gradient(120deg, rgb(238, 0, 255) 30%, rgb(0, 152, 240), rgb(0, 238, 242));
-  --notebook-bg: rgb(0, 210, 170);
-  --notebook-fg: rgb(30, 30, 32);
-  --button-bg: rgb(238, 0, 255);
-  --button-fg: rgb(255, 255, 255);
-  --dark-tab-bg: rgba(60, 60, 67, .75);
-  --light-tab-bg: rgb(234, 234, 236);
-  --tab-active-bg: rgb(0, 242, 195);
-  --tab-active-fg: rgb(60, 60, 67);
-  --tab-panel-bg: rgb(0, 242, 195);
-  --tab-panel-fg: rgb(60, 60, 67);
-  --dark-link-fg: rgba(60, 60, 67, .75);
-  --light-link-fg: rgb(234, 234, 236);
-  --dark-input-bg: rgb(234, 234, 236);
-  --light-input-bg: rgba(60, 60, 67, .75);
-  --tooltip-bg: hsla(169, 100%, 41%, 0.2);
-  --tooltip-fg: rgb(0, 210, 170);
-  --outline: rgb(255, 0, 0);
+  --fontText: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --fontButton: Futura, "Trebuchet MS", Arial, sans-serif;
+  --neutralColor: #fff;
+  --darktestColor: #32337b;
+  --darkColor: #595baa;
+  --lightColor: #7d7eca;
+  --lightestColor: #f1f1f9;
+  --lighterColor: rgba(255, 255, 255, .9);
+  --alertColor: #ff6a00;
   --ease: cubic-bezier(.43, .195, .02, 1);
 
-  font-family: var(--font-family);
+  background-color: var(--neutralColor);
+  font-family: var(--fontText);
   color-scheme: light dark;
   font-synthesis: none;
+  color: var(--darktestColor);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
 
-#root {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
