@@ -1,12 +1,20 @@
 .text {
-  margin-bottom: 2rem;
-  padding: 1.5rem 1.25rem;
-  background-color: var(--neutralColor);
-  border-radius: .25rem;
+  // margin-bottom: 2rem;
+  // padding: 1.5rem 1.25rem;
+  // background-color: var(--neutralColor);
+  // border-radius: .25rem;
 
   p {
-    line-height: 1.75rem;
+    line-height: 1.5rem;
     font-size: 1.15rem;
-    color: var(--darktestColor);
+
+    & + p::before {
+      content: "";
+      display: block;
+      width: 2.5rem;
+      height: 1px;
+      margin: 1.15rem auto 1rem;
+      background-color: var(--darktestColor);
+    }
   }
 }

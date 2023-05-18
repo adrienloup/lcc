@@ -1,3 +1,5 @@
 export interface TextProps {
-  label: string;
+  id?: string;
+  cssClass?: string;
+  text: string;
 }
