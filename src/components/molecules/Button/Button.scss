@@ -3,18 +3,18 @@
   align-items: center;
   justify-content: center;
   border: 0;
-  border-radius: 1rem;
+  border-radius: .5rem;
   text-decoration: none;
   cursor: pointer;
 
   &:active,
   &:focus-visible {
-    outline: 4px solid var(--alertColor);
-    outline-offset: -1px;
+    outline: 4px solid var(--outlineColor);
+    outline-offset: 6px;
   }
 
   .label {
-    padding-right: .5rem;
+    padding-left: .5rem;
     text-transform: uppercase;
     line-height: 1.25rem;
     font-size: 1.25rem;
@@ -51,7 +51,7 @@
 
   &:active,
   &:focus-visible {
-    outline: 4px solid var(--alertColor);
+    outline: 4px solid var(--outlineColor);
     outline-offset: -1px;
   }
 
@@ -63,30 +63,62 @@
   }
 }
 
-.link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 2.6rem;
-  text-decoration: none;
-  background-color: var(--lightestColor);
-  border: 0;
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  background-color: var(--darktestColor);
   border-radius: 1rem;
+  border: 0;
+  text-transform: uppercase;
+  line-height: 1rem;
+  font-size: 1rem;
+  font-family: var(--fontButton);
+  font-weight: bold;
+  color: var(--neutralColor);
   text-decoration: none;
   cursor: pointer;
 
   &:active,
   &:focus-visible {
-    outline: 4px solid var(--alertColor);
+    outline: 4px solid var(--outlineColor);
     outline-offset: -1px;
   }
 
-  .icon {
-    width: 1.5rem;
-    height: 1.5rem;
+  .label {
+    display: block;
+    padding: 1.2rem;
+  }
+
+  & + & {
+    margin-left: 1rem;
   }
 }
+
+// .link {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 3rem;
+//   height: 2.6rem;
+//   text-decoration: none;
+//   background-color: var(--lightestColor);
+//   border: 0;
+//   border-radius: 1rem;
+//   text-decoration: none;
+//   cursor: pointer;
+
+//   &:active,
+//   &:focus-visible {
+//     outline: 4px solid var(--outlineColor);
+//     outline-offset: -1px;
+//   }
+
+//   .icon {
+//     width: 1.5rem;
+//     height: 1.5rem;
+//   }
+// }
 
 .a11y {
   position: relative;
@@ -105,19 +137,37 @@
 
   &:active,
   &:focus-visible {
-    outline: 4px solid var(--alertColor);
+    outline: 4px solid var(--outlineColor);
     outline-offset: 4px;
-  }
-
-  &:hover {
-    color: var(--alertColor);
-    
-    &::after {
-      background-color: var(--alertColor);
-    } 
   }
 
   .label {
     font-size: 1rem;
+  }
+}
+
+.alert {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 3rem;
+  height: 2.6rem;
+  background-color: var(--darkterColor);
+  border: 0;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  &:active,
+  &:focus-visible {
+    outline: 4px solid var(--outlineColor);
+    outline-offset: -1px;
+  }
+
+  .icon {
+    width: 1.75rem;
+    height: 1.75rem;
   }
 }
