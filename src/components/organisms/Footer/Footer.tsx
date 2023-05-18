@@ -7,12 +7,16 @@ function Footer() {
       className='footer'
       role='contentinfo'
     >
-      <nav role='navigation'>
+      <nav
+        className='navigation'
+        role='navigation'
+        >
         <ul className='list'>
           <li>
             <Button
               cssClass='a11y'
               label='Accessibilité : totalement conforme'
+              ariaLabel='Afficher la déclaration d’accessibilité'
               to='/lcc/declaration-accessibilité'
             />
           </li>
@@ -20,8 +24,8 @@ function Footer() {
             <Button
               cssClass='link'
               icon='documentation'
-              ariaLabel='Ouvrir la documentation'
-              to='/lcc/documentation'
+              ariaLabel='Afficher la documentation'
+              to='/lcc/documentation/reference'
             />
           </li>
           <li>

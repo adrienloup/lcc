@@ -6,6 +6,10 @@
   width: 100%;
   padding: 1rem;
   background-color: var(--lighterColor);
+
+  .navigation {
+    position: relative;
+  }
   
   .list {
     display: flex;
