@@ -1,26 +1,48 @@
-// import { FC, useContext } from 'react'
+import { useContext } from 'react'
+import { DataContext } from '../../../contexts/data'
+import glass from '../../../utils/glass'
+import gas from '../../../utils/gas'
 import Button from '../Button/Button'
 import './Scorebar.scss'
 
-// const Header: FC = () => {
 function Scorebar() {
+  const { data } = useContext(DataContext)
+
+  const gasScore = gas(
+    data.visitor,
+    data.duration,
+    data.userlocated,
+    data.mobile,
+    data.page,
+    data.server,
+    data.serverlocated
+  )
+
+  const glassScore = glass(
+    data.visitor,
+    data.page
+  )
+  
   return (
-    <div className='scorebar'>
+    <nav
+      className='scorebar'
+      role='navigation'
+    >
       <Button
         cssClass='score-by-year'
         icon='cloud'
-        label='<strong>8,4&nbsp;tonnes</strong>de CO2-eq / an'
-        ariaLabel='TUTU'
-        to='/lcc/'
+        label={`<strong>${gasScore}&nbsp;tonnes</strong>de CO2-eq / an`}
+        ariaLabel={`Afficher l’explication du score de ${gasScore} tonnes de CO2-eq par an`}
+        to='/lcc/documentation/gaz-a-effet-de-serre'
       />
       <Button
         cssClass='score-by-user'
         icon='glass'
-        label='<strong>8,4&nbsp;verres</strong>d’eau / utilisateur'
-        ariaLabel='TUTU'
+        label={`<strong>${glassScore}&nbsp;verres</strong>d’eau / utilisateur`}
+        ariaLabel={`Afficher l’explication du score de ${glassScore} verres d’eau par utilisateur`}
         to='/lcc/'
       />
-    </div>
+    </nav>
   )
 }
 
