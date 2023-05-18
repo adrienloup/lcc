@@ -1,5 +1,4 @@
 export interface ListProps {
-  tag?: boolean;
-  cssClass: any;
+  cssClass: string;
   list: any[];
 }

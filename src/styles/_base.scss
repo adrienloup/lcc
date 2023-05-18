@@ -8,7 +8,7 @@
 
 body {
   background-color: var(--neutralColor);
-  font-family: var(--fontText);
+  font-family: var(--font2);
   color-scheme: light dark;
   font-synthesis: none;
   color: var(--darktestColor);
@@ -38,18 +38,6 @@ body {
   justify-content: center;
 }
 
-// .article {
-//   position: relative;
-//   z-index: 1;
-//   max-width: 44rem;
-  // padding: 1.25rem 2rem 2.25rem;
-  // background-color: var(--lightestColor);
-  // border-radius: .25rem;
-//   text-align: center;
-//   animation: .25s Appear var(--ease);
-//   will-change: transform, opacity;
-// }
-
 .article {
   position: relative;
   z-index: 1;
@@ -58,6 +46,11 @@ body {
   padding: 1rem;
   animation: .25s Appear var(--ease);
   will-change: transform, opacity;
+
+  .wrapper {
+    display: flex;
+    margin-top: 2rem;
+  }
 }
 
 .form {

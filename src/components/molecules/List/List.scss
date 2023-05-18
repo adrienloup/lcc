@@ -1,11 +1,11 @@
-.list {
+.resources {
   list-style: none;
 
-  li {
+  .item {
     padding-bottom: .5rem;
   }
 
-  a {
+  .link {
     position: relative;
     text-decoration: none;
     font-size: 1.15rem;
@@ -25,6 +25,40 @@
     &:focus-visible {
       outline: 4px solid var(--outlineColor);
       outline-offset: 4px;
+    }
+  }
+}
+
+.models {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+
+  .item {
+    padding: 1rem 1rem 0 0;
+  }
+
+  .link {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem 1.75rem .75rem 1rem;
+    background-color: var(--lightestColor);
+    border-radius: .25rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--darktestColor);
+  
+    &:active,
+    &:focus-visible {
+      outline: 4px solid var(--outlineColor);
+      outline-offset: -1px;
+    }
+
+    .icon {
+      width: auto;
+      height: 5rem;
+      margin-right: .5rem;
     }
   }
 }

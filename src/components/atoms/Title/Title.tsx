@@ -1,11 +1,11 @@
 import { TextProps } from '../../../models/text'
 import './Title.scss'
 
-function Title({ id, cssClass, text }: TextProps) {
+function Title({ id, text }: TextProps) {
   return (
     <h1
       id={id}
-      className={cssClass}
+      className='title'
       dangerouslySetInnerHTML={{__html: text}}
     ></h1>
   )

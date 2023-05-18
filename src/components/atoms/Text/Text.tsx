@@ -3,9 +3,10 @@ import './Text.scss'
 
 function Text({ text }: TextProps) {  
   return (
-    <div className='text'>
-      <p dangerouslySetInnerHTML={{__html: text}}></p>
-    </div>
+    <div
+      className='text'
+      dangerouslySetInnerHTML={{__html: text}}
+    ></div>
   )
 }
 

@@ -54,7 +54,7 @@ function UserLocated() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title='4/8 Où se situe la majeure partie des utilisateurs&nbsp;?' id='radiogroup' />
+          <Title text='4/8 Où se situe la majeure partie des utilisateurs&nbsp;?' id='radiogroup' />
           <Notebook note={'Le mix énergétique du pays dans lequel se situent vos utilisateurs fait varier l’impact écologique.'} />
           <form className='form' action=''>
             <div

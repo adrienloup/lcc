@@ -18,7 +18,7 @@ function Result() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title={`Voici les impacts du parcours d’un utilisateur sur <br />« ${data.name} »`} />
+          <Title text={`Voici les impacts du parcours d’un utilisateur sur <br />« ${data.name} »`} />
           <Button
             label='Recommencer'
             cssClass='start'

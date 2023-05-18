@@ -54,7 +54,7 @@ function ServerLocated() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title='8/8 Où sont localisés la majeure partie des serveurs&nbsp;?' id='radiogroup' />
+          <Title text='8/8 Où sont localisés la majeure partie des serveurs&nbsp;?' id='radiogroup' />
           <Notebook note={'Le mix énergétique du pays dans lequel se situent les serveurs fait varier l’impact écologique.'} />
           <form className='form' action=''>
             <div

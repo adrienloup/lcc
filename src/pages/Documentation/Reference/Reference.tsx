@@ -12,21 +12,34 @@ function Reference() {
 
   const modelList = (list: {
     label: string;
-    href: string;
+    ariaLabel: string;
+    icon: string;
+    to: string;
   }[]) => list.map((item, index) => (
-    <Button
+    <li
       key={index}
-      label={item.label}
-      href={item.href}
-    />
+      className='item'
+    >
+      <Button
+        cssClass='link'
+        label={item.label}
+        ariaLabel={item.ariaLabel}
+        icon={item.icon}
+        to={item.to}
+      />
+    </li>
   ))
 
   const resourceList = (list: {
     label: string;
     href: string;
   }[]) => list.map((item, index) => (
-    <li key={index}>
+    <li
+      key={index}
+      className='item'
+    >
       <Button
+        cssClass='link'
         label={item.label}
         href={item.href}
       />
@@ -46,34 +59,33 @@ function Reference() {
       >
         <article className='article'>
           <Heading text='Modèle de référence et documentation' />
-          <Text text='@todo' />
-          <Subtitle text='Qu’est-ce que c’est ?' />
-          <Text text='Calculateur de cycle de vie est un outil d’éco-conception et d’Analyse du Cycle de Vie (ACV) pour vous aider à éco-concevoir votre site Web zéro carbone.' />
-          <Subtitle text='Explorez les modèles' />
+          <Text text='<p>Le calculateur de cycle de vie est un outil d’éco-conception et d’Analyse du Cycle de Vie (ACV) pour vous aider à éco-concevoir votre site Web zéro carbone.</p>' />
+          <Subtitle text='Les modèles de référence' />
+          <Text text='Explorez les modèles' />
           <List
-            cssClass='list'
-            list={modelList(resources[0]['list'])}
+            cssClass='models'
+            list={modelList([
+              {label: 'Énergie primaire', ariaLabel: 'Afficher l’explication sur l’énergie primaire', icon: 'energy', to: '/lcc/documentation/energie-primaire'},
+              {label: 'Gaz à effet de serre', ariaLabel: 'Afficher l’explication sur le gaz à effet de serre', icon: 'cloud', to: '/lcc/documentation/gaz-a-effet-de-serre'},
+              {label: 'Matières premières', ariaLabel: 'Afficher l’explication sur les matières premières', icon: 'materials', to: '/lcc/documentation/matieres-premieres'},
+              {label: 'Eau', ariaLabel: 'Afficher l’explication sur l’eau', icon: 'watter', to: '/lcc/documentation/eau'}
+            ])}
           />
           <Subtitle text='Documentation générale' />
           <List
-            tag={true}
-            cssClass='list'
+            cssClass='resources'
             list={resourceList(resources[0]['list'])}
           />
           <Subtitle text='Impacts du numérique' />
           <List
-            tag={true}
-            cssClass='list'
+            cssClass='resources'
             list={resourceList(resources[1]['list'])}
           />
           <Subtitle text='Outils d’audit' />
           <List
-            tag={true}
-            cssClass='list'
+            cssClass='resources'
             list={resourceList(resources[2]['list'])}
           />
-          <Subtitle text='Comment intégrer ce simulateur dans votre site ?' />
-          <Text text='Calculateur de cycle de vie est un outil d’éco-conception et d’Analyse du Cycle de Vie (ACV) pour vous aider à éco-concevoir votre site Web zéro carbone.' />
         </article>
       </main>
       <Footer />

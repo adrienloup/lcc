@@ -28,7 +28,7 @@ function Duration() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title='3/8 Quel est le temps passé en moyenne par utilisateur&nbsp;?' />
+          <Title text='3/8 Quel est le temps passé en moyenne par utilisateur&nbsp;?' />
           <Notebook note={'Le temps que les utilisateurs passent sur votre service numérique permet de connaître la quantité de teminaux, équipements réseau, serveur nécessaire pour servir, transiter et consulter les contenus ou les services que vous délivrez.'} />
           <form className='form' action=''>
             <label htmlFor='duration'>{value} {value > 1 ? 'minutes' : 'minute'}</label>

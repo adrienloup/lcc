@@ -1,9 +1,8 @@
 import { ListProps } from '../../../models/list'
 import './List.scss'
 
-function List({ tag, cssClass, list }: ListProps) {
-  const Tag = (tag) ? 'ul' : 'div';
-  return <Tag className={cssClass}>{list}</Tag>
+function List({ cssClass, list }: ListProps) {
+  return <ul className={cssClass}>{list}</ul>
 }
 
 export default List

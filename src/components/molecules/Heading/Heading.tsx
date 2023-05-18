@@ -6,8 +6,8 @@ import './Heading.scss'
 function Heading({ text }: TextProps) {
   return (
     <div className='heading'>
-      <Navigation cssClass='heading_navigation' />
-      <Title cssClass='heading_title' text={text} />
+      <Navigation cssClass='navigation' />
+      <Title text={text} />
     </div>
   )
 }

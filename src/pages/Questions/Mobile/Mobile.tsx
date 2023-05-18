@@ -28,7 +28,7 @@ function Mobile() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title='5/8 Quelle est la proportion d’utilisateurs en mobile&nbsp;?' />
+          <Title text='5/8 Quelle est la proportion d’utilisateurs en mobile&nbsp;?' />
           <Notebook note={'Les conditions d’utilisation de votre service numérique, en mobilité ou au bureau, ont des impacts bien différents.'} />
           <form className='form' action=''>
             <label htmlFor='mobile'>{value} %</label>

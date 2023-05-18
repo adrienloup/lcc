@@ -34,7 +34,7 @@ function Server() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title='7/8 Quel est le nombre de serveurs utilisés&nbsp;?' />
+          <Title text='7/8 Quel est le nombre de serveurs utilisés&nbsp;?' />
           <Notebook note={'Calculé à partir d’un PUE (Power Usage Effectiveness) moyen d’un serveur (soit 1,8). Si vous avez opté pour un hébergement « green », vous serez meilleur que la moyenne du marché sur ce paramètre. Compter les serveurs de production, staging, review, CDN, etc...'} />
           <form className='form' action=''>
             <label htmlFor='serveur'>{value} {value > 1 ? 'serveurs' : 'serveur'}</label>

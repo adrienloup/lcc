@@ -33,7 +33,7 @@ function Name() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title='1/8 De quel site Web mesure-t-on l’impact&nbsp;?' />
+          <Title text='1/8 De quel site Web mesure-t-on l’impact&nbsp;?' />
           <Notebook note={'L’éco-conception part toujours d’un besoin utilisateur clairement identifié et dont le service numérique cherche à apporter une solution.'} />
           <form className='form' action=''>
             <label htmlFor='name'>Nom du site Web</label>

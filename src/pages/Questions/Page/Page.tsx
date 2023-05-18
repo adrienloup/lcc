@@ -34,7 +34,7 @@ function Page() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title='6/8 Quel est le nombre de pages consultées&nbsp;?' />
+          <Title text='6/8 Quel est le nombre de pages consultées&nbsp;?' />
           <Notebook note={'Le parcours utilisateur, après l’identification du besoin utilisateurs, est le deuxième point crutial en éco-conception. Plus le parcours, entre l’utilisateur et le contenu ou le service pour lequel il est venu, est plus faible réduit l’impact écologique. En 2021, le poids moyen d’une page web est de 2,1Mo (contre 0,013Mo en 1995).'} />
           <form className='form' action=''>
             <label htmlFor='page'>{value} {value > 1 ? 'pages' : 'page'}</label>

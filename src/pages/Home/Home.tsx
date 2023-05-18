@@ -15,14 +15,21 @@ function Home() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title='Quel est l’impact de votre site Web sur la planète&nbsp;?' />
+          <div className='heading'>
+            <Title text='Quel est l’impact de votre site Web<br />sur la planète&nbsp;?' />
+          </div>
           <Text text='<p>L’Analyse du Cycle de Vie (ACV), vous aide à éco-concevoir votre site Web zéro carbone.</p><p>Votre résultat évolue à chaque nouvelle réponse&nbsp;!</p><p>Chaque calcul est sauvegardé dans votre navigateur Web.<br />Vous êtes le seul à y avoir accès.</p>' />
-          <Button
-            label='Je démarre'
-            cssClass='start'
-            ariaLabel='Je démarre le calcul'
-            to='/lcc/question/site-web'
-          />
+          <nav
+            className='wrapper'
+            role='navigation'
+          >
+            <Button
+              label='Je démarre !'
+              cssClass='start'
+              ariaLabel='Je démarre le calcul'
+              to='/lcc/question/site-web'
+            />
+          </nav>
         </article>
       </main>
       <Footer />

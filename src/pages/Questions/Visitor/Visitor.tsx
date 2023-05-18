@@ -34,7 +34,7 @@ function Visitor() {
       >
         <Scorebar />
         <article className='article'>
-          <Title title='2/8 Quel est le nombre de visiteurs par mois&nbsp;?' />
+          <Title text='2/8 Quel est le nombre de visiteurs par mois&nbsp;?' />
           <Notebook note={'Le nombre de visiteurs par mois permet de connaître la quantité de teminaux utilisateur, équipements réseau, serveur nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette info dans votre outil Google Analytics ou équivalent.'} />
           <form className='form' action=''>
             <label htmlFor='visitor'>{value} visiteurs</label>

@@ -1,12 +1,11 @@
 .heading {
-  display: inline-block;
   margin-bottom: 2rem;
   background: linear-gradient(60deg, var(--darktestColor) 0%, var(--darkColor) 100%);
-  padding: 1.25rem 1.5rem 1rem;
+  padding: 1rem 1.5rem;
   border-radius: .25rem;
 
-  &_navigation {
-    margin-bottom: .75rem;
+  .navigation {
+    margin-bottom: 1rem;
   
     ul {
       display: flex;
@@ -39,10 +38,5 @@
         background-color: var(--neutralColor);
       }
     }
-  }
-
-  &_title {
-    font-family: var(--fontButton);
-    color: var(--neutralColor);
   }
 }
