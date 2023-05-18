@@ -1,23 +1,14 @@
 :root {
   --fontText: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --fontButton: Futura, "Trebuchet MS", Arial, sans-serif;
-  --neutralColor: #fff;
-  --darktestColor: #32337b;
-  --darkColor: #595baa;
-  --lightColor: #7d7eca;
-  --lightestColor: #f1f1f9;
+  --neutralColor: rgb(255, 255, 255);
+  --darktestColor: rgb(50, 51, 123);
+  --darkColor: rgb(89, 91, 170);
+  --darkterColor: rgb(179, 0, 255);
+  --lightestColor: rgb(241, 241, 249);
+  --lightColor: rgb(125, 126, 202);
   --lighterColor: rgba(255, 255, 255, .9);
-  --alertColor: #ff6a00;
+  --outlineColor: rgb(255, 106, 0);
   --ease: cubic-bezier(.43, .195, .02, 1);
-
-  background-color: var(--neutralColor);
-  font-family: var(--fontText);
-  color-scheme: light dark;
-  font-synthesis: none;
-  color: var(--darktestColor);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
