@@ -1,3 +1,3 @@
 export interface NotebookProps {
-  label: string;
+  note: string;
 }
