@@ -1,4 +1,4 @@
-import Notebook from '../../components/molecules/Notebook/Notebook'
+import Scorebar from '../../components/molecules/Scorebar/Scorebar'
 import Header from '../../components/organisms/Header/Header'
 import Footer from '../../components/organisms/Footer/Footer'
 import Button from '../../components/molecules/Button/Button'
@@ -13,17 +13,17 @@ function Home() {
         className='main'
         role='main'
       >
-        <div className='top'>
-          <Title label='Quel est l’impact de votre site web sur la planète&nbsp;?' />
-          <Notebook label='tutu' />
-        </div>
-        <Text label='<p>Obtenez une estimation de votre empreinte carbone de consommation. Chaque calcul que vous faite est sauvegardé dans votre navigateur Web. Vous êtes le seul à y avoir accès.</p>' />
-        <Button
-          label='Démarrer'
-          cssClass='start'
-          ariaLabel='Démarrer le calculateur de cycle de vie'
-          to='/lcc/question/quel-parcours'
-        />
+        <Scorebar />
+        <article className='article'>
+          <Title title='Quel est l’impact de votre site Web sur la planète&nbsp;?' />
+          <Text text='<p>L’Analyse du Cycle de Vie (ACV), vous aide à éco-concevoir votre site Web zéro carbone.</p><p>Votre résultat évolue à chaque nouvelle réponse&nbsp;!</p><p>Chaque calcul est sauvegardé dans votre navigateur Web.<br />Vous êtes le seul à y avoir accès.</p>' />
+          <Button
+            label='Je démarre'
+            cssClass='start'
+            ariaLabel='Je démarre le calcul'
+            to='/lcc/question/site-web'
+          />
+        </article>
       </main>
       <Footer />
     </div>
