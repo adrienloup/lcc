@@ -1,0 +1,16 @@
+{
+  "models" : [ 
+    {
+      "label" : "Énergie primaire", 
+      "ariaLabel" : "Afficher l’explication sur l’énergie primaire",
+      "icon": "energy",
+      "to": "/lcc/documentation/energie-primaire"
+    },
+    {
+      "label" : "Gaz à effet de serre", 
+      "ariaLabel" : "Afficher l’explication sur le gaz à effet de serre",
+      "icon": "cloud",
+      "to": "/lcc/documentation/gaz-a-effet-de-serre"
+    }
+  ] 
+}
