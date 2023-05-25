@@ -13,11 +13,15 @@ import ServerLocated from './pages/Questions/ServerLocated/ServerLocated'
 import Result from './pages/Result/Result'
 import Reference from './pages/Documentation/Reference/Reference'
 import GreenhouseGas from './pages/Documentation/GreenhouseGas/GreenhouseGas'
+import Materials from './pages/Documentation/Materials/Materials'
+import Watter from './pages/Documentation/Watter/Watter'
+import PrimaryEnergy from './pages/Documentation/PrimaryEnergy/PrimaryEnergy'
+import Resources from './pages/Documentation/Resources/Resources'
 
 const getData = (): any => {
   const { data } = useContext(DataContext)
   const localData = localStorage.getItem('lcc-data')
-  return data || JSON.parse(localData || '{}')
+  return localData ? JSON.parse(localData) : data
 }
 
 function App() {
@@ -71,12 +75,28 @@ function App() {
             element={<Result />}
           />
           <Route
-            path='/lcc/documentation/reference'
+            path='/lcc/documentation/modeles-de-reference'
             element={<Reference />}
           />
           <Route
             path='/lcc/documentation/gaz-a-effet-de-serre'
             element={<GreenhouseGas />}
+          />
+          <Route
+            path='/lcc/documentation/matieres-premieres'
+            element={<Materials />}
+          />
+          <Route
+            path='/lcc/documentation/eau'
+            element={<Watter />}
+          />
+          <Route
+            path='/lcc/documentation/energie-primaire'
+            element={<PrimaryEnergy />}
+          />
+          <Route
+            path='/lcc/documentation/ressources'
+            element={<Resources />}
           />
         </Routes>
       </BrowserRouter>
