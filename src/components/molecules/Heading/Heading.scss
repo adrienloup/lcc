@@ -5,14 +5,15 @@
   border-radius: .25rem;
 
   .navigation {
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
   
     ul {
       display: flex;
       list-style-type: none;
     }
   
-    li:first-of-type {
+    li:nth-child(1),
+    li:nth-child(2) {
       padding-right: .5rem;
 
       &::after {
@@ -26,6 +27,7 @@
     a {
       position: relative;
       text-decoration: none;
+      font-size: 1rem;
       color: var(--neutralColor);
   
       &::after {
@@ -36,6 +38,12 @@
         width: 100%;
         height: 1px;
         background-color: var(--neutralColor);
+      }
+
+      &:active,
+      &:focus-visible {
+        outline: 4px solid var(--outlineColor);
+        outline-offset: 4px;
       }
     }
   }
