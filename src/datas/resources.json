@@ -100,6 +100,14 @@
         {
           "label" : "Nega Octet Base de donnée", 
           "href" : "https://negaoctet.org/#Donnees"
+        },
+        {
+          "label" : "The original Website Carbon calculator", 
+          "href" : "https://www.websitecarbon.com/"
+        },
+        {
+          "label" : "EcoIndex.fr: Testez un site", 
+          "href" : "https://www.ecoindex.fr/"
         }
       ]
     }
