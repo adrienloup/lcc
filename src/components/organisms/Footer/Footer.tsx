@@ -24,8 +24,8 @@ function Footer() {
             <Button
               cssClass='link'
               icon='documentation'
-              ariaLabel='Afficher la documentation'
-              to='/lcc/documentation/reference'
+              ariaLabel='Afficher les modèles de référence'
+              to='/lcc/documentation/modeles-de-reference'
             />
           </li>
           <li>
