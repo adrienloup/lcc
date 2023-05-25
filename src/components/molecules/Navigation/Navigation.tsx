@@ -15,8 +15,14 @@ function Navigation({ cssClass }: { cssClass: string }) {
         </li>
         <li>
           <Button
-            label='Le modèle de référence'
-            to='/lcc/documentation/reference'
+            label='Les modèles de référence'
+            to='/lcc/documentation/modeles-de-reference'
+          />
+        </li>
+        <li>
+          <Button
+            label='La documentation'
+            to='/lcc/documentation/ressources'
           />
         </li>
       </ul>
