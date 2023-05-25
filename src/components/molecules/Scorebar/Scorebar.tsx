@@ -31,16 +31,16 @@ function Scorebar() {
       <Button
         cssClass='score-by-year'
         icon='cloud'
-        label={`<strong>${gasScore}&nbsp;tonnes</strong>de CO2-eq / an`}
-        ariaLabel={`Afficher l’explication du score de ${gasScore} tonnes de CO2-eq par an`}
+        label={`<strong>${gasScore}&nbsp;tonnes</strong>de CO2-eq par année`}
+        ariaLabel={`Afficher l’explication du score de ${gasScore} tonnes de CO2-eq par année`}
         to='/lcc/documentation/gaz-a-effet-de-serre'
       />
       <Button
         cssClass='score-by-user'
         icon='glass'
-        label={`<strong>${glassScore}&nbsp;verres</strong>d’eau / utilisateur`}
+        label={`<strong>${glassScore}&nbsp;verres</strong>d’eau par utilisateur`}
         ariaLabel={`Afficher l’explication du score de ${glassScore} verres d’eau par utilisateur`}
-        to='/lcc/'
+        to='/lcc/documentation/eau'
       />
     </nav>
   )
