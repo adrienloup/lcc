@@ -32,8 +32,6 @@
 
 .start {
   position: relative;
-  display: inline-block;
-  margin: 0 auto;
   padding: .35rem;
   animation: Move 4s infinite alternate;
   background: linear-gradient(60deg,#5f86f2,#a65ff2,#f25fd0,#f25f61,#f2cb5f,#abf25f,#5ff281,#5ff2f0);
@@ -41,10 +39,6 @@
   background-size: 300% 300%;
   border-radius: 1.5rem;
   border: 0;
-  text-transform: uppercase;
-  line-height: 1.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
   color: var(--neutralColor);
   text-decoration: none;
   cursor: pointer;
@@ -60,20 +54,19 @@
     padding: 1.5rem;
     border-radius: 1.25rem;
     background-color: var(--darktestColor);
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
 
 .button {
   position: relative;
-  display: inline-block;
-  margin: 0 auto;
   background-color: var(--darktestColor);
   border-radius: 1rem;
   border: 0;
-  text-transform: uppercase;
-  line-height: 1.15rem;
-  font-size: 1.15rem;
-  font-weight: bold;
   color: var(--neutralColor);
   text-decoration: none;
   cursor: pointer;
@@ -87,6 +80,11 @@
   .label {
     display: block;
     padding: 1.2rem;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    line-height: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: bold;
   }
 
   & + & {
