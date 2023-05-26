@@ -3,7 +3,7 @@ import { useContext, useState } from 'react'
 import { DataContext } from './contexts/data'
 import Home from './pages/Home/Home'
 import Name from './pages/Questions/Name/Name'
-import Visitor from './pages/Questions/Visitor/Visitor'
+import User from './pages/Questions/User/User'
 import Duration from './pages/Questions/Duration/Duration'
 import UserLocated from './pages/Questions/UserLocated/UserLocated'
 import Mobile from './pages/Questions/Mobile/Mobile'
@@ -17,6 +17,7 @@ import Materials from './pages/Documentation/Materials/Materials'
 import Watter from './pages/Documentation/Watter/Watter'
 import PrimaryEnergy from './pages/Documentation/PrimaryEnergy/PrimaryEnergy'
 import Resources from './pages/Documentation/Resources/Resources'
+import A11y from './pages/A11y/A11y'
 
 const getData = (): any => {
   const { data } = useContext(DataContext)
@@ -44,7 +45,7 @@ function App() {
           />
           <Route
             path='/lcc/question/nombre-visiteurs'
-            element={<Visitor />}
+            element={<User />}
           />
           <Route
             path='/lcc/question/temps-moyen'
@@ -97,6 +98,10 @@ function App() {
           <Route
             path='/lcc/documentation/ressources'
             element={<Resources />}
+          />
+          <Route
+            path='/lcc/declaration-accessibilite-numerique'
+            element={<A11y />}
           />
         </Routes>
       </BrowserRouter>
