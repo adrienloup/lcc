@@ -6,8 +6,8 @@
   display: flex;
   padding: 1rem;
 
-  .score-by-year,
-  .score-by-user {
+  .score-co2-eq,
+  .score-car {
     position: relative;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@
     }
   }
 
-  .score-by-year {
+  .score-co2-eq {
     background-color: var(--darktestColor);
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;
@@ -38,7 +38,7 @@
     }
   }
 
-  .score-by-user {
+  .score-car {
     background-color: var(--darkColor);
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
