@@ -5,6 +5,9 @@
   padding: .5rem 1.75rem .75rem 1rem;
   background-color: var(--lightestColor);
   border-radius: .25rem;
+  transform-origin: 50% 0;
+  animation: .55s Appear var(--ease);
+  will-change: transform, opacity;
 
   .icon {
     width: auto;
