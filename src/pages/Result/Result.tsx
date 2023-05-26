@@ -18,13 +18,17 @@ function Result() {
       >
         <Scorebar />
         <article className='article'>
-          <Title text={`Voici les impacts du parcours d’un utilisateur sur <br />« ${data.name} »`} />
-          <Button
-            label='Recommencer'
-            cssClass='start'
-            ariaLabel='Recommencer le calcul'
-            to='/lcc/question/site-web'
-          />
+          <div className='heading'>
+            <Title text={`Voici les impacts d’un utilisateur sur le site Web «&nbsp;${data.name}&nbsp;»`} />
+          </div>
+          <div className='footing'>
+            <Button
+              label='Je recommence'
+              cssClass='start'
+              ariaLabel='Recommencez le calcul'
+              to='/lcc/question/site-web'
+            />
+          </div>
         </article>
       </main>
       <Footer />
