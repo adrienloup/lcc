@@ -7,6 +7,7 @@ import Scorebar from '../../../components/molecules/Scorebar/Scorebar'
 import Header from '../../../components/organisms/Header/Header'
 import Footer from '../../../components/organisms/Footer/Footer'
 import Button from '../../../components/molecules/Button/Button'
+import Back from '../../../components/molecules/Back/Back'
 import Title from '../../../components/atoms/Title/Title'
 
 function ServerLocated() {
@@ -54,27 +55,27 @@ function ServerLocated() {
       >
         <Scorebar />
         <article className='article'>
-          <Title text='8/8 Où sont localisés la majeure partie des serveurs&nbsp;?' id='radiogroup' />
+          <div className='heading'>
+            <Title text='8/8 Où sont localisés la majeure partie des serveurs&nbsp;?' id='radiogroup' />
+          </div>
           <Notebook note={'Le mix énergétique du pays dans lequel se situent les serveurs fait varier l’impact écologique.'} />
-          <form className='form' action=''>
-            <div
-              role='radiogroup'
-              aria-labelledby='radiogroup'
-            >{InputList(countries)}</div>
-          </form>
+          <div className='frame'>
+            <form className='form' action=''>
+              <div
+                role='radiogroup'
+                aria-labelledby='radiogroup'
+              >{InputList(countries)}</div>
+            </form>
+          </div>
           <nav
-            className='navigation'
+            className='footing'
             role='navigation'
           >
+            <Back />
             <Button
-              label='Retour'
+              label='Je continue'
               cssClass='button'
-              ariaLabel={'Retour à la question précédente'}
-              click={() => navigate(-1)}
-            />
-            <Button
-              label='Voir mon résultat'
-              cssClass='button'
+              ariaLabel='Je continue le calcul'
               click={() => handleClick()}
             />
           </nav>
