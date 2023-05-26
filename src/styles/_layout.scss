@@ -21,21 +21,12 @@
 .article {
   position: relative;
   z-index: 1;
-  max-width: 51rem;
+  max-width: 55rem;
   width: 100%;
   padding: 1rem;
-  transform-origin: 0 0;
+  transform-origin: 50% 0;
   animation: .25s Appear var(--ease);
   will-change: transform, opacity;
-
-  .wrapper {
-    display: flex;
-    margin-top: 2rem;
-  }
-}
-
-.form {
-  margin: 2.5rem 0;
 }
 
 .frame {
@@ -44,7 +35,21 @@
   background-color: var(--lightestColor);
 }
 
+.footing {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  transform-origin: 50% 0;
+  animation: .55s Appear var(--ease);
+  will-change: transform, opacity;
+}
+
+.form {
+  // margin: 2.5rem 0;
+}
+
 .resources {
+  list-style: none;
 
   .item {
     padding-bottom: .5rem;
@@ -77,6 +82,10 @@
 .models {
   display: flex;
   flex-flow: row wrap;
+  list-style: none;
+  transform-origin: 50% 0;
+  animation: .55s Appear var(--ease);
+  will-change: transform, opacity;
 
   .item {
     padding: 1rem 1rem 0 0;
@@ -89,8 +98,9 @@
     background-color: var(--darkColor);
     border-radius: .25rem;
     text-decoration: none;
+    line-height: 1.25rem;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--neutralColor);
   
     &:active,
