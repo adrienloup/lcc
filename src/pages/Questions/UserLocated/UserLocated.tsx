@@ -7,6 +7,7 @@ import Scorebar from '../../../components/molecules/Scorebar/Scorebar'
 import Header from '../../../components/organisms/Header/Header'
 import Footer from '../../../components/organisms/Footer/Footer'
 import Button from '../../../components/molecules/Button/Button'
+import Back from '../../../components/molecules/Back/Back'
 import Title from '../../../components/atoms/Title/Title'
 
 function UserLocated() {
@@ -54,28 +55,27 @@ function UserLocated() {
       >
         <Scorebar />
         <article className='article'>
-          <Title text='4/8 Où se situe la majeure partie des utilisateurs&nbsp;?' id='radiogroup' />
+          <div className='heading'>
+            <Title text='<span>4/8</span> Où se situe la majeure partie des utilisateurs&nbsp;?' id='radiogroup' />
+          </div>
           <Notebook note={'Le mix énergétique du pays dans lequel se situent vos utilisateurs fait varier l’impact écologique.'} />
-          <form className='form' action=''>
-            <div
-              role='radiogroup'
-              aria-labelledby='radiogroup'
-            >{InputList(countries)}</div>
-          </form>
+          <div className='frame'>
+            <form className='form' action=''>
+              <div
+                role='radiogroup'
+                aria-labelledby='radiogroup'
+              >{InputList(countries)}</div>
+            </form>
+          </div>
           <nav
-            className='navigation'
+            className='footing'
             role='navigation'
           >
+            <Back />
             <Button
-              label='Retour'
+              label='Je continue'
               cssClass='button'
-              ariaLabel={'Retour à la question précédente'}
-              click={() => navigate(-1)}
-            />
-            <Button
-              label='Continuer'
-              cssClass='button'
-              ariaLabel='Continuer le calcul'
+              ariaLabel='Je continue le calcul'
               click={() => handleClick()}
             />
           </nav>
