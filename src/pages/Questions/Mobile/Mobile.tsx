@@ -6,6 +6,7 @@ import Scorebar from '../../../components/molecules/Scorebar/Scorebar'
 import Header from '../../../components/organisms/Header/Header'
 import Footer from '../../../components/organisms/Footer/Footer'
 import Button from '../../../components/molecules/Button/Button'
+import Back from '../../../components/molecules/Back/Back'
 import Title from '../../../components/atoms/Title/Title'
 
 function Mobile() {
@@ -19,6 +20,11 @@ function Mobile() {
     setValue(mobile)
   }
 
+  const handleClick = () => {
+    localStorage.setItem('lcc-data', JSON.stringify(data))
+    navigate('/lcc/question/nombre-pages')
+  }
+
   return (
     <div className='page'>
       <Header />
@@ -28,36 +34,35 @@ function Mobile() {
       >
         <Scorebar />
         <article className='article'>
-          <Title text='5/8 Quelle est la proportion d’utilisateurs en mobile&nbsp;?' />
+          <div className='heading'>
+            <Title text='<span>5/8</span> Quelle est la proportion d’utilisateurs en mobile&nbsp;?' />
+          </div>
           <Notebook note={'Les conditions d’utilisation de votre service numérique, en mobilité ou au bureau, ont des impacts bien différents.'} />
-          <form className='form' action=''>
-            <label htmlFor='mobile'>{value} %</label>
-            <input
-              id='mobile'
-              type='range'
-              min='1'
-              max='100'
-              step='1'
-              style={{backgroundSize: `${(value * 100) / 100}% 100%`}}
-              value={value}
-              onChange={handleChange}
-            />
-          </form>
+          <div className='frame'>
+            <form className='form' action=''>
+              <label htmlFor='mobile'>{value} %</label>
+              <input
+                id='mobile'
+                type='range'
+                min='1'
+                max='100'
+                step='1'
+                style={{backgroundSize: `${(value * 100) / 100}% 100%`}}
+                value={value}
+                onChange={handleChange}
+              />
+            </form>
+          </div>
           <nav
-            className='navigation'
+            className='footing'
             role='navigation'
           >
+            <Back />
             <Button
-              label='Retour'
+              label='Je continue'
               cssClass='button'
-              ariaLabel={'Retour à la question précédente'}
-              click={() => navigate(-1)}
-            />
-            <Button
-              label='Continuer'
-              cssClass='button'
-              ariaLabel='Continuer le calcul'
-              to='/lcc/question/nombre-pages'
+              ariaLabel='Je continue le calcul'
+              click={() => handleClick()}
             />
           </nav>
         </article>
