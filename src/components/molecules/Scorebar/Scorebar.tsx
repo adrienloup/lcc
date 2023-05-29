@@ -43,8 +43,8 @@ function Scorebar() {
       <Button
         cssClass='score-car'
         icon='car'
-        label={`<strong>${carScore}&nbsp;mille</strong> voitures / année`}
-        ariaLabel={`Afficher l’explication du score de ${carScore} mille voitures par année`}
+        label={`<strong>${carScore}&nbsp;000</strong> voitures / année`}
+        ariaLabel={`Afficher l’explication du score de ${carScore} 000 voitures par année`}
         to='/lcc/documentation/gaz-a-effet-de-serre'
       />
     </nav>
