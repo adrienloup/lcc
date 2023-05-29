@@ -33,26 +33,30 @@ function Name() {
       >
         <Scorebar />
         <article className='article'>
-          <Title text='1/8 De quel site Web mesure-t-on l’impact&nbsp;?' />
+          <div className='heading'>
+            <Title text='<span>1/8</span> De quel site Web mesure-t-on l’impact&nbsp;?' />
+          </div>
           <Notebook note={'L’éco-conception part toujours d’un besoin utilisateur clairement identifié et dont le service numérique cherche à apporter une solution.'} />
-          <form className='form' action=''>
-            <label htmlFor='name'>Nom du site Web</label>
-            <input
-              id='name'
-              type='text'
-              maxLength={15}
-              value={value}
-              onChange={handleChange}
-            />
-          </form>
+          <div className='frame'>
+            <form className='form' action=''>
+              <label htmlFor='name'>Nom du site Web</label>
+              <input
+                id='name'
+                type='text'
+                maxLength={15}
+                value={value}
+                onChange={handleChange}
+              />
+            </form>
+          </div>
           <nav
-            className='navigation'
+            className='footing'
             role='navigation'
           >
             <Button
               label='Je continue'
               cssClass='button'
-              ariaLabel='Je ontinue le calcul'
+              ariaLabel='Je continue le calcul'
               click={() => handleClick()}
             />
           </nav>
