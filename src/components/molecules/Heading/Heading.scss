@@ -1,15 +1,24 @@
 .heading {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   background: linear-gradient(60deg, var(--darktestColor) 0%, var(--darkColor) 100%);
-  padding: 1rem 1.5rem;
+  padding: .75rem 1.5rem 1rem;
   border-radius: .25rem;
-
+  transform-origin: 50% 0;
+  animation: .35s Appear var(--ease);
+  will-change: transform, opacity;
+  
   .navigation {
-    margin-bottom: .75rem;
+    margin: .25rem 0 .75rem;
   
     ul {
       display: flex;
       list-style-type: none;
+      flex-flow: row wrap;
+      list-style-type: none;
+    }
+
+    li {
+      line-height: 1.5rem;
     }
   
     li:nth-child(1),
