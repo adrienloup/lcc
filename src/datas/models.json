@@ -1,6 +1,18 @@
 {
   "models" : [ 
     {
+      "label" : "Matières premières", 
+      "ariaLabel" : "Afficher l’explication sur les matières premières",
+      "icon": "materials",
+      "to": "/lcc/documentation/matieres-premieres"
+    },
+    {
+      "label": "Eau",
+      "ariaLabel": "Afficher l’explication sur l’eau",
+      "icon": "watter",
+      "to": "/lcc/documentation/eau"
+    },
+    {
       "label" : "Énergie primaire", 
       "ariaLabel" : "Afficher l’explication sur l’énergie primaire",
       "icon": "energy",
