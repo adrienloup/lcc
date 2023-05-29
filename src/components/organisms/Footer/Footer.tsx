@@ -17,7 +17,7 @@ function Footer() {
               cssClass='a11y'
               label='Accessibilité : totalement conforme'
               ariaLabel='Afficher la déclaration d’accessibilité'
-              to='/lcc/declaration-accessibilité'
+              to='/lcc/declaration-accessibilite-numerique'
             />
           </li>
           <li>
