@@ -48,16 +48,20 @@ function PrimaryEnergy() {
       >
         <article className='article'>
           <Heading text='Énergie primaire' />
-          <Text text='<p>Voici votre score provisoire, il évolue à chaque nouvelle réponse !</p>' />
+          <div className='frame'>
+            <Text text='<p>Voici votre score provisoire, il évolue à chaque nouvelle réponse !</p>' />
+          </div>
           <Score text={`${energyScore} kWh d’énergie primaire`} icon='energy' />
           <Score text={`Électricité de ${houseScore} maisons par année`} icon='house' />
           <Score text={`1 micro-ondes pendant ${plugScore} secondes par utilisateur`} icon='plug' />
-          <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
-          <Text text='<p>Si vous êtes développeur/euse vous trouverez ci-dessous des informations techniques utiles pour l’intégration de cette règle dans votre application.</p>' />
-          <Subtitle text='Informations techniques' />
-          <Text text='<p>Si vous êtes développeur/euse vous trouverez ci-dessous des informations techniques utiles pour l’intégration de cette règle dans votre application.</p>' />
-          <Subtitle text='Informations techniques' />
-          <Text text='<p>Si vous êtes développeur/euse vous trouverez ci-dessous des informations techniques utiles pour l’intégration de cette règle dans votre application.</p>' />
+          <div className='frame'>
+            <Subtitle text='Impacts écologiques par année' />
+            <Text text={`<p>Cela représente ${energyScore} kWh d’énergie primaire. Comme si chaque année, nous consommons l’équivalent de ${houseScore} maisons françaises en électricité et que chaque utilisateur faisait fonctionner 1 micro-ondes pendant ${plugScore} secondes.</p>`} />
+            <Subtitle text='Informations techniques' />
+            <Text text='<p>Permet d’unifier, l’énergie produite par un barrage hydraulique, une éolienne ou une centrale à Charbon.</p>' />
+            <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
+            <Text text='<p>@TODO</p>' />
+          </div>
           <div className='footing'>
             <Back />
           </div>
