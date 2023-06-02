@@ -11,14 +11,32 @@
     border-radius: .25rem;
     animation: .25s Appear var(--ease);
     will-change: transform, opacity;
-  }
 
-  p {
-    text-align: left;
-    line-height: 1.5rem;
-    font-size: 1.15rem;
-    font-weight: bold;
-    color: var(--darkterColor);
+    button {
+      margin: .75rem 0 0 auto;
+      padding: .5rem .75rem;
+      background-color: var(--darkterColor);
+      border-radius: .25rem;
+      border: 0;
+      line-height: 1rem;
+      font-size: 1rem;
+      color: var(--neutralColor);
+      cursor: pointer;
+  
+      &:active,
+      &:focus-visible {
+        outline: 4px solid var(--outlineColor);
+        outline-offset: -1px;
+      }
+    }
+  
+    p {
+      text-align: left;
+      line-height: 1.5rem;
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: var(--darkterColor);
+    }
   }
 
   &.active div {
