@@ -20,7 +20,9 @@ function A11y() {
           <div className='heading'>
             <Title text='Déclaration d’accessibilité numérique' />
           </div>
-          @TODO
+          <div className='frame'>
+            @TODO
+          </div>
         </article>
       </main>
       <Footer />
