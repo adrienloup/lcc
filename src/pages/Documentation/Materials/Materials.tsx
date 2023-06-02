@@ -60,7 +60,7 @@ function Materials() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>Parce qu’1 KWh produit en Chine par une centrale à charbon émet 1Kg de CO2-eq, soit 10x plus qu’en France par une centrale nucléaire et 5x plus en moyenne qu’un pays de l’OCDE.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
-            <Text text='<p>@TODO</p>' />
+            <Text text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
             <Back />

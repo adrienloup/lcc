@@ -69,7 +69,7 @@ function GreenhouseGas() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>Il faut extraire 100 fois le poids d’un ordinateur pour le fabriquer.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
-            <Text text='<p>@TODO</p>' />
+            <Text text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
             <Back />

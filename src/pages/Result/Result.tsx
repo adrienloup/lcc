@@ -166,7 +166,7 @@ function Result() {
             <Title text={`Voici les impacts écologique d’un utilisateur sur le site Web «&nbsp;${data.name}&nbsp;»`} />
           </div>
           <div className='frame'>
-            <Subtitle text='Par utilisateur' />
+            <Subtitle text='Équivalence par utilisateur' />
           </div>
           <ul className='results'>
             <li className='item'>
@@ -207,7 +207,7 @@ function Result() {
             </li>
           </ul>
           <div className='frame'>
-            <Subtitle text='Par année' />
+            <Subtitle text='Équivalence par année' />
           </div>
           <ul className='results'>
             <li className='item'>
@@ -232,7 +232,7 @@ function Result() {
               {percents[6] !== 0 && <Percent number={percents[6]} />}
               <Button
                 cssClass='link'
-                label={`Comme si chaque année on creusait pour extraire l’équivalent de ${desktopScore}&nbsp;ordinateurs portables`}
+                label={`Comme si chaque année on creusait pour extraire l’équivce de ${desktopScore}&nbsp;ordinateurs portables`}
                 icon='desktop'
                 to='/lcc/documentation/matieres-premieres'
               />

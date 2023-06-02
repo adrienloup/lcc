@@ -1,12 +1,15 @@
 .percent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   padding: 1rem;
   background-color: var(--lightColor);
   border-top-right-radius: .25rem;
   border-top-left-radius: .25rem;
   text-align: right;
   font-weight: bold;
-  line-height: 1.25rem;
-  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
 
   &.negative {
     color: var(--negativeColor);
@@ -14,5 +17,11 @@
 
   &.positive {
     color: var(--positiveColor);
+  }
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: .5rem;
   }
 }

@@ -60,7 +60,7 @@ function PrimaryEnergy() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>Permet d’unifier, l’énergie produite par un barrage hydraulique, une éolienne ou une centrale à Charbon.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
-            <Text text='<p>@TODO</p>' />
+            <Text text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
             <Back />

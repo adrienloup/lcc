@@ -17,13 +17,6 @@ function Notebook({ note }: NotebookProps) {
       />
       <div>
         <p>{note}</p>
-        <Button
-          label='Fermer les notes'
-          ariaLabel={active ? 'Fermer les notes' : 'Ouvrir les notes'}
-          ariaExpanded={active}
-          tabindex={active ? 0 : -1}
-          click={() => setActive(false)}
-        />
       </div>
     </div>
   )

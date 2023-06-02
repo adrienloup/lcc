@@ -21,7 +21,7 @@ function A11y() {
             <Title text='Déclaration d’accessibilité numérique' />
           </div>
           <div className='frame'>
-            @TODO
+            Information bientôt disponible
           </div>
         </article>
       </main>
