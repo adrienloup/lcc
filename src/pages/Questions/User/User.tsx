@@ -18,7 +18,6 @@ function User() {
     const user = Number(e.target.value)
     setData({ ...data, user: user })
     setValue(user)
-    localStorage.setItem('lcc-data', JSON.stringify(data))
   }
 
   const handleClick = () => {

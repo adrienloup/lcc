@@ -16,7 +16,6 @@ function ServerLocated() {
 
   const handleChange = (e: { target: { value: string } }) => {
     setData({ ...data, serverlocated: e.target.value })
-    localStorage.setItem('lcc-data', JSON.stringify(data))
   }
 
   const handleClick = () => {

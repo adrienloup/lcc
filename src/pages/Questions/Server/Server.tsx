@@ -18,7 +18,6 @@ function Server() {
     const server = Number(e.target.value)
     setData({ ...data, server: server })
     setValue(server)
-    localStorage.setItem('lcc-data', JSON.stringify(data))
   }
 
   const handleClick = () => {

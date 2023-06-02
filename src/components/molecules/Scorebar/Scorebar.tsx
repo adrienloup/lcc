@@ -33,8 +33,8 @@ function Scorebar() {
       <Button
         cssClass='score-co2-eq'
         icon='cloud'
-        label={`<strong>${gasScore}&nbsp;tonnes</strong>de CO2-eq / année`}
-        ariaLabel={`Afficher l’explication du score de ${gasScore} tonnes de CO2-eq par année`}
+        label={`<strong>${(gasScore / 1000).toFixed(2)}&nbsp;tonnes</strong>de CO2-eq / année`}
+        ariaLabel={`Afficher l’explication du score de ${(gasScore / 1000).toFixed(2)} tonnes de CO2-eq par année`}
         to='/lcc/documentation/gaz-a-effet-de-serre'
       />
       <Button

@@ -47,10 +47,10 @@ function Materials() {
           </div>
           <Score text={`${watterScore} litres d’eau`} icon='watter' />
           <Score text={`${showerScore} douches par annnée`} icon='shower' />
-          <Score text={`${glassScore} verres d’eau par utilisateur`} icon='glass' />
+          <Score text={`${(glassScore).toFixed(1)} verres d’eau par utilisateur`} icon='glass' />
           <div className='frame'>
             <Subtitle text='Impacts écologiques par année' />
-            <Text text={`<p>Cela représente ${watterScore} litres d’eau. Comme si chaque année, nous prenons l’équivalent de ${showerScore} douches et que chaque utilisateur consommait l’équivalent de ${glassScore} verre d’eau.</p>`} />
+            <Text text={`<p>Cela représente ${watterScore} litres d’eau. Comme si chaque année, nous prenons l’équivalent de ${showerScore} douches et que chaque utilisateur consommait l’équivalent de ${(glassScore).toFixed(1)} verre d’eau.</p>`} />
             <Subtitle text='Informations techniques' />
             <Text text='<p>On comptabilise la consommation en eau bleue - l’eau consommable par l’homme, en distinction de l’eau verte contenue dans les sols des forêts ou l’eau de mer, toutes deux impropres à la consommation.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />

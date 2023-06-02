@@ -133,6 +133,7 @@
 
   .item {
     display: flex;
+    flex-direction: column;
     align-items: stretch;
     width: calc(50% - .5rem);
     margin-top: 1rem;
@@ -145,6 +146,7 @@
   .link {
     display: flex;
     align-items: center;
+    flex: 1;
     padding: 1.5rem;
     background-color: var(--darkColor);
     border-radius: .25rem;
@@ -173,5 +175,10 @@
       width: 5rem;
       height: 5rem;
     }
+  }
+
+  .percent + .link {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
 }

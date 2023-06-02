@@ -18,7 +18,6 @@ function Page() {
     const page = Number(e.target.value)
     setData({ ...data, page: page })
     setValue(page)
-    localStorage.setItem('lcc-data', JSON.stringify(data))
   }
 
   const handleClick = () => {
