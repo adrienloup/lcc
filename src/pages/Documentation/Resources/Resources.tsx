@@ -38,21 +38,27 @@ function Resources() {
       >
         <article className='article'>
           <Heading text='Les modèles de référence' />
-          <Subtitle text='Documentation générale' />
-          <List
-            cssClass='resources'
-            list={list(resources[0]['list'])}
-          />
-          <Subtitle text='Impacts du numérique' />
-          <List
-            cssClass='resources'
-            list={list(resources[1]['list'])}
-          />
-          <Subtitle text='Outils d’audit' />
-          <List
-            cssClass='resources'
-            list={list(resources[2]['list'])}
-          />
+          <div className='frame'>
+            <Subtitle text='Documentation générale' />
+            <List
+              cssClass='resources'
+              list={list(resources[0]['list'])}
+            />
+          </div>
+          <div className='frame'>
+            <Subtitle text='Impacts du numérique' />
+            <List
+              cssClass='resources'
+              list={list(resources[1]['list'])}
+            />
+          </div>
+          <div className='frame'>
+            <Subtitle text='Outils d’audit' />
+            <List
+              cssClass='resources'
+              list={list(resources[2]['list'])}
+            />
+          </div>
         </article>
       </main>
       <Footer />
