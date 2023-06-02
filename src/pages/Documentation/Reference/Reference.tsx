@@ -43,12 +43,16 @@ function Reference() {
       >
         <article className='article'>
           <Heading text='Les modèles de référence' />
-          <Text text='<p>Le calculateur de cycle de vie évalue l’impact annuelle de votre site Web. L’outil utilise plusieurs métriques : trafic du site Web, intensité énergétique, intensité carbone de l’électricité, source d’énergie utilisée.</p>' />
-          <Subtitle text='Comment l’impact écologique est-il calculé&nbsp;?' />
-          <List
-            cssClass='models'
-            list={list(models)}
-          />
+          <div className='frame'>
+            <Text text='<p>Le calculateur de cycle de vie évalue l’impact annuelle de votre site Web. L’outil utilise plusieurs métriques : trafic du site Web, intensité énergétique, intensité carbone de l’électricité, source d’énergie utilisée.</p>' />
+          </div>
+          <div className='frame'>
+            <Subtitle text='Comment l’impact écologique est-il calculé&nbsp;?' />
+          </div>
+            <List
+              cssClass='models'
+              list={list(models)}
+            />
         </article>
       </main>
       <Footer />
