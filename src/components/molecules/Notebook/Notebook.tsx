@@ -9,21 +9,21 @@ function Notebook({ note }: NotebookProps) {
   return (
     <div className={`notebook${active ? ' active' : ''}`}>
       <Button
-        cssClass='alert'
+        cssClass='info'
         icon='notebook'
         ariaLabel={active ? 'Fermer les notes' : 'Ouvrir les notes'}
         ariaExpanded={active}
         click={() => setActive(active => !active)}
       />
       <div>
+        <p>{note}</p>
         <Button
-          label='Fermer'
+          label='Fermer les notes'
           ariaLabel={active ? 'Fermer les notes' : 'Ouvrir les notes'}
           ariaExpanded={active}
           tabindex={active ? 0 : -1}
           click={() => setActive(false)}
         />
-        <p>{note}</p>
       </div>
     </div>
   )
