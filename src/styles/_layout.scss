@@ -1,3 +1,5 @@
+@import '_variables.scss';
+
 #lcc {
   position: relative;
 }
@@ -49,11 +51,8 @@
   will-change: transform, opacity;
 }
 
-.form {
-  // margin: 2.5rem 0;
-}
-
 .resources {
+  margin-top: .75rem;
   list-style: none;
 
   .item {
@@ -118,6 +117,61 @@
       width: auto;
       height: 4rem;
       margin-right: .75rem;
+    }
+  }
+}
+
+.results {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  list-style: none;
+  transform-origin: 50% 0;
+  animation: .55s Appear var(--ease);
+  will-change: transform, opacity;
+
+  .item {
+    display: flex;
+    align-items: stretch;
+    width: calc(50% - .5rem);
+    margin-top: 1rem;
+
+    @media screen and (max-width: $tablet-portrait) {
+      width: 100%;
+    }
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--darkColor);
+    border-radius: .25rem;
+    text-decoration: none;
+    line-height: 1.75rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--neutralColor);
+  
+    @media screen and (max-width: $tablet-portrait) {
+      width: 100%;
+    }
+
+    &:active,
+    &:focus-visible {
+      outline: 4px solid var(--outlineColor);
+      outline-offset: -1px;
+    }
+
+    .label {
+      flex: 1;
+      margin-left: 1.25rem;
+    }
+
+    .icon {
+      width: 5rem;
+      height: 5rem;
     }
   }
 }
