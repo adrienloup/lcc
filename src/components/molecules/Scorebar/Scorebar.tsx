@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { DataContext } from '../../../contexts/data'
 import gas from '../../../utils/gas'
-import car from '../../../utils/car'
+import energy from '../../../utils/energy'
 import Button from '../Button/Button'
 import './Scorebar.scss'
 
@@ -18,14 +18,11 @@ function Scorebar() {
     data.serverlocated
   )
 
-  const carScore = car(
+  const energyScore = energy(
     data.user,
     data.duration,
-    data.userlocated,
     data.mobile,
-    data.page,
-    data.server,
-    data.serverlocated
+    data.server
   )
   
   return (
@@ -42,10 +39,10 @@ function Scorebar() {
       />
       <Button
         cssClass='score-car'
-        icon='car'
-        label={`<strong>${carScore}&nbsp;000</strong> voitures / année`}
-        ariaLabel={`Afficher l’explication du score de ${carScore} 000 voitures par année`}
-        to='/lcc/documentation/gaz-a-effet-de-serre'
+        icon='energy'
+        label={`<strong>${(energyScore / 1000).toFixed(2)}&nbsp;MWh</strong> d’énergie primaire / année`}
+        ariaLabel={`Afficher l’explication du score de ${(energyScore / 1000).toFixed(2)} MWh d’énergie primaire par année`}
+        to='/lcc/documentation/energie-primaire'
       />
     </nav>
   )
