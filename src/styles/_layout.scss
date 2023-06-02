@@ -30,9 +30,14 @@
 }
 
 .frame {
+  margin-top: 1rem;
   padding: 1rem 1.5rem;
   border-radius: .25rem;
   background-color: var(--lightestColor);
+
+  .subtitle + .text {
+    margin: .5rem 0 1.5rem;
+  }
 }
 
 .footing {
