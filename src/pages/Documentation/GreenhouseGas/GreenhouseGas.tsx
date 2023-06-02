@@ -57,17 +57,20 @@ function GreenhouseGas() {
       >
         <article className='article'>
           <Heading text='Gaz à effet de serre' />
-          <Text text='<p>Voici votre score provisoire, il évolue à chaque nouvelle réponse !</p>' />
+          <div className='frame'>
+            <Text text='<p>Voici votre score provisoire, il évolue à chaque nouvelle réponse !</p>' />
+          </div>
           <Score text={`${gasScore} tonnes de CO2-eq`} icon='cloud' />
           <Score text={`${carScore} voitures par année`} icon='car' />
           <Score text={`${meterScore} mètres en voiture par utilisateur`} icon='map' />
-          <Subtitle text='Impacts écologiques par année' />
-          <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
-          <Text text='<p>Si vous êtes développeur/euse vous trouverez ci-dessous des informations techniques utiles pour l’intégration de cette règle dans votre application.</p>' />
-          <Subtitle text='Informations techniques' />
-          <Text text='<p>Si vous êtes développeur/euse vous trouverez ci-dessous des informations techniques utiles pour l’intégration de cette règle dans votre application.</p>' />
-          <Subtitle text='Informations techniques' />
-          <Text text='<p>Si vous êtes développeur/euse vous trouverez ci-dessous des informations techniques utiles pour l’intégration de cette règle dans votre application.</p>' />
+          <div className='frame'>
+            <Subtitle text='Impacts écologiques par année' />
+            <Text text={`<p>Cela représente ${gasScore} tonnes de CO2-eq. Comme si chaque année, nous émettons des gaz à effet de serre comme ${carScore} voitures faisant le tour de la terre et que chaque utilisateur faisait ${meterScore} mètres en voiture.</p>`} />
+            <Subtitle text='Informations techniques' />
+            <Text text='<p>Il faut extraire 100 fois le poids d’un ordinateur pour le fabriquer.</p>' />
+            <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
+            <Text text='<p>@TODO</p>' />
+          </div>
           <div className='footing'>
             <Back />
           </div>
