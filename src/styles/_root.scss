@@ -1,14 +1,16 @@
 :root {
   --font: Inter, interui, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --neutralColor: rgb(255, 255, 255);
+  --blackColor: rgb(0, 0, 0);
+  --whiteColor: rgb(255, 255, 255);
   --darktestColor: rgb(50, 51, 123);
   --darkColor: rgb(89, 91, 170);
   --darkterColor: rgb(2, 112, 107);
   --lightestColor: rgb(241, 241, 249);
   --lightColor: rgb(125, 126, 202);
-  --lighterColor: rgba(255, 255, 255, .9);
-  --outlineColor: rgb(255, 106, 0);
+  --lighterColor: rgba(255, 255, 255, .8);
   --negativeColor: rgb(230, 253, 233);
-  --positiveColor: rgb(255, 245, 237);
+  --positiveColor: rgb(254, 232, 228);
+  --warningColor: rgb(255, 149, 0);
+  --outlineColor: rgb(255, 106, 0);
   --ease: cubic-bezier(.43, .195, .02, 1);
 }
