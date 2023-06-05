@@ -4,6 +4,7 @@ import materials from '../../../utils/materials'
 import desktop from '../../../utils/desktop'
 import coin from '../../../utils/coin'
 import Heading from '../../../components/molecules/Heading/Heading'
+import Warning from '../../../components/molecules/Warning/Warning'
 import Subtitle from '../../../components/atoms/Subtitle/Subtitle'
 import Header from '../../../components/organisms/Header/Header'
 import Footer from '../../../components/organisms/Footer/Footer'
@@ -60,7 +61,7 @@ function Materials() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>Parce qu’1 KWh produit en Chine par une centrale à charbon émet 1Kg de CO2-eq, soit 10x plus qu’en France par une centrale nucléaire et 5x plus en moyenne qu’un pays de l’OCDE.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
-            <Text text='<p>Information bientôt disponible</p>' />
+            <Warning text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
             <Back />
