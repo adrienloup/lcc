@@ -10,7 +10,6 @@ import Mobile from './pages/Questions/Mobile/Mobile'
 import Page from './pages/Questions/Page/Page'
 import Server from './pages/Questions/Server/Server'
 import ServerLocated from './pages/Questions/ServerLocated/ServerLocated'
-import Result from './pages/Result/Result'
 import Reference from './pages/Documentation/Reference/Reference'
 import GreenhouseGas from './pages/Documentation/GreenhouseGas/GreenhouseGas'
 import Materials from './pages/Documentation/Materials/Materials'
@@ -18,6 +17,7 @@ import Watter from './pages/Documentation/Watter/Watter'
 import PrimaryEnergy from './pages/Documentation/PrimaryEnergy/PrimaryEnergy'
 import Resources from './pages/Documentation/Resources/Resources'
 import A11y from './pages/A11y/A11y'
+import Impact from './pages/Impact/Impact'
 
 const getData = (): any => {
   const { data } = useContext(DataContext)
@@ -35,6 +35,10 @@ function App() {
     }}>
       <BrowserRouter>
         <Routes>
+          <Route
+            path='/*'
+            element={<Home />}
+          />
           <Route
             path='/lcc/'
             element={<Home />}
@@ -72,10 +76,6 @@ function App() {
             element={<ServerLocated />}
           />
           <Route
-            path='/lcc/resultat'
-            element={<Result />}
-          />
-          <Route
             path='/lcc/documentation/modeles-de-reference'
             element={<Reference />}
           />
@@ -102,6 +102,10 @@ function App() {
           <Route
             path='/lcc/declaration-accessibilite-numerique'
             element={<A11y />}
+          />
+          <Route
+            path='/lcc/impact-ecologique'
+            element={<Impact />}
           />
         </Routes>
       </BrowserRouter>
