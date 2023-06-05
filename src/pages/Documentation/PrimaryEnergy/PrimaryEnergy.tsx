@@ -4,6 +4,7 @@ import energy from '../../../utils/energy'
 import house from '../../../utils/house'
 import plug from '../../../utils/plug'
 import Heading from '../../../components/molecules/Heading/Heading'
+import Warning from '../../../components/molecules/Warning/Warning'
 import Subtitle from '../../../components/atoms/Subtitle/Subtitle'
 import Header from '../../../components/organisms/Header/Header'
 import Footer from '../../../components/organisms/Footer/Footer'
@@ -60,7 +61,7 @@ function PrimaryEnergy() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>Permet d’unifier, l’énergie produite par un barrage hydraulique, une éolienne ou une centrale à Charbon.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
-            <Text text='<p>Information bientôt disponible</p>' />
+            <Warning text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
             <Back />
