@@ -1,0 +1,52 @@
+@import '../../../styles/_variables.scss';
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: calc(50% - .5rem);
+  margin-top: 1rem;
+
+  @media screen and (max-width: $tablet-portrait) {
+    width: 100%;
+  }
+  
+  .link {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 1.5rem;
+    background-color: var(--darkColor);
+    border-radius: .25rem;
+    text-decoration: none;
+    line-height: 1.75rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--whiteColor);
+  
+    @media screen and (max-width: $tablet-portrait) {
+      width: 100%;
+    }
+  
+    &:active,
+    &:focus-visible {
+      outline: 4px solid var(--outlineColor);
+      outline-offset: -1px;
+    }
+  
+    .label {
+      flex: 1;
+      margin-left: 1.25rem;
+    }
+  
+    .icon {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  
+  .percent + .link {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
