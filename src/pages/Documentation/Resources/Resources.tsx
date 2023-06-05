@@ -5,7 +5,7 @@ import Subtitle from '../../../components/atoms/Subtitle/Subtitle'
 import Header from '../../../components/organisms/Header/Header'
 import Footer from '../../../components/organisms/Footer/Footer'
 import Button from '../../../components/molecules/Button/Button'
-import List from '../../../components/molecules/List/List'
+import List from '../../../components/atoms/List/List'
 
 function Resources() {
 
