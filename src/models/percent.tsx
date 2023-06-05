@@ -1,3 +1,3 @@
 export interface PercentProps {
-  number: number;
+  percent: number;
 }
