@@ -30,7 +30,7 @@
         content: ">";
         margin-left: .5rem;
         font-size: .75rem;
-        color: var(--neutralColor);
+        color: var(--whiteColor);
       }
     }
   
@@ -38,7 +38,7 @@
       position: relative;
       text-decoration: none;
       font-size: 1rem;
-      color: var(--neutralColor);
+      color: var(--whiteColor);
   
       &::after {
         content: "";
@@ -47,7 +47,7 @@
         left: 0;
         width: 100%;
         height: 1px;
-        background-color: var(--neutralColor);
+        background-color: var(--whiteColor);
       }
 
       &:active,
