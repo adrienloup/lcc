@@ -4,6 +4,7 @@ import gas from '../../../utils/gas'
 import meter from '../../../utils/meter'
 import car from '../../../utils/car'
 import Heading from '../../../components/molecules/Heading/Heading'
+import Warning from '../../../components/molecules/Warning/Warning'
 import Subtitle from '../../../components/atoms/Subtitle/Subtitle'
 import Header from '../../../components/organisms/Header/Header'
 import Footer from '../../../components/organisms/Footer/Footer'
@@ -69,7 +70,7 @@ function GreenhouseGas() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>Il faut extraire 100 fois le poids d’un ordinateur pour le fabriquer.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
-            <Text text='<p>Information bientôt disponible</p>' />
+            <Warning text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
             <Back />
