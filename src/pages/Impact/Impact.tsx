@@ -126,8 +126,8 @@ function Impact() {
     watter: watterScore
   }
 
+  const percents: number[] = []
   let percent: number = 0
-  let percents: number[] = []
 
   for (const property in data.scores) {
     percent = (
