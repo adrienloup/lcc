@@ -1,0 +1,18 @@
+.warning {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1.25rem .5rem .75rem;
+  background: var(--warningColor);
+  border-radius: .25rem;
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+    margin-right: .75rem;
+  }
+
+  .text p {
+    font-weight: bold;
+    color: var(--blackColor);
+  }
+}
