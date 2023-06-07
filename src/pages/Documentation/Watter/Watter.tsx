@@ -4,6 +4,7 @@ import watter from '../../../utils/watter'
 import glass from '../../../utils/glass'
 import shower from '../../../utils/shower'
 import Heading from '../../../components/molecules/Heading/Heading'
+import Warning from '../../../components/molecules/Warning/Warning'
 import Subtitle from '../../../components/atoms/Subtitle/Subtitle'
 import Header from '../../../components/organisms/Header/Header'
 import Footer from '../../../components/organisms/Footer/Footer'
@@ -54,7 +55,7 @@ function Materials() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>On comptabilise la consommation en eau bleue - l’eau consommable par l’homme, en distinction de l’eau verte contenue dans les sols des forêts ou l’eau de mer, toutes deux impropres à la consommation.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
-            <Text text='<p>Information bientôt disponible</p>' />
+            <Warning text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
             <Back />
