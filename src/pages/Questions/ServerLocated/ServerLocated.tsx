@@ -20,7 +20,7 @@ function ServerLocated() {
 
   const handleClick = () => {
     localStorage.setItem('lcc-data', JSON.stringify(data))
-    navigate('/lcc/resultat')
+    navigate('/lcc/impact-ecologique')
   }
 
   const InputList = (countries: { label: string; value: string; }[]) => {
