@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import Warning from '../../components/molecules/Warning/Warning'
 import Header from '../../components/organisms/Header/Header'
 import Footer from '../../components/organisms/Footer/Footer'
-import Subtitle from '../../components/atoms/Subtitle/Subtitle'
+// import Subtitle from '../../components/atoms/Subtitle/Subtitle'
 import Title from '../../components/atoms/Title/Title'
-import Text from '../../components/atoms/Text/Text'
+// import Text from '../../components/atoms/Text/Text'
 
 function A11y() {
 
