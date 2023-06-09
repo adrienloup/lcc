@@ -31,8 +31,16 @@ function Footer() {
           <li>
             <Button
               cssClass='link'
-              icon='github'
+              icon='speed'
               ariaLabel='Ouvrir sur GitHub'
+              href='https://pagespeed.web.dev/analysis/https-adrienloup-github-io-lcc/w4b84yf6cs?form_factor=desktop'
+            />
+          </li>
+          <li>
+            <Button
+              cssClass='link'
+              icon='github'
+              ariaLabel='Ouvrir sur PageSpeed Insights'
               href='https://github.com/adrienloup/lcc'
             />
           </li>
