@@ -3,6 +3,7 @@ import { createContext } from 'react'
 export const DataContext = createContext({
   data: {
     name: 'Site Web',
+    journey: 'Lire une page de contenu',
     user: 2500,
     duration: 3,
     userlocated: 'fr',
@@ -14,6 +15,7 @@ export const DataContext = createContext({
   },
   setData: (data: {
     name: string,
+    journey: string,
     user: number,
     duration: number,
     userlocated: string,
