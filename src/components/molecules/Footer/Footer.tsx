@@ -1,4 +1,4 @@
-import Button from '../../molecules/Button/Button'
+import Button from '../Button/Button'
 import './Footer.scss'
 
 function Footer() {
@@ -19,6 +19,9 @@ function Footer() {
               ariaLabel='Afficher la déclaration d’accessibilité'
               to='/lcc/declaration-accessibilite-numerique'
             />
+          </li>
+          <li>
+            tutu
           </li>
           <li>
             <Button
