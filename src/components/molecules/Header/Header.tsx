@@ -1,4 +1,4 @@
-import Button from '../../molecules/Button/Button'
+import Button from '../Button/Button'
 import './Header.scss'
 
 function Header() {
