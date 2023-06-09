@@ -44,7 +44,7 @@ function A11y() {
               <ul><li>Colour Contrast Analyser ;</li><li>Inspecteur de code ;</li><li>Divers bookmarklets et feuilles de style CSS personnalisées.</li></ul>`} />
             <Subtitle text='Pages du site ayant fait l’objet de la vérification de conformité' />
             <Text text={`<p>L’audit a porté sur un échantillon de 6 pages représentatives de l’application.</p>
-              <ul><li>1. Accueil</li><li>2. Question : 1/8 De quel parcours mesure-t-on l’impact ?</li><li>3. Les impacts</li><li>4. Modèles de référence</li><li>5. Modèle : Les matières premières</li><li>6. La documentation</li></ul>`} />
+              <ul><li>Accueil</li><li>Question : 1/8 De quel parcours mesure-t-on l’impact ?</li><li>Les impacts</li><li>Modèles de référence</li><li>Modèle : Les matières premières</li><li>La documentation</li></ul>`} />
             <Subtitle text='Retour d’information et contact' />
             <Text text={`<p>N’hésitez pas à nous signaler les problèmes éventuels que vous rencontrez et qui vous empêchent d’accéder à un contenu ou à une fonctionnalité du site en nous envoyant un courriel à <a href="mailto:adloup@gmail.com">adloup@gmail.com</a>. Nous ferons notre possible pour vous répondre au plus vite.</p>`} />
             <Subtitle text='Voies de recours' />
