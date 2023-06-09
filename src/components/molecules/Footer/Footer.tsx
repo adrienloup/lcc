@@ -21,9 +21,6 @@ function Footer() {
             />
           </li>
           <li>
-            tutu
-          </li>
-          <li>
             <Button
               cssClass='link'
               icon='documentation'
