@@ -3,20 +3,27 @@ import { useContext, useState } from 'react'
 import { DataContext } from '../../../contexts/data'
 import Notebook from '../../../components/molecules/Notebook/Notebook'
 import Scorebar from '../../../components/molecules/Scorebar/Scorebar'
-import Header from '../../../components/organisms/Header/Header'
-import Footer from '../../../components/organisms/Footer/Footer'
+import Header from '../../../components/molecules/Header/Header'
+import Footer from '../../../components/molecules/Footer/Footer'
 import Button from '../../../components/molecules/Button/Button'
 import Title from '../../../components/atoms/Title/Title'
 
-function Name() {
+function Journey() {
   const navigate = useNavigate()
   const { data, setData } = useContext(DataContext)
-  const [ value, setValue ] = useState(data.name)
+  const [ name, setName ] = useState(data.name)
+  const [ journey, setJourney ] = useState(data.journey)
 
-  const handleChange = (e: { target: { value: string } }) => {
+  const handleChangeName = (e: { target: { value: string } }) => {
     const name = e.target.value
     setData({ ...data, name: name })
-    setValue(name)
+    setName(name)
+  }
+
+  const handleChangeJourney = (e: { target: { value: string } }) => {
+    const journey = e.target.value
+    setData({ ...data, journey: journey })
+    setJourney(journey)
   }
 
   const handleClick = () => {
@@ -34,7 +41,7 @@ function Name() {
         <Scorebar />
         <article className='article'>
           <div className='heading'>
-            <Title text='<span>1/8</span> De quel site Web mesure-t-on l’impact&nbsp;?' />
+            <Title text='<span>1/8</span> De quel parcours mesure-t-on l’impact&nbsp;?' />
           </div>
           <Notebook note={'L’éco-conception part toujours d’un besoin utilisateur clairement identifié et dont le service numérique cherche à apporter une solution.'} />
           <div className='frame'>
@@ -44,8 +51,16 @@ function Name() {
                 id='name'
                 type='text'
                 maxLength={15}
-                value={value}
-                onChange={handleChange}
+                value={name}
+                onChange={handleChangeName}
+              />
+              <label htmlFor='journey'>Dans le but de</label>
+              <input
+                id='journey'
+                type='text'
+                maxLength={30}
+                value={journey}
+                onChange={handleChangeJourney}
               />
             </form>
           </div>
@@ -67,4 +82,4 @@ function Name() {
   )
 }
 
-export default Name
+export default Journey
