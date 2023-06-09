@@ -32,7 +32,7 @@ function Footer() {
             <Button
               cssClass='link'
               icon='speed'
-              ariaLabel='Ouvrir sur GitHub'
+              ariaLabel='Ouvrir sur PageSpeed Insights'
               href='https://pagespeed.web.dev/analysis/https-adrienloup-github-io-lcc/w4b84yf6cs?form_factor=desktop'
             />
           </li>
@@ -40,7 +40,7 @@ function Footer() {
             <Button
               cssClass='link'
               icon='github'
-              ariaLabel='Ouvrir sur PageSpeed Insights'
+              ariaLabel='Ouvrir sur GitHub'
               href='https://github.com/adrienloup/lcc'
             />
           </li>
