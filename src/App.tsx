@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useContext, useState } from 'react'
 import { DataContext } from './contexts/data'
 import Home from './pages/Home/Home'
-import Name from './pages/Questions/Name/Name'
+import Journey from './pages/Questions/Journey/Journey'
 import User from './pages/Questions/User/User'
 import Duration from './pages/Questions/Duration/Duration'
 import UserLocated from './pages/Questions/UserLocated/UserLocated'
@@ -45,7 +45,7 @@ function App() {
           />
           <Route
             path='/lcc/question/site-web'
-            element={<Name />}
+            element={<Journey />}
           />
           <Route
             path='/lcc/question/nombre-visiteurs'
