@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
-import Warning from '../../components/molecules/Warning/Warning'
-import Header from '../../components/organisms/Header/Header'
-import Footer from '../../components/organisms/Footer/Footer'
-// import Subtitle from '../../components/atoms/Subtitle/Subtitle'
+import Header from '../../components/molecules/Header/Header'
+import Footer from '../../components/molecules/Footer/Footer'
+import Subtitle from '../../components/atoms/Subtitle/Subtitle'
 import Title from '../../components/atoms/Title/Title'
-// import Text from '../../components/atoms/Text/Text'
+import Text from '../../components/atoms/Text/Text'
 
 function A11y() {
 
@@ -23,7 +22,7 @@ function A11y() {
           <div className='heading'>
             <Title text='Déclaration d’accessibilité numérique' />
           </div>
-          {/* <div className='frame'>
+          <div className='frame'>
             <Text text={`<p>Cette déclaration d’accessibilité à la version 4.1 du référentiel général d’amélioration de l’accessibilité (RGAA) s’applique au présent site et a été établie le 10 juin 2023.</p>`} />
           </div>
           <div className='frame'>
@@ -36,18 +35,21 @@ function A11y() {
             <Subtitle text='Établissement de cette déclaration d’accessibilité' />
             <Text text={`<p>Cette déclaration a été établie le 10 juin 2023.</p>`} />
             <Subtitle text='Technologies utilisées pour la réalisation du site web' />
-            <Text text={`<ul><li>HTML5</li><li>CSS</li><li>JavaScript</li></ul>`} />
+            <Text text={`<p>Langages de programmation :</p>
+              <ul><li>HTML5</li><li>CSS</li><li>JavaScript</li></ul>`} />
             <Subtitle text='Agents utilisateurs, technologies d’assistance et outils utilisés pour vérifier l’accessibilité' />
-            <Text text={`<p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>`} />
-            <Text text={`<ul><li>NVDA et Firefox 94 ;</li><li>JAWS 2020 et Firefox 94 ;</li><li>VoiceOver et Safari 14.1 ;</li><li>VoiceOver (iOS 14.8) et Safari ;</li><li>TalkBack (Android 11) et Chrome.</li></ul>`} />
-            <Text text={`<p>Les outils suivants ont été utilisés lors de l’évaluation :</p>`} />
-            <Text text={`<ul><li>Colour Contrast Analyser ;</li><li>inspecteur de code ;</li><li>divers bookmarklets et feuilles de style CSS personnalisées.</li></ul>`} />
+            <Text text={`<p>Les tests des pages web ont été effectués avec les combinaisons de navigateurs web et lecteurs d’écran suivants :</p>
+              <ul><li>NVDA et Firefox 94 ;</li><li>JAWS 2020 et Firefox 94 ;</li><li>VoiceOver et Safari 14.1 ;</li><li>VoiceOver (iOS 14.8) et Safari ;</li><li>TalkBack (Android 11) et Chrome.</li></ul>
+              <p>Les outils suivants ont été utilisés lors de l’évaluation :</p>
+              <ul><li>Colour Contrast Analyser ;</li><li>Inspecteur de code ;</li><li>Divers bookmarklets et feuilles de style CSS personnalisées.</li></ul>`} />
             <Subtitle text='Pages du site ayant fait l’objet de la vérification de conformité' />
-            <Text text={`<p>L’audit a porté sur un échantillon de 5 pages représentatives du site.</p>`} />
-            <Text text={`<ul><li>1. Accueil</li></ul>`} />
-          </div> */}
-          <div className='frame'>
-            <Warning text='<p>Information bientôt disponible</p>' />
+            <Text text={`<p>L’audit a porté sur un échantillon de 6 pages représentatives de l’application.</p>
+              <ul><li>1. Accueil</li><li>2. Question : 1/8 De quel parcours mesure-t-on l’impact ?</li><li>3. Les impacts</li><li>4. Modèles de référence</li><li>5. Modèle : Les matières premières</li><li>6. La documentation</li></ul>`} />
+            <Subtitle text='Retour d’information et contact' />
+            <Text text={`<p>N’hésitez pas à nous signaler les problèmes éventuels que vous rencontrez et qui vous empêchent d’accéder à un contenu ou à une fonctionnalité du site en nous envoyant un courriel à <a href="mailto:adloup@gmail.com">adloup@gmail.com</a>. Nous ferons notre possible pour vous répondre au plus vite.</p>`} />
+            <Subtitle text='Voies de recours' />
+            <Text text='<p>Si vous nous signalez un problème d’accessibilité et que vous ne parvenez pas à obtenir une réponse rapide de notre part, vous êtes en droit de faire parvenir vos doléances ou demande de saisine au Défenseur des droits. Plusieurs moyens sont à votre disposition :</p>
+              <ul><li><a href="https://formulaire.defenseurdesdroits.fr/" rel="external">Écrire au Défenseur des droits</a> ;</li><li><a href="https://www.defenseurdesdroits.fr/saisir/delegues" rel="external">Contacter le délégué du Défenseur des droits dans votre région ;</a></li><li>Appeler au : 09 69 39 00 00 ;</li><li>Envoyer un courrier postal (courrier gratuit, sans affranchissement) :<br />Le Défenseur des droits — Libre réponse 71120<br />75342 Paris CEDEX 07</li></ul>' />
           </div>
         </article>
       </main>
