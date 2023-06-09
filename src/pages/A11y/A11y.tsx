@@ -46,10 +46,10 @@ function A11y() {
             <Text text={`<p>L’audit a porté sur un échantillon de 6 pages représentatives de l’application.</p>
               <ul><li>Accueil</li><li>Question : 1/8 De quel parcours mesure-t-on l’impact ?</li><li>Les impacts</li><li>Modèles de référence</li><li>Modèle : Les matières premières</li><li>La documentation</li></ul>`} />
             <Subtitle text='Retour d’information et contact' />
-            <Text text={`<p>N’hésitez pas à nous signaler les problèmes éventuels que vous rencontrez et qui vous empêchent d’accéder à un contenu ou à une fonctionnalité du site en nous envoyant un courriel à <a href="mailto:adloup@gmail.com">adloup@gmail.com</a>. Nous ferons notre possible pour vous répondre au plus vite.</p>`} />
+            <Text text={`<p>N’hésitez pas à nous signaler les problèmes éventuels que vous rencontrez et qui vous empêchent d’accéder à un contenu ou à une fonctionnalité du site en nous envoyant un courriel à <a href="mailto:adloup@gmail.com" target="_blank" rel="noreferrer">adloup@gmail.com</a>. Nous ferons notre possible pour vous répondre au plus vite.</p>`} />
             <Subtitle text='Voies de recours' />
             <Text text='<p>Si vous nous signalez un problème d’accessibilité et que vous ne parvenez pas à obtenir une réponse rapide de notre part, vous êtes en droit de faire parvenir vos doléances ou demande de saisine au Défenseur des droits. Plusieurs moyens sont à votre disposition :</p>
-              <ul><li><a href="https://formulaire.defenseurdesdroits.fr/" rel="external">Écrire au Défenseur des droits</a> ;</li><li><a href="https://www.defenseurdesdroits.fr/saisir/delegues" rel="external">Contacter le délégué du Défenseur des droits dans votre région ;</a></li><li>Appeler au : 09 69 39 00 00 ;</li><li>Envoyer un courrier postal (courrier gratuit, sans affranchissement) :<br />Le Défenseur des droits — Libre réponse 71120<br />75342 Paris CEDEX 07</li></ul>' />
+              <ul><li><a href="https://formulaire.defenseurdesdroits.fr/" target="_blank" rel="noreferrer">Écrire au Défenseur des droits</a> ;</li><li><a href="https://www.defenseurdesdroits.fr/saisir/delegues" target="_blank" rel="noreferrer">Contacter le délégué du Défenseur des droits dans votre région ;</a></li><li>Appeler au : 09 69 39 00 00 ;</li><li>Envoyer un courrier postal (courrier gratuit, sans affranchissement) :<br />Le Défenseur des droits — Libre réponse 71120<br />75342 Paris CEDEX 07</li></ul>' />
           </div>
         </article>
       </main>
