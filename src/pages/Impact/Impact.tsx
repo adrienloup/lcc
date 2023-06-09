@@ -13,8 +13,8 @@ import energy from '../../utils/energy'
 import gas from '../../utils/gas'
 import materials from '../../utils/materials'
 import watter from '../../utils/watter'
-import Header from '../../components/organisms/Header/Header'
-import Footer from '../../components/organisms/Footer/Footer'
+import Header from '../../components/molecules/Header/Header'
+import Footer from '../../components/molecules/Footer/Footer'
 import Button from '../../components/molecules/Button/Button'
 import Title from '../../components/atoms/Title/Title'
 import Subtitle from '../../components/atoms/Subtitle/Subtitle'
@@ -152,7 +152,7 @@ function Impact() {
       >
         <article className='article'>
           <div className='heading'>
-            <Title text={`Voici l’impact écologique d’un utilisateur sur le site Web «&nbsp;${data.name}&nbsp;»`} />
+            <Title text={`Voici les impacts du parcours «&nbsp;${data.journey}&nbsp;» sur le site Web ${data.name}`} />
           </div>
           <div className='frame'>
             <Subtitle text='Équivalence par utilisateur' />
@@ -207,7 +207,7 @@ function Impact() {
             />
             <Result
               percent={percents[6]}
-              label={`Comme si chaque année on creusait pour extraire l’équivce de ${desktopScore}&nbsp;ordinateurs portables`}
+              label={`Comme si chaque année on creusait pour extraire l’équivence de ${desktopScore}&nbsp;ordinateurs portables`}
               ariaLabel='Afficher l’explication sur les matières premières'
               icon='desktop'
               to='/lcc/documentation/matieres-premieres'
