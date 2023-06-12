@@ -40,17 +40,19 @@ function Mobile() {
           <Notebook note={'Les conditions d’utilisation de votre service numérique, en mobilité ou au bureau, ont des impacts bien différents.'} />
           <div className='frame'>
             <form className='form' action=''>
-              <label htmlFor='mobile'>{value} %</label>
-              <input
-                id='mobile'
-                type='range'
-                min='1'
-                max='100'
-                step='1'
-                style={{backgroundSize: `${(value * 100) / 100}% 100%`}}
-                value={value}
-                onChange={handleChange}
-              />
+              <div className='range'>
+                <label htmlFor='mobile'>{value} %</label>
+                <input
+                  id='mobile'
+                  type='range'
+                  min='1'
+                  max='100'
+                  step='1'
+                  style={{backgroundSize: `${(value * 100) / 100}% 100%`}}
+                  value={value}
+                  onChange={handleChange}
+                />
+              </div>
             </form>
           </div>
           <nav
