@@ -20,8 +20,8 @@ function Home() {
           </div>
           <div className='frame'>
             <Text text='<p>Le calculateur de cycle de vie est un outil d’éco-conception et d’Analyse de Cycle de Vie (ACV), qui vous aide à éco-concevoir votre site Web.</p>
-              <p>Répondez à 8 questions pour évaluer l’impact écologique du parcours d’un utilisateur sur votre site Web.</p>
-              <p>Votre résultat évolue à chaque nouvelle réponse. Vous pouvez modifier les réponses pour améliorer votre résultat. Chaque calcul est sauvegardé dans votre navigateur Web. Vous êtes le seul à y avoir accès.</p>' />
+              <p>Répondez à 8 questions pour évaluer l’impact écologique par année du parcours d’un utilisateur sur votre site Web.</p>
+              <p>Votre résultat évolue à chaque nouvelle réponse. Vous pouvez modifier vos réponses pour améliorer le résultat. Chaque calcul est sauvegardé dans votre navigateur Web. Vous êtes le seul à y avoir accès.</p>' />
           </div>
           <div className='footing'>
             <Button
