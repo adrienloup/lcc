@@ -40,17 +40,19 @@ function Duration() {
           <Notebook note={'Le temps que les utilisateurs passent sur votre service numérique permet de connaître la quantité de teminaux, équipements réseau, serveur nécessaire pour servir, transiter et consulter les contenus ou les services que vous délivrez.'} />
           <div className='frame'>
             <form className='form' action=''>
-              <label htmlFor='duration'>{value} {value > 1 ? 'minutes' : 'minute'}</label>
-              <input
-                id='duration'
-                type='range'
-                min='1'
-                max='20'
-                step='1'
-                style={{backgroundSize: `${(value * 100) / 20}% 100%`}}
-                value={value}
-                onChange={handleChange}
-              />
+              <div className='range'>
+                <label htmlFor='duration'>{value} {value > 1 ? 'minutes' : 'minute'}</label>
+                <input
+                  id='duration'
+                  type='range'
+                  min='1'
+                  max='20'
+                  step='1'
+                  style={{backgroundSize: `${(value * 100) / 20}% 100%`}}
+                  value={value}
+                  onChange={handleChange}
+                />
+              </div>
             </form>
           </div>
           <nav
