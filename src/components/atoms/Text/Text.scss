@@ -19,7 +19,7 @@
   }
 
   li {
-    line-height: 1.5rem;
+    padding-bottom: 0.5rem;
     font-size: 1.15rem;
   }
 
@@ -27,6 +27,12 @@
     position: relative;
     text-decoration: none;
     color: var(--darktestColor);
+
+    &:active,
+    &:focus-visible {
+      outline: 4px solid var(--outlineColor);
+      outline-offset: 4px;
+    }
 
     &::after {
       content: "";
