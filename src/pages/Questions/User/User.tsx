@@ -40,17 +40,19 @@ function User() {
           <Notebook note={'Le nombre de visiteurs par mois permet de connaître la quantité de teminaux utilisateur, équipements réseau, serveur nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette info dans votre outil Google Analytics ou équivalent.'} />
           <div className='frame'>
             <form className='form' action=''>
-              <label htmlFor='user'>{value} visiteurs</label>
-              <input
-                id='user'
-                type='range'
-                min='1000'
-                max='10000'
-                step='1'
-                style={{backgroundSize: `${(value * 100) / 10000}% 100%`}}
-                value={value}
-                onChange={handleChange}
-              />
+              <div className='range'>
+                <label htmlFor='user'>{value} visiteurs</label>
+                <input
+                  id='user'
+                  type='range'
+                  min='1000'
+                  max='10000'
+                  step='1'
+                  style={{backgroundSize: `${(value * 100) / 10000}% 100%`}}
+                  value={value}
+                  onChange={handleChange}
+                />
+              </div>
             </form>
           </div>
           <nav
