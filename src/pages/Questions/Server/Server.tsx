@@ -39,7 +39,10 @@ function Server() {
           </div>
           <Notebook note={'Calculé à partir d’un PUE (Power Usage Effectiveness) moyen d’un serveur (soit 1,8). Si vous avez opté pour un hébergement « green », vous serez meilleur que la moyenne du marché sur ce paramètre. Compter les serveurs de production, staging, review, CDN, etc...'} />
           <div className='frame'>
-            <form className='form' action=''>
+            <form
+              className='form'
+              action=''
+            >
               <div className='range'>
                 <label htmlFor='serveur'>{value} {value > 1 ? 'serveurs' : 'serveur'}</label>
                 <input
