@@ -55,6 +55,7 @@ function Materials() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>On comptabilise la consommation en eau bleue - l’eau consommable par l’homme, en distinction de l’eau verte contenue dans les sols des forêts ou l’eau de mer, toutes deux impropres à la consommation.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
+            <Text text='<p>L’analyse du cycle de vie est une méthode d’évaluation normalisée permettant de réaliser un bilan environnemental multicritère et multi-étape d’un système sur l’ensemble de son cycle de vie.</p>' />
             <Warning text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
