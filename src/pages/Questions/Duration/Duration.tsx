@@ -39,7 +39,10 @@ function Duration() {
           </div>
           <Notebook note={'Le temps que les utilisateurs passent sur votre service numérique permet de connaître la quantité de teminaux, équipements réseau, serveur nécessaire pour servir, transiter et consulter les contenus ou les services que vous délivrez.'} />
           <div className='frame'>
-            <form className='form' action=''>
+            <form
+              className='form'
+              action=''
+            >
               <div className='range'>
                 <label htmlFor='duration'>{value} {value > 1 ? 'minutes' : 'minute'}</label>
                 <input
