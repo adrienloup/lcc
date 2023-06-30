@@ -45,7 +45,10 @@ function Journey() {
           </div>
           <Notebook note={'L’éco-conception part toujours d’un besoin utilisateur clairement identifié et dont le service numérique cherche à apporter une solution.'} />
           <div className='frame'>
-            <form className='form' action=''>
+            <form
+              className='form'
+              action=''
+            >
               <label htmlFor='name'>Nom du site Web</label>
               <input
                 id='name'
