@@ -39,7 +39,10 @@ function Mobile() {
           </div>
           <Notebook note={'Les conditions d’utilisation de votre service numérique, en mobilité ou au bureau, ont des impacts bien différents.'} />
           <div className='frame'>
-            <form className='form' action=''>
+            <form
+              className='form'
+              action=''
+            >
               <div className='range'>
                 <label htmlFor='mobile'>{value} %</label>
                 <input
