@@ -70,6 +70,7 @@ function GreenhouseGas() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>Il faut extraire 100 fois le poids d’un ordinateur pour le fabriquer.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
+            <Text text='<p>L’analyse du cycle de vie est une méthode d’évaluation normalisée permettant de réaliser un bilan environnemental multicritère et multi-étape d’un système sur l’ensemble de son cycle de vie.</p>' />
             <Warning text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
