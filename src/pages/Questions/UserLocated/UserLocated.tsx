@@ -59,8 +59,12 @@ function UserLocated() {
           </div>
           <Notebook note={'Le mix énergétique du pays dans lequel se situent vos utilisateurs fait varier l’impact écologique.'} />
           <div className='frame'>
-            <form className='form' action=''>
+            <form 
+              className='form' 
+              action=''
+            >
               <div
+                className='radiogroup'
                 role='radiogroup'
                 aria-labelledby='radiogroup'
               >{InputList(countries)}</div>
