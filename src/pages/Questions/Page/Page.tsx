@@ -39,7 +39,10 @@ function Page() {
           </div>
           <Notebook note={'Le parcours utilisateur, après l’identification du besoin utilisateurs, est le deuxième point crutial en éco-conception. Plus le parcours, entre l’utilisateur et le contenu ou le service pour lequel il est venu, est plus faible, plus il réduit l’impact écologique. En 2021, le poids moyen d’une page web est de 2,1Mo (contre 0,013Mo en 1995).'} />
           <div className='frame'>
-            <form className='form' action=''>
+            <form
+              className='form'
+              action=''
+            >
               <div className='range'>
                 <label htmlFor='page'>{value} {value > 1 ? 'pages' : 'page'}</label>
                 <input
