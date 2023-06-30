@@ -1,0 +1,59 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radiogroup {
+  display: flex;
+}
+
+.range {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: .75rem;
+
+  label {
+    margin-bottom: .75rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+}
+
+// input[type="range"] {
+//   -webkit-appearance: none;
+//   appearance: none;
+//   width: 20rem;
+//   height: 2rem;
+//   border-radius: .25rem;
+//   background-image: linear-gradient(var(--darktestColor), var(--darktestColor));
+//   background-repeat: no-repeat;
+
+//   &:focus-visible {
+//     outline: 4px solid var(--outlineColor);
+//     outline-offset: 6px;
+//   }
+// }
+
+// input[type="range"]::-webkit-slider-thumb {
+//   -webkit-appearance: none;
+//   height: 3rem;
+//   width: 3rem;
+//   border-radius: .25rem;
+//   background: var(--darktestColor);
+//   cursor: pointer;
+// }
+
+// input[type="range"]::-webkit-slider-runnable-track {
+//   -webkit-appearance: none;
+//   box-shadow: none;
+//   border: none;
+//   background: transparent;
+// }
+
+// input[type="range"]::-webkit-slider-thumb:hover,
+// input[type="range"]::-webkit-slider-thumb:active {
+//   box-shadow: var(--lightColor) 0px 0px 0px 8px;
+// }
