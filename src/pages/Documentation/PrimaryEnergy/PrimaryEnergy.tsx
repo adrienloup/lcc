@@ -61,6 +61,7 @@ function PrimaryEnergy() {
             <Subtitle text='Informations techniques' />
             <Text text='<p>Permet d’unifier, l’énergie produite par un barrage hydraulique, une éolienne ou une centrale à Charbon.</p>' />
             <Subtitle text='Comment cette donnée est-elle calculée&nbsp;?' />
+            <Text text='<p>L’analyse du cycle de vie est une méthode d’évaluation normalisée permettant de réaliser un bilan environnemental multicritère et multi-étape d’un système sur l’ensemble de son cycle de vie.</p>' />
             <Warning text='<p>Information bientôt disponible</p>' />
           </div>
           <div className='footing'>
