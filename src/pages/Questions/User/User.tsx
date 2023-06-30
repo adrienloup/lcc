@@ -39,7 +39,10 @@ function User() {
           </div>
           <Notebook note={'Le nombre de visiteurs par mois permet de connaître la quantité de teminaux utilisateur, équipements réseau, serveur nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette info dans votre outil Google Analytics ou équivalent.'} />
           <div className='frame'>
-            <form className='form' action=''>
+            <form
+              className='form'
+              action=''
+            >
               <div className='range'>
                 <label htmlFor='user'>{value} visiteurs</label>
                 <input
