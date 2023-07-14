@@ -4,6 +4,10 @@
       "title" : "Documentation générale", 
       "list" : [
         {
+          "label" : "Analyse du cycle de vie", 
+          "href" : "https://fr.wikipedia.org/wiki/Analyse_du_cycle_de_vie"
+        },
+        {
           "label" : "Synthèse officielle GIEC", 
           "href" : "https://comprendre-giec.fr/#lang=fr_FR"
         },
