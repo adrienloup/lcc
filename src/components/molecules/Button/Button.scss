@@ -32,7 +32,7 @@
 
 .start {
   position: relative;
-  padding: .35rem;
+  padding: .25rem;
   animation: Move 4s infinite alternate;
   background: linear-gradient(60deg,#5f86f2,#a65ff2,#f25fd0,#f25f61,#f2cb5f,#abf25f,#5ff281,#5ff2f0);
   background-position: 0 50%;
@@ -51,13 +51,13 @@
 
   .label {
     display: block;
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 1.25rem;
     background-color: var(--darktestColor);
     letter-spacing: .05rem;
     text-transform: uppercase;
-    line-height: 1.5rem;
-    font-size: 1.5rem;
+    line-height: 1.25rem;
+    font-size: 1.25rem;
     font-weight: bold;
   }
 }
