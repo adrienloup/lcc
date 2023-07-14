@@ -33,7 +33,7 @@ function Footer() {
               cssClass='link'
               icon='speed'
               ariaLabel='Ouvrir sur PageSpeed Insights'
-              href='https://pagespeed.web.dev/analysis/https-adrienloup-github-io-lcc/w4b84yf6cs?form_factor=desktop'
+              href='https://pagespeed.web.dev/analysis/https-adrienloup-github-io-lcc/fzyfbne91b?form_factor=desktop'
             />
           </li>
           <li>
