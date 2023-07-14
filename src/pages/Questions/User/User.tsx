@@ -37,7 +37,7 @@ function User() {
           <div className='heading'>
             <Title text='<span>2/8</span> Quel est le nombre de visiteurs par mois&nbsp;?' />
           </div>
-          <Notebook note={'Le nombre de visiteurs par mois permet de connaître la quantité de teminaux utilisateur, équipements réseau, serveur nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette info dans votre outil Google Analytics ou équivalent.'} />
+          <Notebook note={'Le nombre de visiteurs par mois permet de connaître la quantité de teminaux utilisateur, équipements réseau, serveur nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette information dans votre outil Google Analytics ou équivalent.'} />
           <div className='frame'>
             <form
               className='form'
