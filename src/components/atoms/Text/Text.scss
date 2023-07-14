@@ -44,4 +44,10 @@
       background-color: var(--darktestColor);
     }
   }
+
+  span {
+    padding: 0 .2rem;
+    background-color: var(--whiteColor);
+    border-radius: .25rem;
+  }
 }
