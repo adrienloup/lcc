@@ -23,11 +23,8 @@ function A11y() {
             <Title text='Déclaration d’accessibilité numérique' />
           </div>
           <div className='frame'>
-            <Text text={`<p>Cette déclaration d’accessibilité à la version 4.1 du référentiel général d’amélioration de l’accessibilité (RGAA) s’applique au présent site et a été établie le 10 mai 2023.</p>`} />
-          </div>
-          <div className='frame'>
             <Subtitle text='État de conformité' />
-            <Text text={`<p>Le site est en totale conformité avec le Référentiel général d’amélioration de l’accessibilité, RGAA version 4.1.</p>`} />
+            <Text text={`<p>Le site est en totale conformité avec le référentiel général d’amélioration de l’accessibilité, RGAA version 4.1.</p>`} />
             <Subtitle text='Résultats des tests' />
             <Text text={`<p>L’audit de conformité réalisé en interne, par une personne non impliquée dans le développement du site, révèle que 100 % des critères RGAA applicables sont respectés.</p>`} />
             <Subtitle text='Établissement de la déclaration d’accessibilité' />
