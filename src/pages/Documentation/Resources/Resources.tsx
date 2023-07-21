@@ -12,6 +12,7 @@ function Resources() {
   const list = (list: {
     label: string;
     href: string;
+    report: string;
   }[]) => list.map((item, index) => (
     <li
       key={index}
@@ -22,6 +23,7 @@ function Resources() {
         label={item.label}
         href={item.href}
       />
+      {item.report}
     </li>
   ))
 
@@ -37,9 +39,9 @@ function Resources() {
         role='main'
       >
         <article className='article'>
-          <Heading text='Les modèles de référence' />
+          <Heading text='Numérique et environnement' />
           <div className='frame'>
-            <Subtitle text='Documentation générale' />
+            <Subtitle text='Études' />
             <List
               cssClass='resources'
               list={list(resources[0]['list'])}

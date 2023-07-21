@@ -36,12 +36,29 @@
           "href" : "https://librairie.ademe.fr/"
         },
         {
-          "label" : "Arte Data Science", 
-          "href" : "https://www.youtube.com/watch?v=6YMRB4bgQ-o&list=PLCwXWOyIR22vvG5WLClozLrTrY0mqVBvf&ab_channel=ARTE"
+          "label" : "Data Science", 
+          "href" : "https://www.youtube.com/watch?v=6YMRB4bgQ-o&list=PLCwXWOyIR22vvG5WLClozLrTrY0mqVBvf&ab_channel=ARTE",
+          "report" : ", Arte, 2020"
         },
         {
-          "label" : "Le monde sans fin", 
-          "href" : "https://www.bedetheque.com/BD-Monde-sans-fin-434522.html"
+          "label" : "Empreinte environnementale du numérique mondial", 
+          "href" : "https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf",
+          "report" : ", greenIT.fr, octobre 2019"
+        },
+        {
+          "label" : "iNUM 2020 : impacts environnementaux du numérique en France", 
+          "href" : "https://www.greenit.fr/impacts-environnementaux-du-numerique-en-france/",
+          "report" : ", greenIT.fr, juin 2020"
+        },
+        {
+          "label" : "Pour une sobriété numérique", 
+          "href" : "https://theshiftproject.org/article/pour-une-sobriete-numerique-rapport-shift/",
+          "report" : ", Shift Project, octobre 2018"
+        },
+        {
+          "label" : "Climat : l’insoutenable usage de la vidéo en ligne", 
+          "href" : "https://theshiftproject.org/article/climat-insoutenable-usage-video/",
+          "report" : ", Shift Project, juillet 2019."
         }
       ]
     },
