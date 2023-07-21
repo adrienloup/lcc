@@ -39,7 +39,7 @@ function Button({
           role={role}
           aria-label={ariaLabel}
           target='_blank'
-          rel='noreferrer'
+          rel='noopener'
         >
           {icon && <Icon icon={icon} />}
           {label}
