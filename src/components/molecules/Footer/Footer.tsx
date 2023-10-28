@@ -28,14 +28,14 @@ function Footer() {
               to='/lcc/documentation/modeles-de-reference'
             />
           </li>
-          <li>
+          {/* <li>
             <Button
               cssClass='link'
               icon='speed'
               ariaLabel='Ouvrir sur PageSpeed Insights'
               href='https://pagespeed.web.dev/analysis/https-adrienloup-github-io-lcc/fzyfbne91b?form_factor=desktop'
             />
-          </li>
+          </li> */}
           <li>
             <Button
               cssClass='link'
