@@ -93,19 +93,7 @@
 }
 
 .a11y {
-  position: relative;
-  text-decoration: none;
   color: var(--darktestColor);
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--darktestColor);
-  }
 
   &:active,
   &:focus-visible {
