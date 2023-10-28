@@ -35,20 +35,8 @@
     }
   
     a {
-      position: relative;
-      text-decoration: none;
       font-size: 1rem;
       color: var(--whiteColor);
-  
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: var(--whiteColor);
-      }
 
       &:active,
       &:focus-visible {
