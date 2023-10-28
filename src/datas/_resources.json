@@ -1,0 +1,139 @@
+{
+  "resources" : [ 
+    {
+      "title" : "Documentation générale", 
+      "list" : [
+        {
+          "label" : "Synthèse officielle GIEC", 
+          "href" : "https://comprendre-giec.fr/#lang=fr_FR"
+        },
+        {
+          "label" : "Synthèse du rapport du ADEME", 
+          "href" : "https://datagir.ademe.fr/blog/budget-empreinte-carbone-c-est-quoi/"
+        },
+        {
+          "label" : "L’âge des Low Tech par Philippe Bihouix", 
+          "href" : "https://www.seuil.com/ouvrage/l-age-des-low-tech-philippe-bihouix/9782021160727"
+        },
+        {
+          "label" : "IPCC Interactive Atlas", 
+          "href" : "https://interactive-atlas.ipcc.ch/"
+        },
+        {
+          "label" : "Decarbonize Europe", 
+          "href" : "https://decarbonizeurope.org/"
+        },
+        {
+          "label" : "L'éco-conception pour tous", 
+          "href" : "https://www.eco-conception.fr/static/leco-conception-pour-tous.html",
+          "report" : ", Les différents niveaux"
+        },
+        {
+          "label" : "La librairie de l'Agence de la transition écologique",
+          "href" : "https://librairie.ademe.fr/",
+          "report" : ", ADEME Librairie"
+        },
+        {
+          "label" : "Data Science",
+          "href" : "https://www.youtube.com/watch?v=6YMRB4bgQ-o&list=PLCwXWOyIR22vvG5WLClozLrTrY0mqVBvf&ab_channel=ARTE",
+          "report" : ", Arte, 2020"
+        },
+        {
+          "label" : "Empreinte environnementale du numérique mondial", 
+          "href" : "https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf",
+          "report" : ", greenIT.fr, octobre 2019"
+        },
+        {
+          "label" : "iNUM : impacts environnementaux du numérique en France", 
+          "href" : "https://www.greenit.fr/impacts-environnementaux-du-numerique-en-france/",
+          "report" : ", greenIT.fr, juin 2020"
+        },
+        {
+          "label" : "Pour une sobriété numérique", 
+          "href" : "https://theshiftproject.org/article/pour-une-sobriete-numerique-rapport-shift/",
+          "report" : ", Shift Project, octobre 2018"
+        },
+        {
+          "label" : "Climat : l’insoutenable usage de la vidéo en ligne", 
+          "href" : "https://theshiftproject.org/article/climat-insoutenable-usage-video/",
+          "report" : ", Shift Project, juillet 2019."
+        },
+        {
+          "label" : "Déployer la sobriété numérique", 
+          "href" : "https://theshiftproject.org/article/deployer-la-sobriete-numerique-rapport-shift/",
+          "report" : ", Shift Project, octobre 2020."
+        }
+      ]
+    },
+    {
+      "title" : "Impacts du numérique", 
+      "list" : [
+        {
+          "label" : "GreenIT Empreinte environnementale du numérique mondial", 
+          "href" : "https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf"
+        },
+        {
+          "label" : "Écoconception Web par Frédéric Bordage", 
+          "href" : "https://www.eyrolles.com/Informatique/Livre/ecoconception-web-les-115-bonnes-pratiques-9782212678062/"
+        },
+        {
+          "label" : "GreenIT Évolution de la législation Européenne", 
+          "href" : "https://www.greenit.fr/2020/11/30/numerique-responsable-leurope-vote-une-resolution-historique/"
+        },
+        {
+          "label" : "How much Energy do we use on the Web", 
+          "href" : "https://transitionnetwork.org/news/how-much-energy-do-we-use-on-the-web/"
+        },
+        {
+          "label" : "GreenIT News sur l’écoconception", 
+          "href" : "https://www.greenit.fr/tag/ecoconception/"
+        },
+        {
+          "label" : "Nega Octet Initiative", 
+          "href" : "https://negaoctet.org/"
+        }
+      ]
+    },
+    {
+      "title" : "Outils", 
+      "list" : [
+        {
+          "label" : "ADEME Datagir Tool", 
+          "href" : "https://datagir.ademe.fr/"
+        },
+        {
+          "label" : "GreenIT Analysis Extension Chrome", 
+          "href" : "https://chrome.google.com/webstore/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad"
+        },
+        {
+          "label" : "ADEME Données publiques d’ACV par équipement", 
+          "href" : "https://www.bilans-ges.ademe.fr/documentation/UPLOAD_DOC_FR/index.htm?ordinateurs_et_equuipements_pe.htm"
+        },
+        {
+          "label" : "GreenIT 115 bonnes pratiques format Web", 
+          "href" : "https://collectif.greenit.fr/ecoconception-web/115-bonnes-pratiques-eco-conception_web.html"
+        },
+        {
+          "label" : "GreenIT 115 bonnes pratiques format ready-to-user", 
+          "href" : "https://collectif.greenit.fr/ecoconception-web/"
+        },
+        {
+          "label" : "ADEME Convertisseur CO2", 
+          "href" : "https://monconvertisseurco2.fr/"
+        },
+        {
+          "label" : "Nega Octet Base de donnée", 
+          "href" : "https://negaoctet.org/#Donnees"
+        },
+        {
+          "label" : "The original Website Carbon calculator", 
+          "href" : "https://www.websitecarbon.com/"
+        },
+        {
+          "label" : "EcoIndex.fr Testez un site", 
+          "href" : "https://www.ecoindex.fr/"
+        }
+      ]
+    }
+  ] 
+}

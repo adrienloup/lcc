@@ -1,130 +1,436 @@
 {
   "resources" : [ 
     {
-      "title" : "Documentation générale", 
+      "title" : "Études",
       "list" : [
         {
-          "label" : "Synthèse officielle GIEC", 
-          "href" : "https://comprendre-giec.fr/#lang=fr_FR"
-        },
-        {
-          "label" : "Synthèse du rapport du ADEME", 
-          "href" : "https://datagir.ademe.fr/blog/budget-empreinte-carbone-c-est-quoi/"
-        },
-        {
-          "label" : "L’âge des Low Tech par Philippe Bihouix", 
-          "href" : "https://www.seuil.com/ouvrage/l-age-des-low-tech-philippe-bihouix/9782021160727"
-        },
-        {
-          "label" : "IPCC Interactive Atlas", 
-          "href" : "https://interactive-atlas.ipcc.ch/"
-        },
-        {
-          "label" : "Decarbonize Europe", 
-          "href" : "https://decarbonizeurope.org/"
-        },
-        {
-          "label" : "ADEME Datagir Tool", 
-          "href" : "https://datagir.ademe.fr/"
-        },
-        {
-          "label" : "Écoconception Les différents niveaux", 
-          "href" : "https://www.eco-conception.fr/static/leco-conception-pour-tous.html"
-        },
-        {
-          "label" : "ADEME Librairie", 
-          "href" : "https://librairie.ademe.fr/"
-        },
-        {
-          "label" : "Data Science", 
-          "href" : "https://www.youtube.com/watch?v=6YMRB4bgQ-o&list=PLCwXWOyIR22vvG5WLClozLrTrY0mqVBvf&ab_channel=ARTE",
-          "report" : ", Arte, 2020"
-        },
-        {
-          "label" : "Empreinte environnementale du numérique mondial", 
+          "label" : "Empreinte environnementale du numérique mondial",
           "href" : "https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf",
-          "report" : ", greenIT.fr, octobre 2019"
+          "text" : ", greenit.fr, octobre 2019."
         },
         {
-          "label" : "iNUM 2020 : impacts environnementaux du numérique en France", 
+          "label" : "iNUM 2020 : impacts environnementaux du numérique en France",
           "href" : "https://www.greenit.fr/impacts-environnementaux-du-numerique-en-france/",
-          "report" : ", greenIT.fr, juin 2020"
+          "text" : ", GreenIT.fr, juin 2020."
         },
         {
-          "label" : "Pour une sobriété numérique", 
+          "label" : "Pour une sobriété numérique",
           "href" : "https://theshiftproject.org/article/pour-une-sobriete-numerique-rapport-shift/",
-          "report" : ", Shift Project, octobre 2018"
+          "text" : ", Shift Project, octobre 2018."
         },
         {
-          "label" : "Climat : l’insoutenable usage de la vidéo en ligne", 
+          "label" : "Climat : l’insoutenable usage de la vidéo en ligne",
           "href" : "https://theshiftproject.org/article/climat-insoutenable-usage-video/",
-          "report" : ", Shift Project, juillet 2019."
+          "text" : ", Shift Project, juillet 2019."
+        },
+        {
+          "label" : "Déployer la sobriété numérique",
+          "href" : "https://theshiftproject.org/article/deployer-la-sobriete-numerique-rapport-shift/",
+          "text" : ", Shift Project, octobre 2020."
+        },
+        {
+          "label" : "Caractérisation des effets rebond induits par le télétravail",
+          "href" : "https://librairie.ademe.fr/mobilite-et-transport/3776-caracterisation-des-effets-rebond-induits-par-le-teletravail.html",
+          "text" : ", ADEME, 2020 : notamment un chapitre sur l'impact de la visioconférence."
+        },
+        {
+          "label" : "La consommation de métaux du numérique : un secteur loin d’être dématérialisé",
+          "href" : "https://www.strategie.gouv.fr/publications/consommation-de-mentaux-numerique-un-secteur-loin-detre-dematerialise",
+          "text" : ", France Stratégie, 2020."
+        },
+        {
+          "label" : "Feuille de route sur l'environnement et le numérique",
+          "href" : "https://cnnumerique.fr/files/uploads/2020/CNNum%20-%20Feuille%20de%20route%20environnement%20%26%20numerique.pdf",
+          "text" : ", Conseil National du Numérique, 2020."
+        },
+        {
+          "label" : "Pour une transition numérique écologique",
+          "href" : "https://www.senat.fr/rap/r19-555/r19-555_mono.html",
+          "text" : ", rapport du Sénat, 2020."
+        },
+        {
+          "label" : "Rapport sur l’obsolescence logicielle",
+          "href" : "https://www.ecologie.gouv.fr/numerique-et-environnement-remise-au-parlement-du-rapport-sur-lobsolescence-logicielle-prevu",
+          "text" : " prévu à l’article 27 de la loi relative à la lutte contre le gaspillage et à l’économie circulaire (AGEC), février 2021."
+        },
+        {
+          "label" : "Chasing Carbon: The Elusive Environmental Footprint of Computing",
+          "href" : "https://arxiv.org/pdf/2011.02839.pdf",
+          "text" : ", Harvard University, Facebook Inc., Arizona State University, 2020"
+        },
+        {
+          "label" : "How realistic are claims about the benefits of using digital technologies for GHG emissions mitigation?",
+          "href" : "https://computingwithinlimits.org/2022/papers/limits22-final-Rasoldier.pdf",
+          "text" : " par Aina Rasoldier, Jacques Combaz, Alain Girault, Kevin Marquet et Sophie Quinton. Juin 2022"
         }
       ]
     },
     {
-      "title" : "Impacts du numérique", 
+      "title" : "Ecosystème",
       "list" : [
+        
         {
-          "label" : "GreenIT Empreinte environnementale du numérique mondial", 
-          "href" : "https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf"
+          "label" : "ADEME",
+          "href" : "https://alliancegreenit.org/",
+          "text" : ", l'agence de la transition écologique qui publie de nombreuses études sur les impacts environnementaux du numérique et finance / subventionne des projets liés à ce sujet (Perfecto, AMI Low-Tech...)."
         },
         {
-          "label" : "Écoconception Web par Frédéric Bordage", 
-          "href" : "https://www.eyrolles.com/Informatique/Livre/ecoconception-web-les-115-bonnes-pratiques-9782212678062/"
+          "label" : "Alliance Green IT",
+          "href" : "https://alliancegreenit.org/",
+          "text" : " : avec entre autres Thomas Mesplede, Adèle SCHNEEBERGER, Romuald Ribault, Caroline Vateau..."
         },
         {
-          "label" : "GreenIT Évolution de la législation Européenne", 
-          "href" : "https://www.greenit.fr/2020/11/30/numerique-responsable-leurope-vote-une-resolution-historique/"
+          "label" : "Arcep",
+          "href" : "https://www.arcep.fr/nos-sujets/numerique-et-environnement.html",
+          "text" : " dont le rapport Pour un numérique soutenable"
         },
         {
-          "label" : "How much Energy do we use on the Web", 
-          "href" : "https://transitionnetwork.org/news/how-much-energy-do-we-use-on-the-web/"
+          "label" : "Clim'Foot",
+          "href" : "https://climfoot-project.eu/",
+          "text" : ", a European project to calculate greenhouse gas emissions produced by companies and entities founded by programme LIFE 2014-2020."
         },
         {
-          "label" : "GreenIT News sur l’écoconception", 
-          "href" : "https://www.greenit.fr/tag/ecoconception/"
+          "label" : "Collectif conception numérique responsable",
+          "href" : "https://collectif.greenit.fr/",
+          "text" : " : avec entre autres Frédéric Bordage, Romuald Priol..."
         },
         {
-          "label" : "Nega Octet Initiative", 
-          "href" : "https://negaoctet.org/"
+          "label" : "EcoInfo",
+          "href" : "https://ecoinfo.cnrs.fr/",
+          "text" : ", « pour une informatique éco-responsable », groupement de services du CNRS. Avec entre autres Françoise Berthoud."
+        },
+        {
+          "label" : "Electrocycle",
+          "href" : "https://www.electrocycle.co/",
+          "text" : " : association et laboratoire citoyen de recherche de solutions en vue de développer le réemploi des équipements électriques et électroniques en fin de vie."
+        },
+        {
+          "label" : "Green code lab",
+          "href" : "https://www.greencodelab.org/"
+        },
+        {
+          "label" : "GreenIT.fr",
+          "href" : "https://www.greenit.fr/",
+          "text" : ", créé par Frédéric Bordage, communauté des acteurs du numérique responsable qui s’intéressent à la sobriété numérique, à l’écoconception des services numériques, à la lowtech, et plus globalement à un avenir numérique alternatif (depuis 2004)"
+        },
+        {
+          "label" : "Halte à l'obsolescence programmée",
+          "href" : "https://www.halteobsolescence.org/",
+          "text" : " : avec entre autres Laeticia Vasseur, Adèle Chasson, Samuel Sauvage."
+        },
+        {
+          "label" : "Institut Numérique Responsable",
+          "href" : "https://institutnr.org/",
+          "text" : ", entre autres Jean-Christophe Chaussat (Pôle-Emploi) et Vincent Courboulay (Université de la Rochelle)."
+        },
+        {
+          "label" : "Mission interministérielle \"Green Tech\"",
+          "href" : "https://ecoresponsable.numerique.gouv.fr/",
+          "text" : " pilotée dans le cadre du programme TECH.GOUV par le Ministère de la Transition Ecologique et la DINUM."
+        },
+        {
+          "label" : "NegaOctet",
+          "href" : "https://negaoctet.org/",
+          "text" : ", projet de Recherche et Développement lauréat de l’appel à projet PERFECTO 2018 de l'Ademe. Création d’outils permettant la réalisation d’Analyse du Cycle de Vie conforme ISO 14040 sur l’ensemble du périmètre Terminaux – Réseau – Datacenter. Coporté par Julie Orgelet (DDemain), Frédéric Bordage (greenit.fr), Caroline Vateau (Neutreo - APL Datacenter) et Bureau Veritas."
+        },
+        {
+          "label" : "Point de MIR",
+          "href" : "https://www.point-de-mir.com/",
+          "text" : ", maison de l'informatique responsable fondée par Bela Loto et Céline Ferre"
+        },
+        {
+          "label" : "Pôle Eco-conception",
+          "href" : "https://www.eco-conception.fr/static/eco-conception-de-service-numerique.html",
+          "text" : ", association dont une des missions est sur le sujet du numérique."
+        },
+        {
+          "label" : "Rcube",
+          "href" : "https://rcube.org/",
+          "text" : ", Fédération du Réemploi et de la Réparation, association fondée par Benoit Varin, également directeur du Développement Durable de Recommerce."
+        },
+        {
+          "label" : "RepairCafe",
+          "href" : "https://www.repaircafe.org/fr/",
+          "text" : ", référentiel des repair café en france et dans le monde."
+        },
+        {
+          "label" : "The Shift Project",
+          "href" : "https://theshiftproject.org/lean-ict/",
+          "text" : ", projet \"les impacts environnementaux du Numérique\" (depuis 2018) : avec entre autres Hugues Ferreboeuf (directeur de projet) et Maxime Efoui-Hess (chargé de projet)."
         }
       ]
     },
     {
-      "title" : "Outils d’audit", 
+      "title" : "Acteurs privés",
       "list" : [
         {
-          "label" : "GreenIT Analysis Extension Chrome", 
-          "href" : "https://chrome.google.com/webstore/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad"
+          "label" : "Commown",
+          "href" : "https://commown.coop/",
+          "text" : "location de Fairphone, PC et casques audio. Avec entre autres Adrien Montagut."
         },
         {
-          "label" : "ADEME Données publiques d’ACV par équipement", 
-          "href" : "https://www.bilans-ges.ademe.fr/documentation/UPLOAD_DOC_FR/index.htm?ordinateurs_et_equuipements_pe.htm"
+          "label" : "DDemain",
+          "href" : "https://ddemain.com/",
+          "text" : "créé par Julie Orgelet, formatrice et consultante en analyse de cycle de vie."
         },
         {
-          "label" : "GreenIT 115 bonnes pratiques format Web", 
-          "href" : "https://collectif.greenit.fr/ecoconception-web/115-bonnes-pratiques-eco-conception_web.html"
+          "label" : "Fairphone",
+          "href" : "https://www.fairphone.com/fr/",
+          "text" : ", smartphone éthique et réparable."
         },
         {
-          "label" : "GreenIT 115 bonnes pratiques format ready-to-user", 
-          "href" : "https://collectif.greenit.fr/ecoconception-web/"
+          "label" : "Framework Laptop",
+          "href" : "https://frame.work/fr/fr",
+          "text" : ", upgradeable and repairable laptop."
         },
         {
-          "label" : "ADEME Convertisseur CO2", 
-          "href" : "https://monconvertisseurco2.fr/"
+          "label" : "Frédéric Bordage de GreenIT.fr",
+          "href" : "https://www.greenit.fr/",
+          "text" : ", consultant et formateur numérique responsable et éco-conception de services numériques."
         },
         {
-          "label" : "Nega Octet Base de donnée", 
-          "href" : "https://negaoctet.org/#Donnees"
+          "label" : "Greenspector",
+          "href" : "https://greenspector.com/fr/accueil/",
+          "text" : ", outil de mesure de l’empreinte environnementale des applications."
         },
         {
-          "label" : "The original Website Carbon calculator", 
-          "href" : "https://www.websitecarbon.com/"
+          "label" : "Greenet.io",
+          "href" : "https://www.greenet.io/",
+          "text" : ", application de mesure et réduction de l’empreinte carbone de votre navigation web."
+        }
+      ]
+    },
+    {
+      "title" : "Ressources non payantes",
+      "list" : [
+        {
+          "label" : "Charte Numérique Responsable",
+          "href" : "https://charter.isit-europe.org/?lang=fr_FR"
         },
         {
-          "label" : "EcoIndex.fr Testez un site", 
-          "href" : "https://www.ecoindex.fr/"
+          "label" : "Numérique au bureau",
+          "href" : "https://particuliers.ademe.fr/au-bureau/numerique",
+          "text" : ", Ademe"
+        },
+        {
+          "label" : "Impact spatial et énergétique des data centers sur les territoires",
+          "href" : "https://www.ademe.fr/impact-spatial-energetique-data-centers-territoires-l",
+          "text" : ", Ademe, 2019"
+        },
+        {
+          "label" : "La face cachée du numérique",
+          "href" : "https://www.ademe.fr/sites/default/files/assets/documents/guide-pratique-face-cachee-numerique.pdf",
+          "text" : ", Ademe, 2019"
+        },
+        {
+
+          "label" : "Situer le numérique",
+          "href" : "https://designcommun.fr/cahiers/situer-le-numerique/",
+          "text" : ", Gauthier Roussilhe, 2020"
+        },
+        {
+          "label" : "La controverse de la 5G",
+          "href" : "https://gauthierroussilhe.com/fr/projects/controverse-de-la-5g",
+          "text" : ", Gauthier Roussilhe, 2020"
+        },
+        {
+          "label" : "Notes issues du livre : « Analyse du cycle de vie : comprendre et réaliser un éco bilan »",
+          "href" : "https://raphael-lemaire.com/2020/03/26/acv-livre/",
+          "text" : ", Raphaël Lemaire, 2020"
+        },
+        {
+          "label" : "Mise en perspective des impacts écologiques du numérique",
+          "href" : "https://raphael-lemaire.com/2019/11/02/mise-en-perspective-impacts-numerique/",
+          "text" : ", Raphaël Lemaire, 2019"
+        },
+        {
+          "label" : "Lowtus",
+          "href" : "https://lowtus.fr/",
+          "text": ", audits qualité de sites web"
+        },
+        {
+          "label" : "Techologie",
+          "href" : "https://techologie.net/",
+          "text" : ", le podcast qui tente de lier tech et écologie alors que tout les oppose"
+        },
+        {
+          "label" : "ICT Sector Guidance built on the GHG Protocol Product Life Cycle Accounting and Reporting Standard",
+          "href" : "https://ghgprotocol.org/sites/default/files/GHGP-ICTSG%20-%20ALL%20Chapters.pdf",
+          "text" : ", Global e-Gustainability Initiative & Carno Trust, 2017"
+        },
+        {
+          "label" : "Process de recyclage dont les équipements numériques",
+          "href" : "https://www.ecosystem.eco/comprendre/process-recyclage",
+          "text" : ", DEEE"
+        },
+        {
+          "label" : "Le réemploi des mobiles",
+          "href" : "https://telephone-portable.ecosystem.eco/",
+          "text" : ", DEEE"
+        },
+        {
+          "label" : "Arkadin réduit de 20 % l’impact environnemental de sa solution de webconférence",
+          "href" : "https://www.apl-datacenter.com/fr/references/arkadin-reduit-de-20-limpact-environnemental-de-sa-solution-de-webconference-grace-a-neutreo-by-apl/"
+        },
+        {
+          "label" : "Infographie : Les métaux, des ressources qui pourraient manquer ?",
+          "href" : "https://multimedia.ademe.fr/infographies/infographie-terres-rares-ademe/"
+        },
+        {
+          "label" : "IEA: Data centres and energy – from global headlines to local headaches ?",
+          "href" : "https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches"
+        },
+        {
+          "label" : "Rapport de l'ADEME : Modélisation et évaluation des impacts environnementaux de produits de consommation et biens d'équipement",
+          "href" : "https://www.ademe.fr/modelisation-evaluation-impacts-environnementaux-produits-consommation-biens-dequipement"
+        },
+        {
+          "label" : "L'envert du décor : supprimer des mails pour sauver la planète, cette fausse bonne idée",
+          "href" : "https://www.huffingtonpost.fr/science/article/supprimer-des-mails-pour-sauver-la-planete-cette-fausse-bonne-idee_171443.html",
+          "text" : ", Huffingtonpost"
+        },
+        {
+          "label" : "Evaluating the carbon footprint of a software platform hosted in the cloud",
+          "href" : "https://medium.com/teads-engineering/evaluating-the-carbon-footprint-of-a-software-platform-hosted-in-the-cloud-e716e14e060c",
+          "text" : ", Benjamin DAVY, 2020"
+        },
+        {
+          "label" : "Étude d’impact de la lecture d’une vidéo Canal+",
+          "href" : "https://greenspector.com/fr/impact-video-canal/",
+          "text" : ", Greenspector, 2020"
+        },
+        {
+          "label" : "Les data centers, ou l’impossible frugalité numérique ?",
+          "href" : "https://www.caissedesdepots.fr/sites/default/files/2021-01/201210_Cahiers%20de%20recherche_2020_DATA_CENTERS_P.pdf  ",
+          "text" : " Institut pour la recherche de la Caisse des Dépôts, 2021"
+        },
+        {
+          "label" : "Le numérique peut-il être écologique et responsable ?",
+          "href" : "https://www.radiofrance.fr/franceculture/podcasts/de-cause-a-effets-le-magazine-de-l-environnement/le-numerique-peut-il-etre-ecologique-et-responsable-1757144",
+          "text" : " France Culture, 2021"
+        },
+        {
+          "label" : "La décharge de déchets électroniques d’Agbogbloshie, véritable défi économique et environnemental pour le Ghana",
+          "href" : "https://www.francetvinfo.fr/monde/afrique/societe-africaine/la-decharge-de-dechets-electroniques-dagbogbloshie-veritable-defi-economique-et-environnemental-pour-le-ghana_3863287.html"
+        },
+        {
+          "label" : "La loi de Wirth",
+          "href" : "https://fr.wikipedia.org/wiki/Loi_de_Wirth",
+          "text" : ", est une loi empirique formulée par Niklaus Wirth en 1995, selon laquelle « les programmes ralentissent plus vite que le matériel n'accélère »"
+        },
+        {
+          "label" : "Mozilla’s Climate Commitments",
+          "href" : "https://blog.mozilla.org/en/mozilla/mozillas-climate-commitments/",
+          "text" : ", janvier 2021"
+        },
+        {
+          "label" : "Devenir un développeur green avec l’éco-conception web",
+          "href" : "https://alexsoyes.com/eco-conception-web/",
+          "text" : ", janvier 2021"
+        },
+        {
+          "label" : "Les trois newbies qui voulaient calculer l'impact de leur site web",
+          "href" : "https://dev.to/batbyr/les-trois-newbies-qui-voulaient-calculer-l-impact-de-leur-site-web-abn",
+          "text" : ", février 2021"
+        },
+        {
+          "label" : "Why France’s new ‘repairability index’ is a big deal",
+          "href" : "https://grist.org/climate/why-frances-new-repairability-index-is-a-big-deal/",
+          "text" : ", février 2021"
+        },
+        {
+          "label" : "Investigating the Correlation between Performance Scores andEnergy Consumption of Mobile Web Apps",
+          "href" : "https://www.researchgate.net/publication/341123776_Investigating_the_Correlation_between_Performance_Scores_and_Energy_Consumption_of_Mobile_Web_Apps",
+          "text" : ", mai 2020"
+        },
+        {
+          "label" : "Économiser 42Ko pour sauver 50Tb de bande passante",
+          "href" : "https://welovedevs.com/fr/articles/rex-crispchat-economiser-42ko-pour-sauver-50tb-de-bande-passante/",
+          "text" : ", Crisp, février 2021"
+        },
+        {
+          "label" : "Sustainable software products—Towards assessment criteria for resource and energy efficiency",
+          "href" : "https://www.sciencedirect.com/science/article/pii/S0167739X17314188",
+          "text" : ", 2018"
+        },
+        {
+          "label" : "Les métaux : des ressources qui pourraient manquer ?",
+          "href" : "https://multimedia.ademe.fr/infographies/infographie-terres-rares-ademe/",
+          "text" : " Infographie de l'ADEME, 2020"
+        },
+        {
+          "label" : "Guide pratique pour des achats numériques responsables",
+          "href" : "https://ecoresponsable.numerique.gouv.fr/publications/guide-pratique-achats-numeriques-responsables/",
+          "text" : ", Dinum, DAE, MTE/CGDD, INR, avril 2021"
+        },
+        {
+          "label" : "Rapport sur l’impact environnemental du numérique en santé",
+          "href" : "https://esante.gouv.fr/strategie-nationale/ethique-et-numerique",
+          "text" : ", Délégation ministérielle au numérique en santé, mai 2021"
+        },
+        {
+          "label" : "Thèse Design for Obsolete Devices",
+          "href" : "https://anaellebeignon.fr/design-for-obsolete-devices.html",
+          "text" : ", Anaëlle Beignon"
+        },
+        {
+          "label" : "Réduire la consommation énergétique du numérique",
+          "href" : "https://www.economie.gouv.fr/files/files/directions_services/cge/consommation-energique-numerique.pdf",
+          "text" : ", Conseil général de l'économie, décembre 2019"
+        },
+        {
+          "label" : "Réduire sa facture d'électricité",
+          "href" : "https://www.ademe.fr/sites/default/files/assets/documents/guide-pratique-reduire-facture-electricite.pdf",
+          "text" : ", ADEME, 2019"
+        },
+        {
+          "label" : "Guide de questionnement pour le développement de services numériques",
+          "href" : "https://librairie.ademe.fr/cadic/5702/guide-questionnement-de_developpement-services-numeriques-011501.pdf",
+          "text" : ", OuiShare / ADEME, 2021"
+        },
+        {
+          "label" : "Philippe Bihouix : Start-up nation ? Non, low-tech nation !",
+          "href" : "https://www.socialter.fr/article/tribune-philippe-bihouix-start-up-nation-non-low-tech-nation-1",
+          "text" : " 2019"
+        },
+        {
+          "label" : "Comment construire le Web pour sauver le climat ?",
+          "href" : "https://apreslabiere.fr/un-autre-web-3-3-comment-construire-le-web-pour-sauver-le-climat-330961895cc3?gi=b49770030083",
+          "text" : " Jean-Lou Fourquet, Après la bière, 2021"
+        },
+        {
+          "label" : "Des métaux dans mon smartphone ?",
+          "href" : "https://www.systext.org/sites/all/animationreveal/mtxsmp/#/",
+          "text" : " Un outil interactif développé par ISF SystExt (Ingénieurs sans frontières Systèmes extractifs et environnements), 2017"
+        },
+        {
+          "label" : "Livre blanc de l'action GreenConcept - écoconception numérique",
+          "href" : "http://www.greenconcept-innovation.fr/wp-content/uploads/2020/02/greenconcept_21022020.pdf"
+        },
+        {
+          "label" : "De l’eau dans le numérique ?",
+          "href" : "https://www.millenaire3.com/ressources/2022/veille-m3-de-l-eau-dans-le-numerique-l-empreinte-hydrique-meconnue-d-un-secteur-percu-a-tort-comme-immateriel",
+          "text" : " L’empreinte hydrique méconnue d’un secteur perçu à tort comme immatériel"
+        },
+        {
+          "label" : "Evaluation de l'impact environnemental d'un ensemble de produits reconditionnés : Smartphones, tablettes, ordinateurs portables et fixes",
+          "href" : "https://librairie.ademe.fr/dechets-economie-circulaire/5241-evaluation-de-l-impact-environnemental-d-un-ensemble-de-produits-reconditionnes.html",
+          "text" : ", ADEME, 2022"
+        },
+        {
+          "label" : "Evaluation des impacts environnementaux de l'édition virtuelle 2020 des Assises de l'Economie Circulaire",
+          "href" : "https://librairie.ademe.fr/dechets-economie-circulaire/4886-evaluation-des-impacts-environnementaux-de-l-edition-virtuelle-2020-des-assises-de-l-economie-circulaire.html",
+          "text" : ", ADEME, 2021"
+        },
+        {
+          "label" : "Quantifier l'impact GES d'une action de réduction des émissions",
+          "href" : "https://librairie.ademe.fr/cadic/5510/ademe-quanti_ges_2021-web.pdf",
+          "text" : ", Ademe, 2021. Dont certaines actions sur le numérique"
+        },
+        {
+          "label" : "Enseignements sur les enjeux environnementaux et les impacts du numérique dans une école d’ingénieurs",
+          "href" : "https://plmbox.math.cnrs.fr/f/9f8edb763baa43ae8950/",
+          "text" : ", Annabelle Collin et Al, Univ. Bordeaux, CNRS, Bordeaux INP, Inria..."
         }
       ]
     }

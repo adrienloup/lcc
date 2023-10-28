@@ -12,7 +12,7 @@ function Resources() {
   const list = (list: {
     label: string;
     href: string;
-    report: string;
+    text?: string;
   }[]) => list.map((item, index) => (
     <li
       key={index}
@@ -23,7 +23,7 @@ function Resources() {
         label={item.label}
         href={item.href}
       />
-      {item.report}
+      {item.text}
     </li>
   ))
 
@@ -41,24 +41,31 @@ function Resources() {
         <article className='article'>
           <Heading text='Numérique et environnement' />
           <div className='frame'>
-            <Subtitle text='Études' />
+            <Subtitle text={resources[0]['title']} />
             <List
               cssClass='resources'
               list={list(resources[0]['list'])}
             />
           </div>
           <div className='frame'>
-            <Subtitle text='Impacts du numérique' />
+            <Subtitle text={resources[1]['title']} />
             <List
               cssClass='resources'
               list={list(resources[1]['list'])}
             />
           </div>
           <div className='frame'>
-            <Subtitle text='Outils d’audit' />
+            <Subtitle text={resources[2]['title']} />
             <List
               cssClass='resources'
               list={list(resources[2]['list'])}
+            />
+          </div>
+          <div className='frame'>
+            <Subtitle text={resources[3]['title']} />
+            <List
+              cssClass='resources'
+              list={list(resources[3]['list'])}
             />
           </div>
         </article>
