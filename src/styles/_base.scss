@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@ body {
   font-family: var(--font);
   color-scheme: light dark;
   font-synthesis: none;
-  font-size: 100%;
+  font-size: 1rem;
   color: var(--darktestColor);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -17,6 +19,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-button, input {
+button,
+input {
   font-family: var(--font);
 }
