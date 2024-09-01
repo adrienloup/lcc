@@ -1,5 +1,3 @@
-// import { ResultType } from './ResultType';
-
 export interface DataType {
   websiteName: string;
   whatPurpose: string;
@@ -10,6 +8,5 @@ export interface DataType {
   pagesViewed: number;
   serversUsed: number;
   serversLocated: string;
-  result: number[];
-  // result: ResultType;
+  scores: number[];
 }

@@ -1,7 +1,4 @@
-.question {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.title {
   padding: 1.25rem;
   background-image: linear-gradient(
     60deg,
@@ -10,25 +7,13 @@
   );
   background-color: var(--primary-color);
   border-radius: 0.25rem;
-  transform-origin: 50% 0;
-  animation: 0.35s Appear var(--ease);
-  will-change: transform, opacity;
-}
-
-.title {
   line-height: 1.25;
   font-weight: bold;
   font-size: 1.75rem;
   color: var(--color-1);
-}
-
-.button {
-  width: 2rem;
-  height: 2rem;
-  background-color: transparent;
-  border-radius: 50%;
-  font-size: 2.25rem;
-  color: var(--color-1);
+  transform-origin: 50% 0;
+  animation: 0.35s Appear var(--ease);
+  will-change: transform, opacity;
 }
 
 @keyframes Appear {

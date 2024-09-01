@@ -11,6 +11,7 @@ import { GreenhouseGasScoreComponent } from '../../components/GreenhouseGasScore
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
+import { BannerComponent } from '../../components/Banner/BannerComponent';
 import { ButtonComponent } from '../../components/Button/ButtonComponent';
 import { IconComponent } from '../../components/Icon/IconComponent';
 import globalLocations from '../../references/globalLocations';
@@ -62,21 +63,27 @@ function VisitorsLocatedPage() {
           </FrameComponent>
           <NavigationComponent cssClass={styles.navigation}>
             <ButtonComponent
-              cssClass={styles.previous}
+              cssClass={[styles.button, ` ${styles.previous}`].join('')}
               to="/lcc/question/average-time"
             >
               <IconComponent cssClass={styles.icon} name="chevron_left" />
-              {t('common.article.navigation.previous')}
+              {t('common.button.previous')}
             </ButtonComponent>
             <ButtonComponent
-              cssClass={styles.next}
+              cssClass={[styles.button, ` ${styles.next}`].join('')}
               to="/lcc/question/mobile-visitors"
             >
-              {t('common.article.navigation.next')}
+              {t('common.button.next')}
               <IconComponent cssClass={styles.icon} name="chevron_right" />
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>
+        <BannerComponent>
+          <p>{t('common.questionOrProblem.text')}</p>
+          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
+            {t('common.questionOrProblem.button.label')}
+          </ButtonComponent>
+        </BannerComponent>
       </MainComponent>
       <FooterComponent />
     </>

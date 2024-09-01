@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
-import { MainComponent } from '../../components/Main/MainComponent';
-import { FooterComponent } from '../../components/Footer/FooterComponent';
-import { ArticleComponent } from '../../components/Article/ArticleComponent';
+// import { MainComponent } from '../../components/Main/MainComponent';
+// import { FooterComponent } from '../../components/Footer/FooterComponent';
+// import { ArticleComponent } from '../../components/Article/ArticleComponent';
 import { TitleComponent } from '../../components/Title/TitleComponent';
-import { HighlightComponent } from '../../components/Highlight/HighlightComponent';
-import { ButtonComponent } from '../../components/Button/ButtonComponent';
+// import { HighlightComponent } from '../../components/Highlight/HighlightComponent';
+// import { ButtonComponent } from '../../components/Button/ButtonComponent';
 import styles from './HomePage.module.scss';
 
 function HomePage() {
@@ -17,9 +17,12 @@ function HomePage() {
   return (
     <>
       <HeaderComponent />
-      <MainComponent>
-        <ArticleComponent>
-          <div className={styles.frame}>
+      {/* <MainComponent>
+        <ArticleComponent> */}
+      <TitleComponent cssClass={styles.title}>
+        {t('page.home.title')}
+      </TitleComponent>
+      {/* <div className={styles.frame}>
             <TitleComponent cssClass={styles.title}>
               {t('page.home.title')}
             </TitleComponent>
@@ -83,10 +86,10 @@ function HomePage() {
               label: t('common.highlight.ecologicalImpact.button.label'),
               href: t('common.highlight.ecologicalImpact.button.href'),
             }}
-          />
-        </ArticleComponent>
+          /> */}
+      {/* </ArticleComponent>
       </MainComponent>
-      <FooterComponent />
+      <FooterComponent /> */}
     </>
   );
 }

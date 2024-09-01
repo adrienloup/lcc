@@ -3,14 +3,23 @@ import styles from './BannerComponent.module.scss';
 
 interface BannerComponentProps extends ChildrenType {
   cssClass?: string;
+  variant?: string;
 }
 
 export const BannerComponent = ({
   cssClass,
+  variant = 'primary',
   children,
 }: BannerComponentProps) => {
   return (
-    <div className={[styles.banner, cssClass ? ` ${cssClass}` : ''].join('')}>
+    <div
+      role="complementary"
+      className={[
+        styles.banner,
+        ` ${styles[variant]}`,
+        cssClass ? ` ${cssClass}` : '',
+      ].join('')}
+    >
       {children}
     </div>
   );

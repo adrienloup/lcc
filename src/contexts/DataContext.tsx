@@ -13,29 +13,37 @@ const initialValue = {
   pagesViewed: 5,
   serversUsed: 2,
   serversLocated: 'eu',
-  result: [0],
-  // result: {
-  //   plug: 0,
-  //   meter: 0,
-  //   coin: 0,
-  //   glass: 0,
-  //   house: 0,
-  //   car: 0,
-  //   desktop: 0,
-  //   shower: 0,
-  //   energy: 0,
-  //   gas: 0,
-  //   materials: 0,
-  //   water: 0,
-  // },
+  scores: [0],
 };
 
 export const DataContext = createContext<{
   data: DataType;
-  setData: (data: DataType) => void;
+  setData: (data: {
+    websiteName: string;
+    whatPurpose: string;
+    visitorsPerMonth: number;
+    averageTime: number;
+    visitorsLocated: string;
+    mobileVisitors: number;
+    pagesViewed: number;
+    serversUsed: number;
+    serversLocated: string;
+    scores: number[];
+  }) => void;
 }>({
   data: initialValue,
-  setData: (data: DataType) => data,
+  setData: (data: {
+    websiteName: string;
+    whatPurpose: string;
+    visitorsPerMonth: number;
+    averageTime: number;
+    visitorsLocated: string;
+    mobileVisitors: number;
+    pagesViewed: number;
+    serversUsed: number;
+    serversLocated: string;
+    scores: number[];
+  }) => data,
 });
 
 export function DataProvider({ children }: ChildrenType) {

@@ -3,21 +3,19 @@
   flex-flow: row wrap;
   gap: 1rem;
   transform-origin: 50% 0;
-  animation: 0.55s Appear var(--ease);
+  animation: 0.45s Appear var(--ease);
   will-change: transform, opacity;
 }
 
-.raw-materials,
-.water,
-.primary-energy,
-.greenhouse-gas {
-  gap: 0.5rem;
-  height: 4.5rem;
-  padding: 0 1.25rem 0 1rem;
+.button {
+  position: relative;
+  gap: 0.85rem;
+  height: 5rem;
+  padding: 0 2.5rem 0 1rem;
   background-color: var(--primary-lighter-color);
   border-radius: 0.25rem;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--color-1);
 
   &:focus-visible,
@@ -28,30 +26,37 @@
 
 .raw-materials {
   .svg {
-    width: 3.25rem;
+    width: 3.5rem;
     height: auto;
   }
 }
 
 .water {
   .svg {
-    width: 2.25rem;
+    width: 2.5rem;
     height: auto;
   }
 }
 
 .primary-energy {
   .svg {
-    width: 2.25rem;
+    width: 2.5rem;
     height: auto;
   }
 }
 
 .greenhouse-gas {
   .svg {
-    width: 4.3rem;
+    width: 4.5rem;
     height: auto;
   }
+}
+
+.icon {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.25rem;
+  font-size: 1.25rem;
 }
 
 @keyframes Appear {

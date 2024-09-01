@@ -1,11 +1,16 @@
 {
   "common": {
-    "article": {
-      "navigation": {
-        "previous": "Previous",
-        "next": "Next",
-        "result": "Result of my test"
+    "questionOrProblem": {
+      "text": "A question, a problem?",
+      "button": {
+        "label": "Discover the FAQ!",
+        "href": "#"
       }
+    },
+    "button": {
+      "previous": "Previous",
+      "next": "Next",
+      "result": "Result"
     },
     "footer": {
       "accessibility": {
@@ -53,7 +58,13 @@
       "primaryEnergy": "<span>{{value}} MW/h</span>of primary energy per year",
       "greenhouseGas": "<span>{{value}} tons</span>of CO2-eq per year"
     },
-    "title": "Life Cycle Calculator"
+    "title": "Life Cycle Calculator",
+    "referenceModels": {
+      "rawMaterials": "Raw materials",
+      "water": "Water",
+      "primaryEnergy": "Primary energy",
+      "greenhouseGas": "Greenhouse gas"
+    }
   },
   "page": {
     "accessibility": {
@@ -69,6 +80,9 @@
     "mobileVisitors": {
       "title": "What is the proportion of mobile users?"
     },
+    "notFound": {
+      "title": "The page is not found or it is under construction but don't give up :)"
+    },
     "pagesViewed": {
       "title": "What is the number of pages viewed?"
     },
@@ -77,17 +91,12 @@
     },
     "referenceModels": {
       "title": "Reference models",
-      "navigation": {
-        "rawMaterials": "Raw materials",
-        "water": "Water",
-        "primaryEnergy": "Primary energy",
-        "greenhouseGas": "Greenhouse gas"
-      }
+      "text": "The life cycle calculator assesses the ecological impact of a user's journey over a year, based on website traffic, energy intensity, carbon intensity of electricity, energy source used."
     },
     "resources": {
       "title": "Digital and environment"
     },
-    "rawMaterialsPage": {
+    "rawMaterials": {
       "title": "Raw materials"
     },
     "serversLocated": {
@@ -100,7 +109,8 @@
       "title": "Where are the majority of users located?"
     },
     "visitorsPerMonth": {
-      "title": "What is the number of visitors per month?"
+      "title": "What is the number of visitors per month?",
+      "text": "The number of visitors per month allows you to know the quantity of user terminals, network equipment, servers necessary to consult the content or services that you deliver. If you do not know it, you can find this information in your Google Analytics tool or equivalent."
     },
     "website": {
       "title": "What do we measure the impact of?",

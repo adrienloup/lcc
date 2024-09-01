@@ -1,56 +1,56 @@
-.frame {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 40rem;
-  margin: auto;
-  padding: 8vh 0 14vh;
-  text-align: center;
-}
+// .frame {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 2rem;
+//   max-width: 40rem;
+//   margin: auto;
+//   padding: 8vh 0 14vh;
+//   text-align: center;
+// }
 
-.title {
-  line-height: 1.5;
-  letter-spacing: -0.075rem;
-  font-weight: bold;
-  font-size: 2.25rem;
-}
+// .title {
+//   line-height: 1.5;
+//   letter-spacing: -0.075rem;
+//   font-weight: bold;
+//   font-size: 2.25rem;
+// }
 
-.text {
-  line-height: 1.5;
-  font-weight: bold;
-  font-size: 1.5rem;
+// .text {
+//   line-height: 1.5;
+//   font-weight: bold;
+//   font-size: 1.5rem;
 
-  span {
-    color: var(--secondary-color);
-  }
-}
+//   span {
+//     color: var(--secondary-color);
+//   }
+// }
 
-.button {
-  gap: 0.25rem;
-  padding: 1.5rem 2rem;
-  background-color: var(--primary-color);
-  border-radius: 2.5rem;
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: var(--color-1);
+// .button {
+//   gap: 0.25rem;
+//   padding: 1.5rem 2rem;
+//   background-color: var(--primary-color);
+//   border-radius: 2.5rem;
+//   font-weight: bold;
+//   font-size: 1.25rem;
+//   color: var(--color-1);
 
-  &:focus-visible,
-  &:hover {
-    background-color: var(--primary-darker-color);
-  }
+//   &:focus-visible,
+//   &:hover {
+//     background-color: var(--primary-darker-color);
+//   }
 
-  .icon {
-    font-size: 2rem;
-  }
-}
+//   .icon {
+//     font-size: 2rem;
+//   }
+// }
 
-.link {
-  padding-bottom: 0.25rem;
-  background-color: transparent;
-  border-bottom: 0.2rem solid var(--primary-color);
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: var(--primary-color);
-}
+// .link {
+//   padding-bottom: 0.25rem;
+//   background-color: transparent;
+//   border-bottom: 0.2rem solid var(--primary-color);
+//   font-weight: bold;
+//   font-size: 1.25rem;
+//   color: var(--primary-color);
+// }

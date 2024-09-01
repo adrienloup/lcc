@@ -4,6 +4,8 @@ import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
+import { BannerComponent } from '../../components/Banner/BannerComponent';
+import { ButtonComponent } from '../../components/Button/ButtonComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { ReferenceModelsComponent } from '../../components/ReferenceModels/ReferenceModelsComponent';
 import { TitleComponent } from '../../components/Title/TitleComponent';
@@ -22,10 +24,17 @@ function ReferenceModelsPage() {
           <TitleComponent cssClass={styles.title}>
             {t('page.referenceModels.title')}
           </TitleComponent>
-          <FrameComponent>ReferenceModelsPage</FrameComponent>
-          <FrameComponent>ReferenceModelsPage</FrameComponent>
+          <FrameComponent>
+            <p>{t('page.referenceModels.text')}</p>
+          </FrameComponent>
           <ReferenceModelsComponent />
         </ArticleComponent>
+        <BannerComponent>
+          <p>{t('common.questionOrProblem.text')}</p>
+          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
+            {t('common.questionOrProblem.button.label')}
+          </ButtonComponent>
+        </BannerComponent>
       </MainComponent>
       <FooterComponent />
     </>

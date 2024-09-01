@@ -11,6 +11,7 @@ import { GreenhouseGasScoreComponent } from '../../components/GreenhouseGasScore
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
+import { BannerComponent } from '../../components/Banner/BannerComponent';
 import { ButtonComponent } from '../../components/Button/ButtonComponent';
 import { IconComponent } from '../../components/Icon/IconComponent';
 import globalLocations from '../../references/globalLocations';
@@ -62,18 +63,27 @@ function ServersLocatedPage() {
           </FrameComponent>
           <NavigationComponent cssClass={styles.navigation}>
             <ButtonComponent
-              cssClass={styles.previous}
+              cssClass={[styles.button, ` ${styles.previous}`].join('')}
               to="/lcc/question/servers-used"
             >
               <IconComponent cssClass={styles.icon} name="chevron_left" />
-              {t('common.article.navigation.previous')}
+              {t('common.button.previous')}
             </ButtonComponent>
-            <ButtonComponent cssClass={styles.next} to="/lcc/ecological-impact">
-              {t('common.article.navigation.result')}
-              <IconComponent cssClass={styles.icon} name="check_small" />
+            <ButtonComponent
+              cssClass={[styles.button, ` ${styles.result}`].join('')}
+              to="/lcc/ecological-impact"
+            >
+              <IconComponent cssClass={styles.icon} name="done_all" />
+              {t('common.button.result')}
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>
+        <BannerComponent>
+          <p>{t('common.questionOrProblem.text')}</p>
+          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
+            {t('common.questionOrProblem.button.label')}
+          </ButtonComponent>
+        </BannerComponent>
       </MainComponent>
       <FooterComponent />
     </>

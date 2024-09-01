@@ -1,11 +1,16 @@
 {
   "common": {
-    "article": {
-      "navigation": {
-        "previous": "Précédent",
-        "next": "Suivant",
-        "result": "Mon résultat"
+    "questionOrProblem": {
+      "text": "Une question, un problème ?",
+      "button": {
+        "label": "Découvrez la FAQ !",
+        "href": "#"
       }
+    },
+    "button": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "result": "Résultat"
     },
     "footer": {
       "accessibility": {
@@ -53,7 +58,13 @@
       "primaryEnergy": "<span>{{value}} MWh</span>d’énergie primaire par an",
       "greenhouseGas": "<span>{{value}} tonnes</span>de CO2-eq par an"
     },
-    "title": "Calculateur de cycle de vie"
+    "title": "Calculateur de cycle de vie",
+    "referenceModels": {
+      "rawMaterials": "Les matières premières",
+      "water": "L'eau",
+      "primaryEnergy": "L'énergie primaire",
+      "greenhouseGas": "Le gaz à effet de serre"
+    }
   },
   "page": {
     "accessibility": {
@@ -69,6 +80,9 @@
     "mobileVisitors": {
       "title": "Quelle est la proportion d’utilisateurs en mobile ?"
     },
+    "notFound": {
+      "title": "La page n'est pas trouvée ou elle est en construction mais n'abandonnez pas :)"
+    },
     "pagesViewed": {
       "title": "Quel est le nombre de pages consultées ?"
     },
@@ -77,12 +91,7 @@
     },
     "referenceModels": {
       "title": "Les modèles de référence",
-      "navigation": {
-        "rawMaterials": "Les matières premières",
-        "water": "L'eau",
-        "primaryEnergy": "L'énergie primaire",
-        "greenhouseGas": "Le gaz à effet de serre"
-      }
+      "text": "Le calculateur de cycle de vie évalue l'impact écologique du parcours d’un utilisateur sur un an, en fonction du trafic du site Web, intensité énergétique, intensité carbone de l’électricité, source d’énergie utilisée."
     },
     "resources": {
       "title": "Numérique et environnement"
@@ -100,7 +109,8 @@
       "title": "Où se situe la majeure partie des utilisateurs ?"
     },
     "visitorsPerMonth": {
-      "title": "Quel est le nombre de visiteurs par mois ?"
+      "title": "Quel est le nombre de visiteurs par mois ?",
+      "text": "Le nombre de visiteurs par mois permet de connaître la quantité de teminaux utilisateur, équipements réseau, serveur nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette information dans votre outil Google Analytics ou équivalent."
     },
     "website": {
       "title": "De quel parcours mesure-t-on l'impact ?",

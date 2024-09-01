@@ -11,6 +11,7 @@ import { WaterScoreComponent } from '../../components/WaterScore/WaterScoreCompo
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
+import { BannerComponent } from '../../components/Banner/BannerComponent';
 import { ButtonComponent } from '../../components/Button/ButtonComponent';
 import { IconComponent } from '../../components/Icon/IconComponent';
 import styles from './QuestionPage.module.scss';
@@ -39,7 +40,7 @@ function VisitorsPerMonthPage() {
           <WaterScoreComponent data={data} />
           <QuestionComponent
             title={t('page.visitorsPerMonth.title')}
-            text="Le nombre de visiteurs par mois permet de connaître la quantité de teminaux utilisateur, équipements réseau, serveur nécessaire pour consulter les contenus ou les services que vous délivrez. Si vous ne la connaissez pas, vous pouvez trouver cette information dans votre outil Google Analytics ou équivalent."
+            text={t('page.visitorsPerMonth.text')}
           />
           <FrameComponent>
             <form className="form" action="">
@@ -61,21 +62,27 @@ function VisitorsPerMonthPage() {
           </FrameComponent>
           <NavigationComponent cssClass={styles.navigation}>
             <ButtonComponent
-              cssClass={styles.previous}
+              cssClass={[styles.button, ` ${styles.previous}`].join('')}
               to="/lcc/question/website"
             >
               <IconComponent cssClass={styles.icon} name="chevron_left" />
-              {t('common.article.navigation.previous')}
+              {t('common.button.previous')}
             </ButtonComponent>
             <ButtonComponent
-              cssClass={styles.next}
+              cssClass={[styles.button, ` ${styles.next}`].join('')}
               to="/lcc/question/average-time"
             >
-              {t('common.article.navigation.next')}
+              {t('common.button.next')}
               <IconComponent cssClass={styles.icon} name="chevron_right" />
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>
+        <BannerComponent>
+          <p>{t('common.questionOrProblem.text')}</p>
+          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
+            {t('common.questionOrProblem.button.label')}
+          </ButtonComponent>
+        </BannerComponent>
       </MainComponent>
       <FooterComponent />
     </>

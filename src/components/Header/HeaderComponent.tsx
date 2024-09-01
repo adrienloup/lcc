@@ -45,10 +45,7 @@ export const HeaderComponent = () => {
             {t('common.header.navigation.tab2')}
           </ButtonComponent>
           <ButtonComponent
-            cssClass={[
-              styles.tab,
-              useActivePage('resources') ? ` ${styles.active}` : '',
-            ].join('')}
+            cssClass={[styles.tab].join('')}
             to="/lcc/documentation/resources"
           >
             {t('common.header.navigation.tab3')}

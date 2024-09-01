@@ -8,36 +8,100 @@
   will-change: transform, opacity;
 }
 
-.previous,
-.next {
-  gap: 0.25rem;
+.button {
+  position: relative;
+  height: 5rem;
   background-color: var(--primary-color);
   border-radius: 2.5rem;
   font-weight: bold;
   font-size: 1.25rem;
   color: var(--color-1);
 
-  &:focus-visible,
-  &:hover {
+  &::after {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--primary-darker-color);
+    border-radius: 2.5rem;
+  }
+
+  &:focus-visible {
     background-color: var(--primary-darker-color);
   }
+
+  &:hover {
+    background-image: linear-gradient(
+      270deg,
+      #a2d2fd,
+      #cef1d5,
+      #ffefbc,
+      #ffdbbc,
+      #fd69d0,
+      #a2d2fd,
+      #cef1d5,
+      #ffefbc,
+      #ffdbbc,
+      #fd69d0,
+      #a2d2fd
+    );
+    background-size: 200% 200%;
+    background-clip: text;
+    animation: Slide 5s linear infinite;
+    color: transparent;
+
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.previous {
+  gap: 0.25rem;
+  padding: 0 2rem 0 1rem;
+
+  .icon {
+    font-size: 2.25rem;
+  }
+}
+
+.next {
+  gap: 0.25rem;
+  padding: 0 1rem 0 2rem;
+
+  .icon {
+    font-size: 2.25rem;
+  }
+}
+
+.result {
+  gap: 0.75rem;
+  padding: 0 2rem 0 1.5rem;
 
   .icon {
     font-size: 2rem;
   }
 }
 
-.previous {
-  padding: 1.25rem 2rem 1.25rem 1.25rem;
-}
-
-.next {
-  padding: 1.25rem 1.25rem 1.25rem 2rem;
-}
-
 @keyframes Appear {
   0% {
     transform: scale(0.9);
     opacity: 0;
+  }
+}
+
+@keyframes Slide {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }

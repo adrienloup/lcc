@@ -29,5 +29,13 @@ export const DebugComponent = () => {
     setDisplay(!!window.localStorage.getItem('_lcc_1em0m_3_debug'));
   }, []);
 
-  return <>{display && <div className={styles.debug}>{list}</div>}</>;
+  return (
+    <>
+      {display && (
+        <div className={styles.debug}>
+          <div className={styles.inner}>{list}</div>
+        </div>
+      )}
+    </>
+  );
 };
