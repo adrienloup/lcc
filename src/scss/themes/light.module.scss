@@ -1,0 +1,15 @@
+@mixin if-light {
+  @content;
+}
+
+@mixin light {
+  --color-1: var(--neutral-color-1);
+  --color-2: var(--neutral-color-5);
+  --color-3: var(--neutral-color-2);
+}
+
+:root {
+  @include if-light {
+    @include light();
+  }
+}

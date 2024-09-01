@@ -1,0 +1,62 @@
+.reference-models {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  transform-origin: 50% 0;
+  animation: 0.55s Appear var(--ease);
+  will-change: transform, opacity;
+}
+
+.raw-materials,
+.water,
+.primary-energy,
+.greenhouse-gas {
+  gap: 0.5rem;
+  height: 4.5rem;
+  padding: 0 1.25rem 0 1rem;
+  background-color: var(--primary-lighter-color);
+  border-radius: 0.25rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--color-1);
+
+  &:focus-visible,
+  &:hover {
+    background-color: var(--primary-darker-color);
+  }
+}
+
+.raw-materials {
+  .svg {
+    width: 3.25rem;
+    height: auto;
+  }
+}
+
+.water {
+  .svg {
+    width: 2.25rem;
+    height: auto;
+  }
+}
+
+.primary-energy {
+  .svg {
+    width: 2.25rem;
+    height: auto;
+  }
+}
+
+.greenhouse-gas {
+  .svg {
+    width: 4.3rem;
+    height: auto;
+  }
+}
+
+@keyframes Appear {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}

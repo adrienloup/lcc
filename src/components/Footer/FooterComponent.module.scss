@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  background-color: var(--color-1);
+  border-top: 0.25rem solid var(--color-3);
+
+  @include tablet-portrait {
+    height: 3rem;
+  }
+}
+
+.button {
+  gap: 0.5rem;
+  padding: 0 1rem;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+
+  @include tablet-portrait {
+    gap: 0.25rem;
+    font-size: 1rem;
+  }
+
+  &:focus-visible {
+    background-color: var(--color-3);
+    outline-offset: -0.35rem;
+  }
+
+  &:hover {
+    background-color: var(--color-3);
+  }
+}
+
+.icon {
+  font-size: 2.25rem;
+
+  @include tablet-portrait {
+    display: none;
+  }
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--primary-color);
+
+  @include mobile-landscape {
+    display: none;
+  }
+}

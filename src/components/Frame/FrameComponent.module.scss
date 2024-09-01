@@ -1,0 +1,17 @@
+.frame {
+  padding: 1.5rem 2rem;
+  background-color: var(--color-3);
+  border-radius: 0.25rem;
+
+  & + & {
+    transform-origin: 50% 0;
+    animation: 0.25s Appear var(--ease);
+    will-change: transform, opacity;
+  }
+}
+
+@keyframes Appear {
+  0% {
+    transform: scale(0.9);
+  }
+}

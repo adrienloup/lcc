@@ -1,0 +1,110 @@
+{
+  "common": {
+    "article": {
+      "navigation": {
+        "previous": "Précédent",
+        "next": "Suivant",
+        "result": "Mon résultat"
+      }
+    },
+    "footer": {
+      "accessibility": {
+        "button": "Accessibilité : totalement conforme"
+      }
+    },
+    "header": {
+      "name": "Calculateur<br />de cycle<br />de vie",
+      "navigation": {
+        "tab1": "Calculateur",
+        "tab2": "Modèles",
+        "tab3": "Documentation"
+      },
+      "profile": {
+        "tooltip": "Mon profil"
+      }
+    },
+    "help": {
+      "paragraph1": "Voici votre score provisoire, il évolue à chaque nouvelle réponse !",
+      "paragraph2": "Parcourez les modèles de référence pour comprendre l'impacte écologique de votre site Web sur la planète."
+    },
+    "highlight": {
+      "actForThePlanet": {
+        "subtitle": "Agir pour la planète",
+        "title": "Comment agir ?",
+        "text": "Découvrez les actions personnalisées pour agir dès aujourd'hui pour la planète.",
+        "button": {
+          "label": "Toutes les actions",
+          "to": "/lcc/documentation/reference-models"
+        }
+      },
+      "ecologicalImpact": {
+        "subtitle": "L'impact écologique",
+        "title": "L'empreinte climat ?",
+        "text": "La concentration du carbone dans l’atmosphère augmente tant et si bien que le climat de la planète subit des bouleversements aux lourdes conséquences : montée des eaux, destruction du vivant, explosion des catastrophes climatiques.",
+        "button": {
+          "label": "En savoir plus",
+          "href": "https://fr.wikipedia.org/wiki/Analyse_du_cycle_de_vie"
+        }
+      }
+    },
+    "liveScore": {
+      "rawMaterials": "<span>{{value}} Kg</span>de matières premières par an",
+      "water": "<span>{{value}} litres</span>d’eau par an",
+      "primaryEnergy": "<span>{{value}} MWh</span>d’énergie primaire par an",
+      "greenhouseGas": "<span>{{value}} tonnes</span>de CO2-eq par an"
+    },
+    "title": "Calculateur de cycle de vie"
+  },
+  "page": {
+    "accessibility": {
+      "title": "Accessibilité numérique"
+    },
+    "averageTime": {
+      "title": "Quel est le temps passé par les utilisateurs ?"
+    },
+    "home": {
+      "title": "Connaissez-vous l’impact écologique de votre site Web sur la planète ?",
+      "text": "En <span>10 minutes</span> obtenez une estimation de votre impact écologique à la fin du test !"
+    },
+    "mobileVisitors": {
+      "title": "Quelle est la proportion d’utilisateurs en mobile ?"
+    },
+    "pagesViewed": {
+      "title": "Quel est le nombre de pages consultées ?"
+    },
+    "profile": {
+      "title": "Mon profil"
+    },
+    "referenceModels": {
+      "title": "Les modèles de référence",
+      "navigation": {
+        "rawMaterials": "Les matières premières",
+        "water": "L'eau",
+        "primaryEnergy": "L'énergie primaire",
+        "greenhouseGas": "Le gaz à effet de serre"
+      }
+    },
+    "resources": {
+      "title": "Numérique et environnement"
+    },
+    "rawMaterials": {
+      "title": "Les matières premières"
+    },
+    "serversLocated": {
+      "title": "Où sont localisés la majeure partie des serveurs ?"
+    },
+    "serversUsed": {
+      "title": "Quel est le nombre de serveurs utilisés ?"
+    },
+    "visitorsLocated": {
+      "title": "Où se situe la majeure partie des utilisateurs ?"
+    },
+    "visitorsPerMonth": {
+      "title": "Quel est le nombre de visiteurs par mois ?"
+    },
+    "website": {
+      "title": "De quel parcours mesure-t-on l'impact ?",
+      "text": "L'éco-conception part toujours d’un besoin utilisateur clairement identifié et dont le service numérique cherche à apporter une solution."
+    }
+  }
+}

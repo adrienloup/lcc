@@ -1,0 +1,34 @@
+.question {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--primary-lighter-color);
+  border-radius: 0.25rem;
+  transform-origin: 50% 0;
+  animation: 0.35s Appear var(--ease);
+  will-change: transform, opacity;
+}
+
+.title {
+  line-height: 1.25;
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: var(--color-1);
+}
+
+.button {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border-radius: 50%;
+  font-size: 2.25rem;
+  color: var(--color-1);
+}
+
+@keyframes Appear {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}

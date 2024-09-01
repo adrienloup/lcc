@@ -41,5 +41,12 @@ export default defineConfig({
       },
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@use "./src/scss/additional/breakpoints" as *;',
+      },
+    },
+  },
   base: '/lcc',
 });

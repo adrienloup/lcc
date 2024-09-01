@@ -1,0 +1,10 @@
+.debug {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.25rem;
+  padding: 1rem;
+  background-color: var(--neutral-color-3);
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+}

@@ -1,0 +1,92 @@
+.tooltip {
+  position: relative;
+  display: inline-flex;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    .box {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    button,
+    a {
+      background-color: var(--color-3);
+    }
+  }
+
+  &:focus-visible {
+    outline: 0.35rem solid var(--secondary-color);
+    outline-offset: -0.35rem;
+  }
+}
+
+.box {
+  position: absolute;
+  z-index: 2;
+  white-space: nowrap;
+  padding: 0.75rem;
+  background-color: var(--color-3);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top-start {
+  bottom: 100%;
+  left: 0;
+}
+
+.top-end {
+  bottom: 100%;
+  right: 0;
+}
+
+.right {
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-start {
+  top: 100%;
+  left: 0;
+}
+
+.bottom-end {
+  top: 100%;
+  right: 0;
+}
+
+.left {
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.text {
+  font-size: 1rem;
+}

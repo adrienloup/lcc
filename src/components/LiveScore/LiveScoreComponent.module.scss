@@ -1,0 +1,51 @@
+.live-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-image: linear-gradient(
+    60deg,
+    var(--primary-darker-color) 0%,
+    var(--primary-lighter-color) 100%
+  );
+  background-color: var(--primary-color);
+  border-radius: 0.25rem;
+  transform-origin: 50% 0;
+  animation: 0.45s Appear var(--ease);
+  will-change: transform, opacity;
+}
+
+.svg {
+  width: 4rem;
+  height: auto;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--color-1);
+
+  span {
+    font-size: 1.75rem;
+  }
+}
+
+.button {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border-radius: 50%;
+  font-size: 2.25rem;
+  color: var(--color-1);
+}
+
+@keyframes Appear {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}

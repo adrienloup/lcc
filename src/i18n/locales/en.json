@@ -1,0 +1,110 @@
+{
+  "common": {
+    "article": {
+      "navigation": {
+        "previous": "Previous",
+        "next": "Next",
+        "result": "Result of my test"
+      }
+    },
+    "footer": {
+      "accessibility": {
+        "button": "Accessibility: fully compliant"
+      }
+    },
+    "header": {
+      "name": "Life Cycle<br />Calculator",
+      "navigation": {
+        "tab1": "Calculator",
+        "tab2": "Models",
+        "tab3": "Documentation"
+      },
+      "profile": {
+        "tooltip": "My profile"
+      }
+    },
+    "help": {
+      "paragraph1": "Here is your provisional score, it changes with each new answer!",
+      "paragraph2": "Browse reference models to understand your website's ecological impact on the planet."
+    },
+    "highlight": {
+      "actForThePlanet": {
+        "subtitle": "Act for the planet",
+        "title": "How to act?",
+        "text": "Discover personalized actions to act today for the planet.",
+        "button": {
+          "label": "All actions",
+          "to": "/lcc/documentation/reference-models"
+        }
+      },
+      "ecologicalImpact": {
+        "subtitle": "The ecological impact",
+        "title": "What is the climate footprint?",
+        "text": "The concentration of carbon in the atmosphere is increasing so much so that the planet's climate is undergoing upheavals with serious consequences: rising water levels, destruction of life, explosion of climatic disasters.",
+        "button": {
+          "label": "Learn more",
+          "href": "https://en.wikipedia.org/wiki/Life-cycle_assessment"
+        }
+      }
+    },
+    "liveScore": {
+      "rawMaterials": "<span>{{value}} Kg</span>of raw materials per year",
+      "water": "<span>{{value}} liters</span>of water per year",
+      "primaryEnergy": "<span>{{value}} MW/h</span>of primary energy per year",
+      "greenhouseGas": "<span>{{value}} tons</span>of CO2-eq per year"
+    },
+    "title": "Life Cycle Calculator"
+  },
+  "page": {
+    "accessibility": {
+      "title": "Digital accessibility"
+    },
+    "averageTime": {
+      "title": "What is the average time spent on the journey per user?"
+    },
+    "home": {
+      "title": "Do you know the ecological impact of your website on the planet?",
+      "text": "In <span>10 minutes</span> obtain an estimate of your ecological impact at the end of the test!"
+    },
+    "mobileVisitors": {
+      "title": "What is the proportion of mobile users?"
+    },
+    "pagesViewed": {
+      "title": "What is the number of pages viewed?"
+    },
+    "profile": {
+      "title": "My profile"
+    },
+    "referenceModels": {
+      "title": "Reference models",
+      "navigation": {
+        "rawMaterials": "Raw materials",
+        "water": "Water",
+        "primaryEnergy": "Primary energy",
+        "greenhouseGas": "Greenhouse gas"
+      }
+    },
+    "resources": {
+      "title": "Digital and environment"
+    },
+    "rawMaterialsPage": {
+      "title": "Raw materials"
+    },
+    "serversLocated": {
+      "title": "Where are most of the servers located?"
+    },
+    "serversUsed": {
+      "title": "How many servers are used?"
+    },
+    "visitorsLocated": {
+      "title": "Where are the majority of users located?"
+    },
+    "visitorsPerMonth": {
+      "title": "What is the number of visitors per month?"
+    },
+    "website": {
+      "title": "What do we measure the impact of?",
+      "text": "Eco-design always starts from a clearly identified user need for which the digital service seeks to provide a solution."
+    }
+  }
+}
