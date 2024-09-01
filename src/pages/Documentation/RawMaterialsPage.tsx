@@ -58,7 +58,7 @@ function RawMaterialsPage() {
           </FrameComponent>
           <div className={styles.scores}>
             <ScoreComponent
-              text={`<span>${rawMaterialsScore.toFixed(0)}Kg</span>de matières premières`}
+              text={`<span>${rawMaterialsScore.toFixed(0)} Kg</span>de matières premières`}
               name="raw-materials"
             />
             <ScoreComponent
@@ -73,7 +73,7 @@ function RawMaterialsPage() {
           <FrameComponent>
             <h2>Impacts écologiques par année</h2>
             <p>
-              Cela représente {rawMaterialsScore.toFixed(0)}Kg de matières
+              Cela représente {rawMaterialsScore.toFixed(0)} Kg de matières
               premières. Comme si chaque année, nous creusons pour extraire
               l'équivalent de {desktopScore} ordinateurs portables et que chaque
               utilisateur creusait pour extraire l'équivalent de

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
@@ -23,8 +24,10 @@ import getRawMaterials from '../../metrics/getRawMaterials';
 import getShower from '../../metrics/getShower';
 import getWater from '../../metrics/getWater';
 import styles from './ImpactPage.module.scss';
+import { CardComponent } from '../../components/Card/CardComponent';
 
 function ImpactPage() {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const { data, setData } = useData();
 
@@ -136,6 +139,7 @@ function ImpactPage() {
 
   const onClick = () => {
     setData({ ...data, scores: newScore });
+    navigate('/lcc/question/website');
   };
 
   return (
@@ -149,55 +153,62 @@ function ImpactPage() {
             {data.websiteName}
           </TitleComponent>
           <FrameComponent>Équivalence par utilisateur</FrameComponent>
+          <div className={styles.cards}>
+            <CardComponent
+              percent={percents[0]}
+              text={`Comme si chaque utilisateur faisait fonctionner 1 micro-ondes pendant ${plugScore} secondes`}
+              name="plug"
+              to="/lcc/documentation/reference-models/raw-materials"
+            />
+            <CardComponent
+              percent={percents[1]}
+              text={`Comme si chaque utilisateur faisait ${meterScore} mètres en voiture`}
+              name="map"
+              to="/lcc/documentation/reference-models/greenhouse-gas"
+            />
+            <CardComponent
+              percent={percents[2]}
+              text={`Comme si chaque utilisateur creusait pour extraire l'équivalent de ${coinScore} pièces de 1 euro`}
+              name="coin"
+              to="/lcc/documentation/reference-models/primary-energy"
+            />
+            <CardComponent
+              percent={percents[3]}
+              text={`Comme si chaque utilisateur consommait l'équivalent de ${glassScore.toFixed(1)} verres d'eau`}
+              name="glass"
+              to="/lcc/documentation/reference-models/water"
+            />
+          </div>
           <div>
-            <div>{percents[0]}</div>
-            <div>
-              Comme si chaque utilisateur faisait fonctionner 1 micro-ondes
-              pendant {plugScore} secondes
-            </div>
-            <div>{percents[1]}</div>
-            <div>
-              Comme si chaque utilisateur faisait {meterScore} mètres en voiture
-            </div>
-            <div>{percents[2]}</div>
-            <div>
-              Comme si chaque utilisateur creusait pour extraire l'équivalent de
-              {coinScore} pièces de 1 euro
-            </div>
-            <div>{percents[3]}</div>
-            <div>
-              Comme si chaque utilisateur consommait l'équivalent de
-              {glassScore.toFixed(1)} verres d'eau
-            </div>
             <FrameComponent>Équivalence par année</FrameComponent>
-            <div>{percents[4]}</div>
+            <div>{percents[4]} house</div>
             <div>
               Comme si chaque année on consommait de l'électricité comme
               {houseScore} maisons françaises
             </div>
-            <div>{percents[5]}</div>
+            <div>{percents[5]} car</div>
             <div>
               Comme si chaque année on émettait des gaz à effet de serre comme
               {carScore} voitures faisant le tour de la terre
             </div>
-            <div>{percents[6]}</div>
+            <div>{percents[6]} desktop</div>
             <div>
               Comme si chaque année on creusait pour extraire l'équivence de
               {desktopScore} ordinateurs portables
             </div>
-            <div>{percents[7]}</div>
+            <div>{percents[7]} shower</div>
             <div>
               Comme si chaque année on prenait l'équivalent de {showerScore}
               douches
             </div>
             <FrameComponent>Données brutes par année</FrameComponent>
-            <div>{percents[8]}</div>
+            <div>{percents[8]} energy</div>
             <div>{primaryEnergyScore} KWh d'énergie primaire</div>
-            <div>{percents[9]}</div>
+            <div>{percents[9]} cloud</div>
             <div>{greenhouseGasScore.toFixed(0)} Kg de CO2-eq</div>
-            <div>{percents[10]}</div>
+            <div>{percents[10]} materials</div>
             <div>{rawMaterialsScore.toFixed(0)} Kg de matières premières</div>
-            <div>{percents[11]}</div>
+            <div>{percents[11]} water</div>
             <div>{waterScore}&nbsp;litres d'eau</div>
             <button onClick={() => onClick()}>button</button>
           </div>

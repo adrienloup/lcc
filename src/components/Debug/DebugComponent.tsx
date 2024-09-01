@@ -1,18 +1,28 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useData } from '../../hooks/useData';
+// import { useData } from '../../hooks/useData';
 import styles from './DebugComponent.module.scss';
 
 export const DebugComponent = () => {
   const location = useLocation();
-  const { data } = useData();
+  // const { data } = useData();
   const [display, setDisplay] = useState(false);
 
-  const list = Object.entries(data).map(([key, value]) => (
-    <span key={key}>
-      {key}: {value};
-    </span>
-  ));
+  // const list = Object.entries(data).map(
+  //   ([key, value]) => console.log(key, value)
+  //   // <span key={key}>
+  //   //   {key}: {value};
+  //   // </span>
+  // );
+
+  // const list = () => {
+  //   let group;
+  //   for (const property in data) {
+  //     console.log(`${property}: ${data[property]}`);
+  //   }
+  // };
+
+  // list();
 
   useEffect(() => {
     const debug =
@@ -33,7 +43,7 @@ export const DebugComponent = () => {
     <>
       {display && (
         <div className={styles.debug}>
-          <div className={styles.inner}>{list}</div>
+          {/* <div className={styles.inner}>{list}</div> */}
         </div>
       )}
     </>

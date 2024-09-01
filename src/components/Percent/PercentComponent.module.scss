@@ -1,0 +1,25 @@
+.percent {
+  display: flex;
+  // align-items: center;
+  // justify-content: flex-end;
+  // padding: 1rem;
+  // // background-color: var(--lightColor);
+  // border-top-right-radius: 0.25rem;
+  // border-top-left-radius: 0.25rem;
+  // text-align: right;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  &.negative {
+    color: green;
+  }
+
+  &.positive {
+    color: red;
+  }
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
