@@ -18,9 +18,11 @@ export function ThemeProvider({ children }: ChildrenType) {
   );
 
   useEffect(() => {
-    theme === 'dark'
-      ? document.body.classList.add('_dark_1em0m_3')
-      : document.body.classList.remove('_dark_1em0m_3');
+    if (theme === 'dark') {
+      document.body.classList.add('_dark_1em0m_3');
+    } else {
+      document.body.classList.remove('_dark_1em0m_3');
+    }
   }, [theme]);
 
   return (
