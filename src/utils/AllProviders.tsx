@@ -9,7 +9,7 @@ import { AlertProvider } from '../contexts/AlertContext';
 import { DataProvider } from '../contexts/DataContext';
 import { LanguageProvider } from '../contexts/LanguageContext';
 import { ProgressProvider } from '../contexts/ProgressContext';
-import { resultProvider } from '../contexts/ResultContext';
+import { ResultProvider } from '../contexts/ResultContext';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { UserProvider } from '../contexts/UserContext';
 
@@ -35,7 +35,7 @@ export const AllProviders: FunctionComponent<{ children: ReactNode }> =
     [DataProvider],
     [LanguageProvider],
     [ProgressProvider],
-    [resultProvider],
+    [ResultProvider],
     [ThemeProvider],
     [UserProvider],
   ]);

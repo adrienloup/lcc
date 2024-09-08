@@ -44,7 +44,7 @@ export const ResultContext = createContext<{
   setPreviousResult: (previousResult: ResultType) => previousResult,
 });
 
-export function resultProvider({ children }: ChildrenType) {
+export function ResultProvider({ children }: ChildrenType) {
   const [result, setResult] = useLocalStorage(
     '_ccv_1em0m_3_result',
     initialValue

@@ -1,4 +1,4 @@
-import { KeyboardEvent, ReactNode } from 'react';
+import { KeyboardEvent } from 'react';
 import { ChildrenType } from '../../models/ChildrenType';
 import { PositionType } from '../../models/PositionType';
 import styles from './TooltipComponent.module.scss';
