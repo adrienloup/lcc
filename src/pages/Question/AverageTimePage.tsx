@@ -26,8 +26,8 @@ function AverageTimePage() {
   useTitlePage(t('page.averageTime.title'));
 
   const changeAverageTime = (value: string) => {
-    setData({ ...data, averageTime: value });
-    setAverageTime(value);
+    setData({ ...data, averageTime: +value });
+    setAverageTime(+value);
   };
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function AverageTimePage() {
       <MainComponent>
         <DebugComponent />
         <ArticleComponent>
-          <RawMaterialsScoreComponent data={data} />
+          <RawMaterialsScoreComponent />
           <QuestionComponent
             title={t('page.averageTime.title')}
             text={t('page.averageTime.text')}

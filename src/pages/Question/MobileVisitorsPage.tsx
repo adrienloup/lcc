@@ -26,8 +26,8 @@ function MobileVisitorsPage() {
   useTitlePage(t('page.mobileVisitors.title'));
 
   const changeMobileVisitors = (value: string) => {
-    setData({ ...data, mobileVisitors: value });
-    setMobileVisitors(value);
+    setData({ ...data, mobileVisitors: +value });
+    setMobileVisitors(+value);
   };
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function MobileVisitorsPage() {
       <MainComponent>
         <DebugComponent />
         <ArticleComponent>
-          <PrimaryEnergyScoreComponent data={data} />
+          <PrimaryEnergyScoreComponent />
           <QuestionComponent
             title={t('page.mobileVisitors.title')}
             text={t('page.mobileVisitors.text')}

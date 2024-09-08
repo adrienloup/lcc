@@ -26,8 +26,8 @@ function PagesViewedPage() {
   useTitlePage(t('page.pagesViewed.title'));
 
   const changePagesViewed = (value: string) => {
-    setData({ ...data, pagesViewed: value });
-    setPagesViewed(value);
+    setData({ ...data, pagesViewed: +value });
+    setPagesViewed(+value);
   };
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function PagesViewedPage() {
       <MainComponent>
         <DebugComponent />
         <ArticleComponent>
-          <WaterScoreComponent data={data} />
+          <WaterScoreComponent />
           <QuestionComponent
             title={t('page.pagesViewed.title')}
             text={t('page.pagesViewed.text')}

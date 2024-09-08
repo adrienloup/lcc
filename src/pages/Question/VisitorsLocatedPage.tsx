@@ -55,7 +55,7 @@ function VisitorsLocatedPage() {
       <MainComponent>
         <DebugComponent />
         <ArticleComponent>
-          <GreenhouseGasScoreComponent data={data} />
+          <GreenhouseGasScoreComponent />
           <QuestionComponent
             title={t('page.visitorsLocated.title')}
             text={t('page.visitorsLocated.text')}

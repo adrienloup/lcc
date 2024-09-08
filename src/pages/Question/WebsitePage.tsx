@@ -46,7 +46,7 @@ function WebsitePage() {
       <MainComponent>
         <DebugComponent />
         <ArticleComponent>
-          <PrimaryEnergyScoreComponent data={data} />
+          <PrimaryEnergyScoreComponent />
           <QuestionComponent
             title={t('page.website.title')}
             text={t('page.website.text')}

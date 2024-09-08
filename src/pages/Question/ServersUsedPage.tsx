@@ -26,8 +26,8 @@ function ServersUsedPage() {
   useTitlePage(t('page.serversUsed.title'));
 
   const changeServersUsed = (value: string) => {
-    setData({ ...data, serversUsed: value });
-    setServersUsed(value);
+    setData({ ...data, serversUsed: +value });
+    setServersUsed(+value);
   };
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function ServersUsedPage() {
       <MainComponent>
         <DebugComponent />
         <ArticleComponent>
-          <RawMaterialsScoreComponent data={data} />
+          <RawMaterialsScoreComponent />
           <QuestionComponent
             title={t('page.serversUsed.title')}
             text={t('page.serversUsed.text')}
