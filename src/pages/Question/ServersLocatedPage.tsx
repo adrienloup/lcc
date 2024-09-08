@@ -8,7 +8,7 @@ import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
 import { DebugComponent } from '../../components/Debug/DebugComponent';
-import { GreenhouseGasScoreComponent } from '../../components/GreenhouseGasScore/GreenhouseGasScoreComponent';
+import { GreenhouseGasImpactComponent } from '../../components/GreenhouseGasImpact/GreenhouseGasImpactComponent';
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
@@ -54,8 +54,8 @@ function ServersLocatedPage() {
       <HeaderComponent />
       <MainComponent>
         <DebugComponent />
-        <ArticleComponent>
-          <GreenhouseGasScoreComponent />
+        <ArticleComponent cssClass={styles.article}>
+          <GreenhouseGasImpactComponent />
           <QuestionComponent
             title={t('page.serversLocated.title')}
             text={t('page.serversLocated.text')}
@@ -79,8 +79,8 @@ function ServersLocatedPage() {
               cssClass={[styles.button, ` ${styles.result}`].join('')}
               to="/lcc/calculator/ecological-impact"
             >
-              <IconComponent cssClass={styles.icon} icon="done_all" />
               {t('common.button.result')}
+              <IconComponent cssClass={styles.icon} icon="done_all" />
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>

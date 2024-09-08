@@ -9,19 +9,19 @@
       "english": "Anglais",
       "faq": "Découvrez la FAQ !",
       "french": "Français",
-      "improve": "Améliorer mon test",
       "light": "Mode Clair",
       "previous": "Précédent",
       "progress": "Reprendre mon test",
       "next": "Suivant",
-      "restarted": "Commencer un nouveau test",
+      "restart": "Améliorer mon test",
       "result": "Résultat",
       "save": "Mettre à jour mes informations",
-      "start": "Commencer mon test"
+      "start": "Commencer mon test",
+      "startNew": "Commencer un nouveau test"
     },
     "underConstruction": {
       "website": "Le site est en construction, ça marche plutôt bien :)",
-      "page": "Le page est en construction, le contenu final arrive bientôt :)"
+      "page": "Le page est en cours de rédaction, c'est pour bientôt :)"
     },
     "footer": {
       "accessibility": {
@@ -33,13 +33,13 @@
       "navigation": {
         "calculator": "Calculateur",
         "models": "Modèles",
-        "documentation": "Documentation"
+        "resources": "Ressources"
       },
       "profile": {
         "tooltip": "Mon profil"
       }
     },
-    "help": "Voici votre score provisoire, il évolue à chaque nouvelle réponse ! Parcourez les modèles de référence pour comprendre l'impacte écologique de votre site Web sur la planète.",
+    "help": "Voici votre result provisoire, il évolue à chaque nouvelle réponse ! Parcourez les modèles de référence pour comprendre l'impacte écologique de votre site Web sur la planète.",
     "highlight": {
       "actForThePlanet": {
         "subtitle": "Agir pour la planète",
@@ -60,7 +60,7 @@
         }
       }
     },
-    "LiveScore": {
+    "LiveImpact": {
       "rawMaterials": "<span>{{value}} Kg</span>de matières premières par an",
       "water": "<span>{{value}} litres</span>d’eau par an",
       "primaryEnergy": "<span>{{value}} MWh</span>d’énergie primaire par an",
@@ -79,35 +79,35 @@
       "title": "Accessibilité numérique"
     },
     "averageTime": {
-      "title": "Quel est le temps passé par les utilisateurs ?",
+      "title": "Quel est le temps passé en moyenne ?",
       "text": "Le temps que les utilisateurs passent sur votre service numérique permet de connaître la quantité de teminaux, équipements réseau, serveur nécessaire pour servir, transiter et consulter les contenus ou les services que vous délivrez."
     },
     "home": {
-      "title": "Connaissez-vous l’impact écologique de votre site Web sur la planète ?",
-      "text": "En <span>10 minutes</span> obtenez une estimation de votre impact écologique à la fin du test !"
+      "title": "Connaissez-vous l’impact écologique de votre site Web ?",
+      "text": "En <span>10 minutes</span> obtenez l'estimation de votre impact écologique à la fin du test !"
     },
     "impact": {
       "title": "L'impact du parcours {{whatPurpose}} sur le site Web {{websiteName}}",
       "user": {
         "title": "Équivalence par utilisateur",
-        "plug": "Comme si chaque utilisateur faisait fonctionner 1 micro-ondes pendant <span>{{score}} secondes</span>",
-        "meter": "Comme si chaque utilisateur faisait <span>{{score}} mètres</span> en voiture sur les routes",
-        "coin": "Comme si chaque utilisateur creusait pour extraire l'équivalent de <span>{{score}}&nbsp;pièces</span> de 1 euro",
-        "glass": "Comme si chaque utilisateur consommait l'équivalent de <span>{{score}}&nbsp;verres d'eau</span>"
+        "microwave": "Comme si chaque utilisateur faisait fonctionner 1 micro-ondes pendant {{result}}&nbsp;secondes",
+        "meter": "Comme si chaque utilisateur faisait {{result}}&nbsp;mètres en voiture sur les routes",
+        "coin": "Comme si chaque utilisateur creusait pour extraire l'équivalent de {{result}}&nbsp;pièces de 1 euro",
+        "glass": "Comme si chaque utilisateur consommait l'équivalent de {{result}}&nbsp;verre{{plural}} d'eau"
       },
       "year": {
         "title": "Équivalence par année",
-        "house": "Comme si chaque année on consommait de l'électricité comme <span>{{score}}&nbsp;maisons françaises</span>",
-        "car": "Comme si chaque année on émettait des gaz à effet de serre comme <span>{{score}} voitures</span> faisant le tour de la terre",
-        "desktop": "Comme si chaque année on creusait pour extraire l'équivence de <span>{{score}} ordinateurs portables</span>",
-        "shower": "Comme si chaque année on prenait l'équivalent de <span>{{score}} douches</span>"
+        "house": "Comme si chaque année on consommait l'électricité de {{result}}&nbsp;maison{{plural}} française{{plural}}",
+        "car": "Comme si chaque année on émettait des gaz à effet de serre comme {{result}}&nbsp;voiture{{plural}} faisant le tour de la terre",
+        "desktop": "Comme si chaque année on creusait pour extraire l'équivence de {{result}}&nbsp;ordinateurs portable{{plural}}",
+        "shower": "Comme si chaque année on prenait l'équivalent de {{result}}&nbsp;douche{{plural}}"
       },
       "data": {
         "title": "Données brutes par année",
-        "primaryEnergy": "<span>{{score}} KWh</span> d'énergie primaire",
-        "greenhouseGas": "<span>{{score}} Kg</span> de CO2-eq",
-        "rawMaterials": "<span>{{score}} Kg</span> de matières premières",
-        "water": "<span>{{score}} litres</span> d'eau"
+        "primaryEnergy": "{{result}} KWh<br />d'énergie primaire",
+        "greenhouseGas": "{{result}} Kg<br />de CO2-eq",
+        "rawMaterials": "{{result}} Kg<br />de matières premières",
+        "water": "{{result}} litres<br />d'eau"
       }
     },
     "mobileVisitors": {
@@ -123,7 +123,6 @@
     },
     "profile": {
       "title": "Mon profil",
-      "welcome": "Bienvenue {{name}} :)",
       "text": {
         "start": "Commencez votre test pour connaître votre progression !",
         "progress": "Vous avez terminé le test à {{percent}}% ({{value}} question{{plural}})"
@@ -141,7 +140,7 @@
     },
     "referenceModels": {
       "title": "Les modèles de référence",
-      "text": "Le calculateur de cycle de vie évalue l'impact écologique du parcours d’un utilisateur en fonction du trafic du site Web, de l'intensité énergétique, de l'intensité carbone de l’électricité et de la source d’énergie utilisée par an."
+      "text": "Le calculateur de cycle de vie évalue l'impact écologique du parcours d’un utilisateur en fonction du <span>trafic du site Web</span>, de <span>l'intensité énergétique</span>, de <span>l'intensité carbone</span> de l’électricité et de <span>la source d’énergie</span> utilisée par an."
     },
     "resources": {
       "title": "Numérique et environnement",
@@ -343,15 +342,15 @@
     },
     "rawMaterials": {
       "title": "Les matières premières",
-      "text": "Voici votre score provisoire, il évolue à chaque nouvelle réponse !",
-      "score": {
-        "rawMaterials": "{{score}} Kg de matières premières",
-        "desktop": "{{score}} ordinateurs  par annnée",
-        "coin": "{{score}} pièces de 1 euro  par utilisateur"
+      "text": "Voici votre result provisoire, il évolue à chaque nouvelle réponse !",
+      "result": {
+        "rawMaterials": "<span>{{result}} Kg</span> de matières premières",
+        "desktop": "<span>{{result}}</span> ordinateurs  par an",
+        "coin": "<span>{{result}} pièces de 1 euro</span> par utilisateur"
       },
       "impacts": {
-        "title": "Impacts écologiques par année",
-        "text": "Cela représente {{RawMaterialsScore}} Kg de matières premières. Comme si chaque année, nous creusons pour extraire l'équivalent de {{desktopScore}} ordinateurs portables et que chaque utilisateur creusait pour extraire l'équivalent de {{coinScore}} pièces de 1 euro."
+        "title": "Impacts écologiques par an",
+        "text": "Cela représente {{RawMaterialsImpact}} Kg de matières premières. Comme si chaque année, nous creusons pour extraire l'équivalent de {{desktopresult}} ordinateurs portables et que chaque utilisateur creusait pour extraire l'équivalent de {{coinresult}} pièces de 1 euro."
       },
       "technical": {
         "title": "Informations techniques",

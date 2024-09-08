@@ -3,7 +3,7 @@
   align-items: center;
   gap: 0.25rem;
   position: relative;
-  margin: 1rem 1rem 0;
+  margin: 0 1rem 1rem;
   padding: 1rem 1rem 0.75rem 0.75rem;
   background-color: var(--solid-color-9);
   border-top-right-radius: 0.25rem;
@@ -13,8 +13,6 @@
 }
 
 .label {
-  font-weight: bold;
-  font-size: 1.25rem;
   color: var(--neutral-color-2);
 }
 

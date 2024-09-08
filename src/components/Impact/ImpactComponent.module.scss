@@ -1,7 +1,7 @@
-.score {
+.impact {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   padding: 1.25rem 1.25rem 1.25rem 1rem;
   background-color: var(--color-3);
   border-radius: 0.25rem;
@@ -9,16 +9,14 @@
   animation: 0.45s Appear var(--ease);
   will-change: transform, opacity;
 
-  .text {
+  .label {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    font-weight: bold;
-    font-size: 1.25rem;
   }
 
   .svg {
-    width: 3.5rem;
+    width: 3rem;
     height: auto;
   }
 }

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
-import { useScore } from '../../hooks/useScore';
+import { useResult } from '../../hooks/useResult';
 import { useProgress } from '../../hooks/useProgress';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useTheme } from '../../hooks/useTheme';
@@ -27,11 +27,11 @@ function ProfilePage() {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { setData } = useData();
-  const { setScore } = useScore();
+  const { setResult, setPreviousResult } = useResult();
   const { progress } = useProgress();
   const { language, setLanguage } = useLanguage();
   const { theme, setTheme } = useTheme();
-  const { user, setUser } = useUser();
+  const { setUser } = useUser();
   const { addAlert } = useAlertDispatch();
   const [status, setStatus] = useState('info');
   const [name, setName] = useState('');
@@ -63,7 +63,6 @@ function ProfilePage() {
 
     if (!testName(name)) setMessageName(t('page.profile.name.message'));
     if (!testEmail(email)) setMessageEmail(t('page.profile.email.message'));
-
     if (testName(name) && testEmail(email)) {
       addAlert({ label: t('common.alert.valid') });
       setUser({ id, name, email });
@@ -72,9 +71,20 @@ function ProfilePage() {
     }
   };
 
-  const restarted = () => {
-    setScore({
-      plug: 0,
+  const startNewTest = () => {
+    setData({
+      websiteName: 'Website Name',
+      whatPurpose: 'Read a page of content',
+      visitorsPerMonth: 2500,
+      averageTime: 3,
+      visitorsLocated: 'fr',
+      mobileVisitors: 70,
+      pagesViewed: 5,
+      serversUsed: 2,
+      serversLocated: 'eu',
+    });
+    setResult({
+      microwave: 0,
       meter: 0,
       coin: 0,
       glass: 0,
@@ -87,16 +97,19 @@ function ProfilePage() {
       rawMaterials: 0,
       water: 0,
     });
-    setData({
-      websiteName: 'Website Name',
-      whatPurpose: 'Read a page of content',
-      visitorsPerMonth: 2500,
-      averageTime: 3,
-      visitorsLocated: 'fr',
-      mobileVisitors: 70,
-      pagesViewed: 5,
-      serversUsed: 2,
-      serversLocated: 'eu',
+    setPreviousResult({
+      microwave: 0,
+      meter: 0,
+      coin: 0,
+      glass: 0,
+      house: 0,
+      car: 0,
+      desktop: 0,
+      shower: 0,
+      primaryEnergy: 0,
+      greenhouseGas: 0,
+      rawMaterials: 0,
+      water: 0,
     });
     navigate('/lcc/calculator/website');
   };
@@ -105,13 +118,9 @@ function ProfilePage() {
     <>
       <HeaderComponent />
       <MainComponent>
-        <ArticleComponent>
+        <ArticleComponent cssClass={styles.article}>
           <TitleComponent cssClass={styles.title}>
-            {user && user.name
-              ? t('page.profile.welcome', {
-                  name: user.name,
-                })
-              : t('page.profile.title')}
+            {t('page.profile.title')}
           </TitleComponent>
           <FrameComponent>
             <p>
@@ -141,10 +150,10 @@ function ProfilePage() {
                 </ButtonComponent>
                 <ButtonComponent
                   cssClass={styles.button}
-                  onClick={() => restarted()}
+                  onClick={() => startNewTest()}
                 >
-                  {t('common.button.restarted')}
-                  <IconComponent cssClass={styles.icon} icon="restart_alt" />
+                  {t('common.button.startNew')}
+                  <IconComponent cssClass={styles.icon} icon="refresh" />
                 </ButtonComponent>
               </>
             )}
@@ -183,6 +192,7 @@ function ProfilePage() {
           <FrameComponent>
             <h2>{t('page.profile.myPreferences')}</h2>
           </FrameComponent>
+          <h3 className={styles.subtitle}>Thèmes</h3>
           <div className={styles.settings}>
             <ButtonComponent
               cssClass={[
@@ -205,6 +215,7 @@ function ProfilePage() {
               <IconComponent cssClass={styles.icon} icon="dark_mode" />
             </ButtonComponent>
           </div>
+          <h3 className={styles.subtitle}>Language</h3>
           <div className={styles.settings}>
             <ButtonComponent
               cssClass={[

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
-// import { useScore } from '../../hooks/useScore';
+import { useResult } from '../../hooks/useResult';
 import { useProgress } from '../../hooks/useProgress';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
@@ -16,46 +16,72 @@ import { BannerComponent } from '../../components/Banner/BannerComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
 import { ButtonComponent } from '../../components/Button/ButtonComponent';
 import { IconComponent } from '../../components/Icon/IconComponent';
-// import { CardsComponent } from '../../components/Cards/CardsComponent';
-// import { CardComponent } from '../../components/Card/CardComponent';
+import { CardsComponent } from '../../components/Cards/CardsComponent';
+import { CardComponent } from '../../components/Card/CardComponent';
 import styles from './ImpactPage.module.scss';
 
 function ImpactPage() {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const { data } = useData();
-  // const { data, setData } = useData();
-  // const { score, setScore } = useScore();
+  const { data, setData } = useData();
+  const { result, setResult, previousResult, setPreviousResult } = useResult();
   const { setProgress } = useProgress();
 
   useTitlePage(t('page.home.title'));
 
-  // const newScore: ScoreType = {
-  //   plug: plugScore,
-  //   meter: meterScore,
-  //   coin: coinScore,
-  //   glass: glassScore,
-  //   house: houseScore,
-  //   car: carScore,
-  //   desktop: desktopScore,
-  //   shower: showerScore,
-  //   energy: PrimaryEnergyScore,
-  //   gas: GreenhouseGasScore,
-  //   materials: RawMaterialsScore,
-  //   water: WaterScore,
-  // };
+  const percents: number[] = [];
+  let percent: number = 0;
 
-  // const percents: number[] = [];
+  for (const key in previousResult) {
+    percent = ((result[key] - previousResult[key]) / previousResult[key]) * 100;
+    percents.push(Math.round(percent));
+  }
 
-  // let percent: number = 0;
+  const restartMyTest = () => {
+    setPreviousResult({ ...result });
+    navigate('/lcc/calculator/website');
+  };
 
-  // for (const score in data.score) {
-  //   percent = ((newScore[score] - data.score[score]) / data.score[score]) * 100;
-  //   percents.push(percent);
-  // }
-
-  const onClick = () => {
-    // setData({ ...data, score: newScore });
+  const startNewTest = () => {
+    setData({
+      websiteName: 'Website Name',
+      whatPurpose: 'Read a page of content',
+      visitorsPerMonth: 2500,
+      averageTime: 3,
+      visitorsLocated: 'fr',
+      mobileVisitors: 70,
+      pagesViewed: 5,
+      serversUsed: 2,
+      serversLocated: 'eu',
+    });
+    setResult({
+      microwave: 0,
+      meter: 0,
+      coin: 0,
+      glass: 0,
+      house: 0,
+      car: 0,
+      desktop: 0,
+      shower: 0,
+      primaryEnergy: 0,
+      greenhouseGas: 0,
+      rawMaterials: 0,
+      water: 0,
+    });
+    setPreviousResult({
+      microwave: 0,
+      meter: 0,
+      coin: 0,
+      glass: 0,
+      house: 0,
+      car: 0,
+      desktop: 0,
+      shower: 0,
+      primaryEnergy: 0,
+      greenhouseGas: 0,
+      rawMaterials: 0,
+      water: 0,
+    });
     navigate('/lcc/calculator/website');
   };
 
@@ -68,7 +94,7 @@ function ImpactPage() {
       <HeaderComponent />
       <MainComponent>
         <DebugComponent />
-        <ArticleComponent>
+        <ArticleComponent cssClass={styles.article}>
           <TitleComponent cssClass={styles.title}>
             {t('page.impact.title', {
               whatPurpose: data.whatPurpose,
@@ -78,106 +104,136 @@ function ImpactPage() {
           <FrameComponent>
             <h2>{t('page.impact.user.title')}</h2>
           </FrameComponent>
-          {/* <CardsComponent>
+          <CardsComponent>
             <CardComponent
               percent={percents[0]}
-              text={t('page.impact.user.plug', {
-                score: score.plug,
+              label={t('page.impact.user.microwave', {
+                result: result.microwave,
               })}
-              svg="plug"
+              to="/lcc/documentation/reference-models/primary-energy"
+              svg="microwave"
             />
             <CardComponent
               percent={percents[1]}
-              text={t('page.impact.user.meter', {
-                score: score.meter,
+              label={t('page.impact.user.meter', {
+                result: result.meter,
               })}
+              to="/lcc/documentation/reference-models/greenhouse-gas"
               svg="meter"
             />
             <CardComponent
               percent={percents[2]}
-              text={t('page.impact.user.coin', {
-                score: score.coin.toFixed(),
+              label={t('page.impact.user.coin', {
+                result: result.coin.toFixed(),
               })}
+              to="/lcc/documentation/reference-models/raw-materials"
               svg="coin"
             />
             <CardComponent
               percent={percents[3]}
-              text={t('page.impact.user.glass', {
-                score: score.glass.toFixed(),
+              label={t('page.impact.user.glass', {
+                result: result.glass.toFixed(),
+                plural: result.glass > 1 ? 's' : '',
               })}
+              to="/lcc/documentation/reference-models/water"
               svg="glass"
             />
-          </CardsComponent> */}
+          </CardsComponent>
           <FrameComponent>
             <h2>{t('page.impact.year.title')}</h2>
           </FrameComponent>
-          {/* <CardsComponent>
+          <CardsComponent>
             <CardComponent
               percent={percents[4]}
-              text={t('page.impact.year.house', {
-                score: score.house,
+              label={t('page.impact.year.house', {
+                result: result.house,
+                plural: result.house > 1 ? 's' : '',
               })}
+              to="/lcc/documentation/reference-models/primary-energy"
               svg="house"
             />
             <CardComponent
               percent={percents[5]}
-              text={t('page.impact.year.car', {
-                score: score.car,
+              label={t('page.impact.year.car', {
+                result: result.car,
+                plural: result.car > 1 ? 's' : '',
               })}
+              to="/lcc/documentation/reference-models/greenhouse-gas"
               svg="car"
             />
             <CardComponent
               percent={percents[6]}
-              text={t('page.impact.year.desktop', {
-                score: score.desktop,
+              label={t('page.impact.year.desktop', {
+                result: result.desktop,
+                plural: result.desktop > 1 ? 's' : '',
               })}
+              to="/lcc/documentation/reference-models/raw-materials"
               svg="desktop"
             />
             <CardComponent
               percent={percents[7]}
-              text={t('page.impact.year.shower', {
-                score: score.shower,
+              label={t('page.impact.year.shower', {
+                result: result.shower,
+                plural: result.shower > 1 ? 's' : '',
               })}
+              to="/lcc/documentation/reference-models/water"
               svg="shower"
             />
-          </CardsComponent> */}
+          </CardsComponent>
           <FrameComponent>
             <h2>{t('page.impact.data.title')}</h2>
           </FrameComponent>
-          {/* <CardsComponent>
+          <CardsComponent>
             <CardComponent
               percent={percents[8]}
-              text={t('page.impact.data.primaryEnergy', {
-                score: score.primaryEnergy,
+              label={t('page.impact.data.primaryEnergy', {
+                result: result.primaryEnergy,
               })}
+              to="/lcc/documentation/reference-models/primary-energy"
               svg="primary-energy"
             />
             <CardComponent
               percent={percents[9]}
-              text={t('page.impact.data.greenhouseGas', {
-                score: score.greenhouseGas.toFixed(1),
+              label={t('page.impact.data.greenhouseGas', {
+                result: result.greenhouseGas.toFixed(1),
               })}
+              to="/lcc/documentation/reference-models/greenhouse-gas"
               svg="greenhouse-gas"
             />
             <CardComponent
               percent={percents[10]}
-              text={t('page.impact.data.rawMaterials', {
-                score: score.rawMaterials.toFixed(),
+              label={t('page.impact.data.rawMaterials', {
+                result: result.rawMaterials.toFixed(),
               })}
+              to="/lcc/documentation/reference-models/raw-materials"
               svg="raw-materials"
             />
             <CardComponent
               percent={percents[11]}
-              text={t('page.impact.data.water', {
-                score: score.water,
+              label={t('page.impact.data.water', {
+                result: result.water,
               })}
+              to="/lcc/documentation/reference-models/water"
               svg="water"
             />
-          </CardsComponent> */}
+          </CardsComponent>
           <NavigationComponent cssClass={styles.navigation}>
-            <ButtonComponent cssClass={styles.button} onClick={() => onClick()}>
-              {t('common.button.improve')}
-              <IconComponent cssClass={styles.icon} icon="restart_alt" />
+            <ButtonComponent
+              cssClass={[styles.button, ` ${styles.restart}`].join('')}
+              onClick={() => restartMyTest()}
+            >
+              <IconComponent
+                cssClass={styles.icon}
+                icon="switch_access_shortcut_add"
+              />
+              {t('common.button.restart')}
+            </ButtonComponent>
+            <ButtonComponent
+              cssClass={[styles.button, ` ${styles.start}`].join('')}
+              onClick={() => startNewTest()}
+            >
+              {t('common.button.startNew')}
+              <IconComponent cssClass={styles.icon} icon="refresh" />
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>

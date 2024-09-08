@@ -1,21 +1,19 @@
 import { KeyboardEvent, ReactNode } from 'react';
+import { ChildrenType } from '../../models/ChildrenType';
 import { PositionType } from '../../models/PositionType';
 import styles from './TooltipComponent.module.scss';
 
-interface TooltipComponentProps {
-  children: ReactNode;
-  title?: string;
-  text?: string;
+interface TooltipComponentProps extends ChildrenType {
+  label: string;
   position?: PositionType;
   onKeyDown?: () => void;
 }
 
 export const TooltipComponent = ({
-  title,
-  text,
+  label,
   position = 'top',
-  children,
   onKeyDown = () => {},
+  children,
 }: TooltipComponentProps) => {
   const handleOnKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.code === 'Enter') onKeyDown();
@@ -30,8 +28,7 @@ export const TooltipComponent = ({
     >
       {children}
       <div className={[styles.box, ` ${styles[position]}`].join('')}>
-        {title && <div className={styles.title}>{title}</div>}
-        {text && <div className={styles.text}>{text}</div>}
+        {label && <div className={styles.label}>{label}</div>}
       </div>
     </div>
   );

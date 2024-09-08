@@ -1,4 +1,4 @@
-function getPlug(
+function getMicrowave(
   visitorsPerMonth: number,
   averageTime: number,
   mobileVisitors: number,
@@ -26,4 +26,4 @@ function getPlug(
   );
 }
 
-export default getPlug;
+export default getMicrowave;

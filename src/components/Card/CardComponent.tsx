@@ -1,27 +1,35 @@
+import { ButtonComponent } from '../Button/ButtonComponent';
 import { PercentComponent } from '../Percent/PercentComponent';
 import { SvgComponent } from '../Svg/SvgComponent';
 import styles from './CardComponent.module.scss';
 
 interface CardComponentProps {
   cssClass?: string;
-  percent: number;
-  text: string;
-  svg: string;
+  percent?: number;
+  label: string;
+  to?: string;
+  svg?: string;
 }
 
 export const CardComponent = ({
   cssClass,
   percent,
-  text,
+  label,
+  to,
   svg,
 }: CardComponentProps) => {
   return (
-    <div className={[styles.card, cssClass ? ` ${cssClass}` : ''].join('')}>
+    <ButtonComponent
+      cssClass={[styles.card, cssClass ? ` ${cssClass}` : ''].join('')}
+      to={to}
+    >
       <div className={styles.inner}>
-        <SvgComponent cssClass={styles[svg]} svg={svg} />
-        <p dangerouslySetInnerHTML={{ __html: text }} />
+        {svg && <SvgComponent cssClass={styles.svg} svg={svg} />}
+        <p dangerouslySetInnerHTML={{ __html: label }} />
       </div>
-      {!isNaN(percent) && <PercentComponent percent={percent} />}
-    </div>
+      {percent && percent !== 0 && percent !== Infinity ? (
+        <PercentComponent percent={percent} />
+      ) : null}
+    </ButtonComponent>
   );
 };

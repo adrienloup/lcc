@@ -9,19 +9,19 @@
       "english": "English",
       "faq": "Discover the FAQ!",
       "french": "French",
-      "improve": "Improve my test",
       "light": "Light mode",
       "previous": "Previous",
       "progress": "Resume my test",
       "next": "Next",
-      "restarted": "Start a new test",
+      "restart": "Improve my test",
       "result": "Result",
       "save": "Update my information",
-      "start": "Start my test"
+      "start": "Start my test",
+      "startNew": "Start a new test"
     },
     "underConstruction": {
       "website": "The site is under construction, it works pretty well :)",
-      "page": "The page is under construction, the final content is coming soon :)"
+      "page": "The page is being written, it's coming soon :)"
     },
     "footer": {
       "accessibility": {
@@ -33,13 +33,13 @@
       "navigation": {
         "calculator": "Calculator",
         "models": "Models",
-        "documentation": "Documentation"
+        "resources": "Resources"
       },
       "profile": {
         "tooltip": "My profile"
       }
     },
-    "help": "Here is your provisional score, it changes with each new answer! Browse reference models to understand your website's ecological impact on the planet.",
+    "help": "Here is your provisional result, it changes with each new answer! Browse reference models to understand your website's ecological impact on the planet.",
     "highlight": {
       "actForThePlanet": {
         "subtitle": "Act for the planet",
@@ -60,7 +60,7 @@
         }
       }
     },
-    "LiveScore": {
+    "LiveImpact": {
       "rawMaterials": "<span>{{value}} Kg</span>of raw materials per year",
       "water": "<span>{{value}} liters</span>of water per year",
       "primaryEnergy": "<span>{{value}} MW/h</span>of primary energy per year",
@@ -79,7 +79,7 @@
       "title": "Digital accessibility"
     },
     "averageTime": {
-      "title": "What is the average time spent on the journey per user?",
+      "title": "What is the average time spent?",
       "text": "The time that users spend on your digital service allows us to know the quantity of terminals, network equipment, servers necessary to serve, transit and consult the content or services that you deliver."
     },
     "home": {
@@ -90,24 +90,24 @@
       "title": "The impact of the {{whatPurpose}} journey on the {{websiteName}} website",
       "user": {
         "title": "Equivalence per user",
-        "plug": "As if each user ran 1 microwave for <span>{{score}} seconds</span>",
-        "meter": "As if each user drove <span>{{score}} meters</span> on the roads",
-        "coin": "As if each user was digging to extract the equivalent of <span>{{score}} euro coins</span>",
-        "glass": "As if each user consumed the equivalent of <span>{{score}}&nbsp;glasses of water</span>"
+        "microwave": "As if each user ran 1 microwave for {{result}}&nbsp;seconds",
+        "meter": "As if each user drove {{result}} meters on the roads",
+        "coin": "As if each user was digging to extract the equivalent of {{result}}&nbsp;euro coins",
+        "glass": "As if each user consumed the equivalent of {{result}}&nbsp;glasse{{plural}} of water"
       },
       "year": {
         "title": "Equivalence by year",
-        "house": "As if every year we consumed electricity like <span>{{score}}&nbsp;French houses</span>",
-        "car": "As if every year we emit greenhouse gases like <span>{{score}} cars</span> circling the earth",
-        "desktop": "As if every year we dig to extract the equivence of <span>{{score}} laptops</span>",
-        "shower": "As if every year we take the equivalent of <span>{{score}} showers</span>"
+        "house": "As if every year we consumed electricity like {{result}}&nbsp;French house{{plural}}",
+        "car": "As if every year we emit greenhouse gases like {{result}}&nbsp;car{{plural}} circling the earth",
+        "desktop": "As if every year we dig to extract the equivence of {{result}}&nbsp;laptop{{plural}}",
+        "shower": "As if every year we take the equivalent of {{result}}&nbsp;shower{{plural}}"
       },
       "data": {
         "title": "Raw data per year",
-        "primaryEnergy": "<span>{{score}} KWh</span> of primary energy",
-        "greenhouseGas": "<span>{{score}} Kg</span> of CO2-eq",
-        "rawMaterials": "<span>{{score}} Kg</span> of raw materials",
-        "water": "<span>{{score}} liters</span> of water"
+        "primaryEnergy": "{{result}} KWh<br />of primary energy",
+        "greenhouseGas": "{{result}} Kg<br />of CO2-eq",
+        "rawMaterials": "{{result}} Kg<br />of raw materials",
+        "water": "{{result}} liters <br />of water"
       }
     },
     "mobileVisitors": {
@@ -123,7 +123,6 @@
     },
     "profile": {
       "title": "My profile",
-      "welcome": "Welcome {{name}} :)",
       "text": {
         "start": "Start your test to see your progress!",
         "progress": "You have completed the test at {{percent}}% ({{value}} question{{plural}})"
@@ -141,7 +140,7 @@
     },
     "referenceModels": {
       "title": "Reference models",
-      "text": "The life cycle calculator assesses the ecological impact of a user's journey based on website traffic, energy intensity, carbon intensity of electricity and energy source used per year."
+      "text": "The life cycle calculator assesses the ecological impact of a user's journey based on <span>website traffic</span>, <span>energy intensity</span>, <span>carbon intensity</span> of electricity and <span>energy source</span> used per year."
     },
     "resources": {
       "title": "Digital and environment",
@@ -343,15 +342,15 @@
     },
     "rawMaterials": {
       "title": "Raw materials",
-      "text": "Here is your provisional score, it changes with each new answer!",
-      "score": {
-        "rawMaterials": "{{score}} Kg of raw materials",
-        "desktop": "{{score}} computers per year",
-        "coin": "{{score}} euro coins per user"
+      "text": "Here is your provisional result, it changes with each new answer!",
+      "result": {
+        "rawMaterials": "{{result}} Kg of raw materials",
+        "desktop": "{{result}} computers per year",
+        "coin": "{{result}} euro coins per user"
       },
       "impacts": {
         "title": "Ecological impacts per year",
-        "text": "This represents {{RawMaterialsScore}} Kg of raw materials. As if every year we dig to extract the equivalent of {{desktopScore}} laptops and each user digs to extract the equivalent of {{coinScore}} euro coins."
+        "text": "This represents {{RawMaterialsImpact}} Kg of raw materials. As if every year we dig to extract the equivalent of {{desktopresult}} laptops and each user digs to extract the equivalent of {{coinresult}} euro coins."
       },
       "technical": {
         "title": "Technical information",

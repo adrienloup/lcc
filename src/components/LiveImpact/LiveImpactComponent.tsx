@@ -4,28 +4,26 @@ import { ButtonComponent } from '../Button/ButtonComponent';
 import { IconComponent } from '../Icon/IconComponent';
 import { SnackbarComponent } from '../Snackbar/SnackbarComponent';
 import { SvgComponent } from '../Svg/SvgComponent';
-import styles from './LiveScoreComponent.module.scss';
+import styles from './LiveImpactComponent.module.scss';
 
-interface LiveScoreComponentProps {
+interface LiveImpactComponentProps {
   label: string;
   value: number;
   svg: string;
-  svgClass: string;
 }
 
-export const LiveScoreComponent = ({
+export const LiveImpactComponent = ({
   label,
   value,
   svg,
-  svgClass,
-}: LiveScoreComponentProps) => {
+}: LiveImpactComponentProps) => {
   const { t } = useTranslation();
   const [snackbar, setSnackbar] = useState(false);
 
   return (
     <>
-      <div className={styles['live-score']}>
-        <SvgComponent cssClass={svgClass} svg={svg} />
+      <div className={styles['live-impact']}>
+        <SvgComponent cssClass={styles.svg} svg={svg} />
         <span
           className={styles.label}
           dangerouslySetInnerHTML={{

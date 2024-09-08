@@ -4,7 +4,7 @@
   left: 0;
   z-index: 2;
   display: flex;
-  height: 6rem;
+  height: 5rem;
   background-color: var(--color-1);
   border-bottom: 0.25rem solid var(--color-3);
 
@@ -24,6 +24,11 @@
 
 .navigation {
   display: flex;
+  margin-right: 10rem;
+
+  @include tablet-landscape {
+    margin-right: 0;
+  }
 
   @include tablet-portrait {
     display: none;
@@ -51,7 +56,6 @@
 .name {
   gap: 0.25rem;
   text-align: center;
-  font-weight: bold;
   font-size: 1.25rem;
 
   @include tablet-portrait {
@@ -69,7 +73,6 @@
 }
 
 .tab {
-  font-weight: bold;
   font-size: 1.25rem;
 }
 

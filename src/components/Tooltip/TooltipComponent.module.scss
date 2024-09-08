@@ -31,9 +31,6 @@
   white-space: nowrap;
   padding: 0.75rem;
   background-color: var(--color-3);
-  text-transform: uppercase;
-  font-weight: bold;
-  color: var(--solid-color-1);
   opacity: 0;
   visibility: hidden;
 }
@@ -82,11 +79,8 @@
   transform: translateY(-50%);
 }
 
-.title {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-
-.text {
+.label {
+  text-transform: uppercase;
+  color: var(--solid-color-1);
   font-size: 1rem;
 }

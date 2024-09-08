@@ -1,3 +1,7 @@
+.article {
+  max-width: 50rem;
+}
+
 .title {
   padding: 1.25rem;
   background-image: linear-gradient(
@@ -8,12 +12,15 @@
   background-color: var(--solid-color-1);
   border-radius: 0.25rem;
   line-height: 1.25;
-  font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: var(--neutral-color-1);
   transform-origin: 50% 0;
   animation: 0.35s Appear var(--ease);
   will-change: transform, opacity;
+
+  @include tablet-portrait {
+    font-size: 1.25rem;
+  }
 }
 
 @keyframes Appear {

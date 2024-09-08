@@ -13,13 +13,20 @@
   max-width: 90rem;
   width: 100%;
   margin: 0 auto;
-  padding: 1.25rem 1rem;
+  padding: 1.25rem;
+  text-align: center;
+
+  @include tablet-portrait {
+    padding: 1rem;
+  }
 
   p {
     line-height: 1.25;
-    font-weight: bold;
-    font-size: 1.25rem;
     color: var(--neutral-color-2);
+
+    @include tablet-portrait {
+      font-size: 1rem;
+    }
   }
 
   a {
@@ -34,10 +41,6 @@
       text-decoration: underline;
     }
   }
-}
-
-.icon {
-  font-size: 2rem;
 }
 
 .primary {

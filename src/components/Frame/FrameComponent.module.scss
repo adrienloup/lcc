@@ -13,18 +13,19 @@
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   p {
     line-height: 1.35;
-    font-weight: bold;
-    font-size: 1.25rem;
+
+    span {
+      color: var(--solid-color-4);
+    }
   }
 
   a {
     display: inline;
-    line-height: inherit;
     color: var(--solid-color-1);
 
     &:focus-visible {
@@ -46,8 +47,6 @@
 
   li {
     line-height: 1.35;
-    font-weight: bold;
-    font-size: 1.25rem;
   }
 }
 

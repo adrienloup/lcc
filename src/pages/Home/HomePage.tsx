@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
-import { useScore } from '../../hooks/useScore';
+import { useResult } from '../../hooks/useResult';
 import { useProgress } from '../../hooks/useProgress';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
@@ -19,14 +19,25 @@ function HomePage() {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { setData } = useData();
-  const { setScore } = useScore();
+  const { setResult, setPreviousResult } = useResult();
   const { progress } = useProgress();
 
   useTitlePage(t('page.home.title'));
 
-  const restarted = () => {
-    setScore({
-      plug: 0,
+  const startNewTest = () => {
+    setData({
+      websiteName: 'Website Name',
+      whatPurpose: 'Read a page of content',
+      visitorsPerMonth: 2500,
+      averageTime: 3,
+      visitorsLocated: 'fr',
+      mobileVisitors: 70,
+      pagesViewed: 5,
+      serversUsed: 2,
+      serversLocated: 'eu',
+    });
+    setResult({
+      microwave: 0,
       meter: 0,
       coin: 0,
       glass: 0,
@@ -39,16 +50,19 @@ function HomePage() {
       rawMaterials: 0,
       water: 0,
     });
-    setData({
-      websiteName: 'Website Name',
-      whatPurpose: 'Read a page of content',
-      visitorsPerMonth: 2500,
-      averageTime: 3,
-      visitorsLocated: 'fr',
-      mobileVisitors: 70,
-      pagesViewed: 5,
-      serversUsed: 2,
-      serversLocated: 'eu',
+    setPreviousResult({
+      microwave: 0,
+      meter: 0,
+      coin: 0,
+      glass: 0,
+      house: 0,
+      car: 0,
+      desktop: 0,
+      shower: 0,
+      primaryEnergy: 0,
+      greenhouseGas: 0,
+      rawMaterials: 0,
+      water: 0,
     });
     navigate('/lcc/calculator/website');
   };
@@ -58,7 +72,7 @@ function HomePage() {
       <HeaderComponent />
       <MainComponent>
         <DebugComponent />
-        <BannerComponent variant="secondary" icon="warning">
+        <BannerComponent variant="secondary">
           <p>{t('common.underConstruction.website')}</p>
         </BannerComponent>
         <ArticleComponent cssClass={styles.article}>
@@ -85,9 +99,9 @@ function HomePage() {
               </ButtonComponent>
               <ButtonComponent
                 cssClass={styles.link}
-                onClick={() => restarted()}
+                onClick={() => startNewTest()}
               >
-                {t('common.button.restarted')}
+                {t('common.button.startNew')}
               </ButtonComponent>
             </>
           )}

@@ -1,3 +1,7 @@
+.article {
+  max-width: 50rem;
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -10,12 +14,16 @@
 
 .button {
   position: relative;
-  height: 5rem;
+  height: 4.75rem;
   background-color: var(--solid-color-1);
   border-radius: 2.5rem;
-  font-weight: bold;
   font-size: 1.25rem;
   color: var(--color-1);
+
+  @include tablet-portrait {
+    height: 4.25rem;
+    font-size: 1rem;
+  }
 
   &::after {
     display: none;
@@ -61,17 +69,25 @@
 }
 
 .previous {
-  gap: 0.25rem;
   padding: 0 2rem 0 1rem;
 
-  .icon {
-    font-size: 2.25rem;
+  @include tablet-portrait {
+    padding: 0 1.75rem 0 1rem;
   }
 }
 
+.next,
+.result {
+  padding: 0 1.5rem 0 2rem;
+
+  @include tablet-portrait {
+    padding: 0 1.5rem 0 1.75rem;
+  }
+}
+
+.previous,
 .next {
   gap: 0.25rem;
-  padding: 0 1rem 0 2rem;
 
   .icon {
     font-size: 2.25rem;
@@ -80,7 +96,6 @@
 
 .result {
   gap: 0.75rem;
-  padding: 0 2rem 0 1.5rem;
 
   .icon {
     font-size: 2rem;

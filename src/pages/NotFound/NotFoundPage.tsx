@@ -16,7 +16,7 @@ function NotFoundPage() {
     <>
       <HeaderComponent />
       <MainComponent>
-        <BannerComponent variant="secondary" icon="warning">
+        <BannerComponent variant="secondary">
           <TitleComponent cssClass={styles.title}>
             {t('page.notFound.title')}
           </TitleComponent>

@@ -1,5 +1,5 @@
-export interface ResultType {
-  plug: number;
+export type ResultType = {
+  microwave: number;
   meter: number;
   coin: number;
   glass: number;
@@ -7,8 +7,9 @@ export interface ResultType {
   car: number;
   desktop: number;
   shower: number;
-  energy: number;
-  gas: number;
-  materials: number;
+  primaryEnergy: number;
+  greenhouseGas: number;
+  rawMaterials: number;
   water: number;
-}
+  [key: number]: number;
+};

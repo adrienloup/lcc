@@ -2,9 +2,9 @@ import { createContext, useEffect } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useData } from '../hooks/useData';
 import { ChildrenType } from '../models/ChildrenType';
-import { ScoreType } from '../models/ScoreType';
+import { ResultType } from '../models/ResultType';
 import getEnergyLocations from '../metrics/getEnergyLocations';
-import getPlug from '../metrics/getPlug';
+import getMicrowave from '../metrics/getMicrowave';
 import getMeter from '../metrics/getMeter';
 import getCoin from '../metrics/getCoin';
 import getGlass from '../metrics/getGlass';
@@ -17,8 +17,8 @@ import getGreenhouseGas from '../metrics/getGreenhouseGas';
 import getRawMaterials from '../metrics/getRawMaterials';
 import getWater from '../metrics/getWater';
 
-const initialValue: ScoreType = {
-  plug: 0,
+const initialValue: ResultType = {
+  microwave: 0,
   meter: 0,
   coin: 0,
   glass: 0,
@@ -32,20 +32,31 @@ const initialValue: ScoreType = {
   water: 0,
 };
 
-export const ScoreContext = createContext<{
-  score: ScoreType;
-  setScore: (score: ScoreType) => void;
+export const ResultContext = createContext<{
+  result: ResultType;
+  setResult: (result: ResultType) => void;
+  previousResult: ResultType;
+  setPreviousResult: (previousResults: ResultType) => void;
 }>({
-  score: initialValue,
-  setScore: (score: ScoreType) => score,
+  result: initialValue,
+  setResult: (result: ResultType) => result,
+  previousResult: initialValue,
+  setPreviousResult: (previousResult: ResultType) => previousResult,
 });
 
-export function ScoreProvider({ children }: ChildrenType) {
-  const [score, setScore] = useLocalStorage('_ccv_1em0m_3_score', initialValue);
+export function resultProvider({ children }: ChildrenType) {
+  const [result, setResult] = useLocalStorage(
+    '_ccv_1em0m_3_result',
+    initialValue
+  );
+  const [previousResult, setPreviousResult] = useLocalStorage(
+    '_ccv_1em0m_3_previous_result',
+    initialValue
+  );
   const { data } = useData();
 
   useEffect(() => {
-    const plug = getPlug(
+    const microwave = getMicrowave(
       data.visitorsPerMonth,
       data.averageTime,
       data.mobileVisitors,
@@ -123,9 +134,9 @@ export function ScoreProvider({ children }: ChildrenType) {
 
     const water = getWater(data.visitorsPerMonth, data.pagesViewed);
 
-    setScore({
-      ...score,
-      plug,
+    setResult({
+      ...result,
+      microwave,
       meter,
       coin,
       glass,
@@ -141,8 +152,10 @@ export function ScoreProvider({ children }: ChildrenType) {
   }, [data]);
 
   return (
-    <ScoreContext.Provider value={{ score, setScore }}>
+    <ResultContext.Provider
+      value={{ result, setResult, previousResult, setPreviousResult }}
+    >
       {children}
-    </ScoreContext.Provider>
+    </ResultContext.Provider>
   );
 }

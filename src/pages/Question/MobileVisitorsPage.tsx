@@ -8,7 +8,7 @@ import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
 import { DebugComponent } from '../../components/Debug/DebugComponent';
-import { PrimaryEnergyScoreComponent } from '../../components/PrimaryEnergyScore/PrimaryEnergyScoreComponent';
+import { PrimaryEnergyImpactComponent } from '../../components/PrimaryEnergyImpact/PrimaryEnergyImpactComponent';
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
@@ -39,8 +39,8 @@ function MobileVisitorsPage() {
       <HeaderComponent />
       <MainComponent>
         <DebugComponent />
-        <ArticleComponent>
-          <PrimaryEnergyScoreComponent />
+        <ArticleComponent cssClass={styles.article}>
+          <PrimaryEnergyImpactComponent />
           <QuestionComponent
             title={t('page.mobileVisitors.title')}
             text={t('page.mobileVisitors.text')}

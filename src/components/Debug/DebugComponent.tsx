@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useData } from '../../hooks/useData';
-import { useScore } from '../../hooks/useScore';
+import { useResult } from '../../hooks/useResult';
 import styles from './DebugComponent.module.scss';
 
 export const DebugComponent = () => {
   const location = useLocation();
   const { data } = useData();
-  const { score } = useScore();
+  const { result } = useResult();
   const [display, setDisplay] = useState(false);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export const DebugComponent = () => {
           <div className={styles.inner}>
             {data && (
               <div>
-                Data:
+                Data
                 <div>
                   {Object.keys(data).map((key) => (
                     <span key={key}>
@@ -42,13 +42,13 @@ export const DebugComponent = () => {
                 </div>
               </div>
             )}
-            {score && (
+            {result && (
               <div>
-                Score:
+                result
                 <div>
-                  {Object.keys(score).map((key) => (
+                  {Object.keys(result).map((key) => (
                     <span key={key}>
-                      {key}: {score[key as unknown as number]}
+                      {key}: {result[key as unknown as number]}
                     </span>
                   ))}
                 </div>

@@ -4,19 +4,20 @@
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  margin-left: auto;
-  padding: 0.5rem 0.75rem;
+  padding: 0 0.75rem;
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
-  font-weight: bold;
+  font-size: 1rem;
 }
 
 .true {
   background-color: var(--solid-color-5);
+  color: var(--color-2);
 }
 
 .wrong {
-  background-color: var(--solid-color-8);
+  background-color: var(--solid-color-11);
+  color: var(--color-1);
 }
 
 .icon {

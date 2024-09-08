@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { useTitlePage } from '../../hooks/useTitlePage';
-import { HeaderComponent } from '../../components/Header/HeaderComponent';
-import { MainComponent } from '../../components/Main/MainComponent';
-import { FooterComponent } from '../../components/Footer/FooterComponent';
-import { ArticleComponent } from '../../components/Article/ArticleComponent';
-import { BannerComponent } from '../../components/Banner/BannerComponent';
-import { ButtonComponent } from '../../components/Button/ButtonComponent';
-import { FrameComponent } from '../../components/Frame/FrameComponent';
-import { TitleComponent } from '../../components/Title/TitleComponent';
-import styles from './DocumentationPage.module.scss';
+import { useTitlePage } from '../../../hooks/useTitlePage';
+import { HeaderComponent } from '../../../components/Header/HeaderComponent';
+import { MainComponent } from '../../../components/Main/MainComponent';
+import { FooterComponent } from '../../../components/Footer/FooterComponent';
+import { ArticleComponent } from '../../../components/Article/ArticleComponent';
+import { BannerComponent } from '../../../components/Banner/BannerComponent';
+import { ButtonComponent } from '../../../components/Button/ButtonComponent';
+import { FrameComponent } from '../../../components/Frame/FrameComponent';
+import { TitleComponent } from '../../../components/Title/TitleComponent';
+import styles from './ResourcesPage.module.scss';
 
 function ResourcesPage() {
   const { t } = useTranslation();
@@ -22,7 +22,7 @@ function ResourcesPage() {
         <BannerComponent variant="secondary" icon="warning">
           <p>{t('common.underConstruction.page')}</p>
         </BannerComponent>
-        <ArticleComponent>
+        <ArticleComponent cssClass={styles.article}>
           <TitleComponent cssClass={styles.title}>
             {t('page.resources.title')}
           </TitleComponent>

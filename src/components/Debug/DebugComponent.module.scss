@@ -3,13 +3,14 @@
 }
 
 .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   max-width: 90rem;
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
   line-height: 1.25;
-  font-weight: bold;
-  font-size: 1.25rem;
   color: var(--solid-color-4);
 
   span {

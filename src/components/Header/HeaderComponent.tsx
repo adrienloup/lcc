@@ -51,11 +51,11 @@ export const HeaderComponent = () => {
             ].join('')}
             to="/lcc/documentation/resources"
           >
-            {t('common.header.navigation.documentation')}
+            {t('common.header.navigation.resources')}
           </ButtonComponent>
         </NavigationComponent>
         <TooltipComponent
-          text={t('common.header.profile.tooltip')}
+          label={t('common.header.profile.tooltip')}
           position="bottom-end"
           onKeyDown={() => navigate('/lcc/profile')}
         >

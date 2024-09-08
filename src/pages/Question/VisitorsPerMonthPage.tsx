@@ -8,7 +8,7 @@ import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
 import { DebugComponent } from '../../components/Debug/DebugComponent';
-import { WaterScoreComponent } from '../../components/WaterScore/WaterScoreComponent';
+import { WaterImpactComponent } from '../../components/WaterImpact/WaterImpactComponent';
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
@@ -41,8 +41,8 @@ function VisitorsPerMonthPage() {
       <HeaderComponent />
       <MainComponent>
         <DebugComponent />
-        <ArticleComponent>
-          <WaterScoreComponent />
+        <ArticleComponent cssClass={styles.article}>
+          <WaterImpactComponent />
           <QuestionComponent
             title={t('page.visitorsPerMonth.title')}
             text={t('page.visitorsPerMonth.text')}

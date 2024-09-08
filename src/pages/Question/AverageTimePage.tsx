@@ -8,7 +8,7 @@ import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
 import { DebugComponent } from '../../components/Debug/DebugComponent';
-import { RawMaterialsScoreComponent } from '../../components/RawMaterialsScore/RawMaterialsScoreComponent';
+import { RawMaterialsImpactComponent } from '../../components/RawMaterialsImpact/RawMaterialsImpactComponent';
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
@@ -39,8 +39,8 @@ function AverageTimePage() {
       <HeaderComponent />
       <MainComponent>
         <DebugComponent />
-        <ArticleComponent>
-          <RawMaterialsScoreComponent />
+        <ArticleComponent cssClass={styles.article}>
+          <RawMaterialsImpactComponent />
           <QuestionComponent
             title={t('page.averageTime.title')}
             text={t('page.averageTime.text')}
