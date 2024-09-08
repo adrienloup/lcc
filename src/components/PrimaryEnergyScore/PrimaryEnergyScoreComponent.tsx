@@ -1,22 +1,16 @@
-import { DataType } from '../../models/DataType';
 import { LiveScoreComponent } from '../LiveScore/LiveScoreComponent';
-import getPrimaryEnergy from '../../metrics/getPrimaryEnergy';
+import { useScore } from '../../hooks/useScore';
 import styles from './PrimaryEnergyScoreComponent.module.scss';
 
-export const PrimaryEnergyScoreComponent = ({ data }: { data: DataType }) => {
-  const primaryEnergyScore = getPrimaryEnergy(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.mobileVisitors,
-    data.serversUsed
-  );
+export const PrimaryEnergyScoreComponent = () => {
+  const { score } = useScore();
 
   return (
     <LiveScoreComponent
-      name="primary-energy"
-      label="common.liveScore.primaryEnergy"
-      value={Number((primaryEnergyScore / 1000).toFixed(2))}
-      svg={styles.svg}
+      label="common.LiveScore.primaryEnergy"
+      value={Number((score.primaryEnergy / 1000).toFixed(2))}
+      svg="primary-energy"
+      svgClass={styles.svg}
     />
   );
 };

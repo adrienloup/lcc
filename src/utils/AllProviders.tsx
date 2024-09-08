@@ -5,9 +5,13 @@ import {
   FunctionComponent,
   ReactNode,
 } from 'react';
-import { ThemeProvider } from '../contexts/ThemeContext';
-import { LanguageProvider } from '../contexts/LanguageContext';
+import { AlertProvider } from '../contexts/AlertContext';
 import { DataProvider } from '../contexts/DataContext';
+import { LanguageProvider } from '../contexts/LanguageContext';
+import { ProgressProvider } from '../contexts/ProgressContext';
+import { ScoreProvider } from '../contexts/ScoreContext';
+import { ThemeProvider } from '../contexts/ThemeContext';
+import { UserProvider } from '../contexts/UserContext';
 
 type ProvidersType = [
   ComponentType<{ children: ReactNode }>,
@@ -26,4 +30,12 @@ const combineProviders = (providers: ProvidersType) =>
   );
 
 export const AllProviders: FunctionComponent<{ children: ReactNode }> =
-  combineProviders([[ThemeProvider], [LanguageProvider], [DataProvider]]);
+  combineProviders([
+    [AlertProvider],
+    [DataProvider],
+    [LanguageProvider],
+    [ProgressProvider],
+    [ScoreProvider],
+    [ThemeProvider],
+    [UserProvider],
+  ]);

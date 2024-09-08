@@ -4,11 +4,11 @@ import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
+import { TitleComponent } from '../../components/Title/TitleComponent';
 import { BannerComponent } from '../../components/Banner/BannerComponent';
 import { ButtonComponent } from '../../components/Button/ButtonComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { ReferenceModelsComponent } from '../../components/ReferenceModels/ReferenceModelsComponent';
-import { TitleComponent } from '../../components/Title/TitleComponent';
 import styles from './DocumentationPage.module.scss';
 
 function ReferenceModelsPage() {
@@ -30,10 +30,12 @@ function ReferenceModelsPage() {
           <ReferenceModelsComponent />
         </ArticleComponent>
         <BannerComponent>
-          <p>{t('common.questionOrProblem.text')}</p>
-          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
-            {t('common.questionOrProblem.button.label')}
-          </ButtonComponent>
+          <p>
+            {t('common.faq')}{' '}
+            <ButtonComponent to="/lcc/faq">
+              {t('common.button.faq')}
+            </ButtonComponent>
+          </p>
         </BannerComponent>
       </MainComponent>
       <FooterComponent />

@@ -1,38 +1,74 @@
 .card {
   position: relative;
   display: flex;
-  gap: 1rem;
-  padding: 1rem 2.5rem 1rem 1rem;
-  background-color: var(--primary-lighter-color);
+  overflow: hidden;
+  width: calc(50% - 0.5rem);
+  background-color: var(--color-3);
   border-radius: 0.25rem;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: var(--color-1);
   transform-origin: 50% 0;
-  animation: 0.45s Appear var(--ease);
+  animation: 0.25s Appear var(--ease);
   will-change: transform, opacity;
 
-  &:focus-visible,
-  &:hover {
-    background-color: var(--primary-darker-color);
+  @include tablet-portrait {
+    width: 100%;
+  }
+
+  @for $i from 1 through 3 {
+    $duration: ($i + 2.5) * 0.1;
+
+    &:nth-child(#{$i}) {
+      animation-duration: #{$duration}s;
+    }
   }
 }
 
-.text {
-  line-height: 1.25;
-  font-size: 1.25rem;
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  p {
+    flex: 1;
+    line-height: 1.25;
+    font-size: 1.5rem;
+  }
+
+  span {
+    color: var(--solid-color-4);
+  }
 }
 
-.svg {
+.primary-energy,
+.water {
+  width: 2.5rem;
+  height: auto;
+}
+
+.plug {
+  width: 3rem;
+  height: auto;
+}
+
+.coin,
+.glass,
+.meter,
+.car,
+.desktop,
+.shower,
+.raw-materials,
+.house {
   width: 3.5rem;
   height: auto;
 }
 
-.icon {
-  position: absolute;
-  right: 0.5rem;
-  bottom: 0.25rem;
-  font-size: 1.25rem;
+.greenhouse-gas {
+  width: 4.5rem;
+  height: auto;
 }
 
 @keyframes Appear {

@@ -19,21 +19,21 @@ export const HeaderComponent = () => {
           cssClass={styles.burger}
           onClick={() => console.log('menu')}
         >
-          <IconComponent name="menu" />
+          <IconComponent icon="menu" />
         </ButtonComponent>
         <ButtonComponent cssClass={styles.name} to="/lcc">
-          <SvgComponent cssClass={styles.svg} name="lcc" />
+          <SvgComponent cssClass={styles.svg} svg="lcc" />
           <span dangerouslySetInnerHTML={{ __html: t('common.header.name') }} />
         </ButtonComponent>
         <NavigationComponent cssClass={styles.navigation}>
           <ButtonComponent
             cssClass={[
               styles.tab,
-              useActivePage('question') ? ` ${styles.active}` : '',
+              useActivePage('calculator') ? ` ${styles.active}` : '',
             ].join('')}
-            to="/lcc/question/website"
+            to="/lcc/calculator/website"
           >
-            {t('common.header.navigation.tab1')}
+            {t('common.header.navigation.calculator')}
           </ButtonComponent>
           <ButtonComponent
             cssClass={[
@@ -42,13 +42,16 @@ export const HeaderComponent = () => {
             ].join('')}
             to="/lcc/documentation/reference-models"
           >
-            {t('common.header.navigation.tab2')}
+            {t('common.header.navigation.models')}
           </ButtonComponent>
           <ButtonComponent
-            cssClass={[styles.tab].join('')}
+            cssClass={[
+              styles.tab,
+              useActivePage('resources') ? ` ${styles.active}` : '',
+            ].join('')}
             to="/lcc/documentation/resources"
           >
-            {t('common.header.navigation.tab3')}
+            {t('common.header.navigation.documentation')}
           </ButtonComponent>
         </NavigationComponent>
         <TooltipComponent
@@ -64,7 +67,7 @@ export const HeaderComponent = () => {
             tabIndex={-1}
             to="/lcc/profile"
           >
-            <IconComponent name="account_circle" />
+            <IconComponent icon="account_circle" />
           </ButtonComponent>
         </TooltipComponent>
       </div>

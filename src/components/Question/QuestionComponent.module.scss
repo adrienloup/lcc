@@ -5,10 +5,10 @@
   padding: 1.25rem;
   background-image: linear-gradient(
     60deg,
-    var(--primary-darker-color) 0%,
-    var(--primary-lighter-color) 100%
+    var(--solid-color-3) 0%,
+    var(--solid-color-2) 100%
   );
-  background-color: var(--primary-color);
+  background-color: var(--solid-color-1);
   border-radius: 0.25rem;
   transform-origin: 50% 0;
   animation: 0.35s Appear var(--ease);

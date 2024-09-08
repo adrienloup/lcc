@@ -1,15 +1,24 @@
 .article {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
   flex: 1;
-  max-width: 55rem;
+  max-width: 60rem;
   width: 100%;
-  margin: 1rem auto;
+  margin: 2.5rem auto;
   padding: 0 1rem;
   transform-origin: 50% 0;
   animation: 0.25s Appear var(--ease);
   will-change: transform, opacity;
+
+  @include desktop {
+    margin: 2rem auto;
+  }
+
+  @include tablet-landscape {
+    margin: 1rem auto;
+  }
 }
 
 @keyframes Appear {

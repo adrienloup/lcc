@@ -3,8 +3,8 @@ import { useTitlePage } from '../../hooks/useTitlePage';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
-import { BannerComponent } from '../../components/Banner/BannerComponent';
 import { TitleComponent } from '../../components/Title/TitleComponent';
+import { BannerComponent } from '../../components/Banner/BannerComponent';
 import styles from './NotFoundPage.module.scss';
 
 function NotFoundPage() {
@@ -16,7 +16,7 @@ function NotFoundPage() {
     <>
       <HeaderComponent />
       <MainComponent>
-        <BannerComponent variant="secondary">
+        <BannerComponent variant="secondary" icon="warning">
           <TitleComponent cssClass={styles.title}>
             {t('page.notFound.title')}
           </TitleComponent>

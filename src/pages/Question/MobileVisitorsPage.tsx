@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
+import { useProgress } from '../../hooks/useProgress';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
-import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
-import { RawMaterialsScoreComponent } from '../../components/RawMaterialsScore/RawMaterialsScoreComponent';
+import { DebugComponent } from '../../components/Debug/DebugComponent';
+import { PrimaryEnergyScoreComponent } from '../../components/PrimaryEnergyScore/PrimaryEnergyScoreComponent';
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
@@ -19,15 +20,19 @@ import styles from './QuestionPage.module.scss';
 function MobileVisitorsPage() {
   const { t } = useTranslation();
   const { data, setData } = useData();
+  const { setProgress } = useProgress();
   const [mobileVisitors, setMobileVisitors] = useState(data.mobileVisitors);
 
   useTitlePage(t('page.mobileVisitors.title'));
 
   const changeMobileVisitors = (value: string) => {
-    const mobileVisitors = Number(value);
-    setData({ ...data, mobileVisitors });
-    setMobileVisitors(mobileVisitors);
+    setData({ ...data, mobileVisitors: value });
+    setMobileVisitors(value);
   };
+
+  useEffect(() => {
+    setProgress({ value: 4, page: '/lcc/calculator/mobile-visitors' });
+  }, []);
 
   return (
     <>
@@ -35,10 +40,10 @@ function MobileVisitorsPage() {
       <MainComponent>
         <DebugComponent />
         <ArticleComponent>
-          <RawMaterialsScoreComponent data={data} />
+          <PrimaryEnergyScoreComponent data={data} />
           <QuestionComponent
             title={t('page.mobileVisitors.title')}
-            text="Les conditions d’utilisation de votre service numérique, en mobilité ou au bureau, ont des impacts bien différents."
+            text={t('page.mobileVisitors.text')}
           />
           <FrameComponent>
             <form className="form" action="">
@@ -59,25 +64,27 @@ function MobileVisitorsPage() {
           <NavigationComponent cssClass={styles.navigation}>
             <ButtonComponent
               cssClass={[styles.button, ` ${styles.previous}`].join('')}
-              to="/lcc/question/visitors-located"
+              to="/lcc/calculator/visitors-located"
             >
-              <IconComponent cssClass={styles.icon} name="chevron_left" />
+              <IconComponent cssClass={styles.icon} icon="chevron_left" />
               {t('common.button.previous')}
             </ButtonComponent>
             <ButtonComponent
               cssClass={[styles.button, ` ${styles.next}`].join('')}
-              to="/lcc/question/pages-viewed"
+              to="/lcc/calculator/pages-viewed"
             >
               {t('common.button.next')}
-              <IconComponent cssClass={styles.icon} name="chevron_right" />
+              <IconComponent cssClass={styles.icon} icon="chevron_right" />
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>
         <BannerComponent>
-          <p>{t('common.questionOrProblem.text')}</p>
-          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
-            {t('common.questionOrProblem.button.label')}
-          </ButtonComponent>
+          <p>
+            {t('common.faq')}{' '}
+            <ButtonComponent to="/lcc/faq">
+              {t('common.button.faq')}
+            </ButtonComponent>
+          </p>
         </BannerComponent>
       </MainComponent>
       <FooterComponent />

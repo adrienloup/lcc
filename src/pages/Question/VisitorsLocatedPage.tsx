@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
+import { useProgress } from '../../hooks/useProgress';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
-import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
+import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { GreenhouseGasScoreComponent } from '../../components/GreenhouseGasScore/GreenhouseGasScoreComponent';
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
@@ -20,13 +21,14 @@ import styles from './QuestionPage.module.scss';
 function VisitorsLocatedPage() {
   const { t } = useTranslation();
   const { data, setData } = useData();
+  const { setProgress } = useProgress();
   const [visitorsLocated, setVisitorsLocated] = useState(data.visitorsLocated);
 
   useTitlePage(t('page.visitorsLocated.title'));
 
-  const changeVisitorsLocated = (visitorsLocated: string) => {
-    setData({ ...data, visitorsLocated });
-    setVisitorsLocated(visitorsLocated);
+  const changeVisitorsLocated = (value: string) => {
+    setData({ ...data, visitorsLocated: value });
+    setVisitorsLocated(value);
   };
 
   const list = globalLocations?.map((location) => (
@@ -43,6 +45,10 @@ function VisitorsLocatedPage() {
     </div>
   ));
 
+  useEffect(() => {
+    setProgress({ value: 3, page: '/lcc/calculator/visitors-located' });
+  }, []);
+
   return (
     <>
       <HeaderComponent />
@@ -52,7 +58,7 @@ function VisitorsLocatedPage() {
           <GreenhouseGasScoreComponent data={data} />
           <QuestionComponent
             title={t('page.visitorsLocated.title')}
-            text="Le mix énergétique du pays dans lequel se situent vos utilisateurs fait varier l’impact écologique."
+            text={t('page.visitorsLocated.text')}
           />
           <FrameComponent>
             <form className="form" action="">
@@ -64,25 +70,27 @@ function VisitorsLocatedPage() {
           <NavigationComponent cssClass={styles.navigation}>
             <ButtonComponent
               cssClass={[styles.button, ` ${styles.previous}`].join('')}
-              to="/lcc/question/average-time"
+              to="/lcc/calculator/average-time"
             >
-              <IconComponent cssClass={styles.icon} name="chevron_left" />
+              <IconComponent cssClass={styles.icon} icon="chevron_left" />
               {t('common.button.previous')}
             </ButtonComponent>
             <ButtonComponent
               cssClass={[styles.button, ` ${styles.next}`].join('')}
-              to="/lcc/question/mobile-visitors"
+              to="/lcc/calculator/mobile-visitors"
             >
               {t('common.button.next')}
-              <IconComponent cssClass={styles.icon} name="chevron_right" />
+              <IconComponent cssClass={styles.icon} icon="chevron_right" />
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>
         <BannerComponent>
-          <p>{t('common.questionOrProblem.text')}</p>
-          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
-            {t('common.questionOrProblem.button.label')}
-          </ButtonComponent>
+          <p>
+            {t('common.faq')}{' '}
+            <ButtonComponent to="/lcc/faq">
+              {t('common.button.faq')}
+            </ButtonComponent>
+          </p>
         </BannerComponent>
       </MainComponent>
       <FooterComponent />

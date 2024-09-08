@@ -8,5 +8,5 @@ export interface DataType {
   pagesViewed: number;
   serversUsed: number;
   serversLocated: string;
-  scores: number[];
+  [key: string | number]: string | number;
 }

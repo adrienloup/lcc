@@ -5,16 +5,25 @@
 
 @mixin colors {
   --neutral-color-1: #fff;
-  --neutral-color-2: #ebebf8;
-  --neutral-color-3: #fde2f0;
-  --neutral-color-4: #0e0e24;
-  --neutral-color-5: #000;
-  --primary-color: #37389d;
-  --primary-lighter-color: #6566c5;
-  --primary-darker-color: #242673;
-  --secondary-color: #f3389c;
-  --tertiary-color: #11d482;
-  --quaternary-color: #11c7df;
+  --neutral-color-2: #000;
+  --solid-color-1: #37389d;
+  --solid-color-2: #6566c5;
+  --solid-color-3: #242673;
+  --solid-color-4: #ff0076;
+  --solid-color-5: #00ff3c;
+  --solid-color-6: #00e1ff;
+  --solid-color-7: #ffff00;
+  --solid-color-8: #ff8000;
+  --solid-color-9: #b300ff;
+  --solid-color-10: #0e0e24;
+  --solid-color-11: #ff0000;
+  --pastel-color-1: #a2d2fd;
+  --pastel-color-2: #cef1d5;
+  --pastel-color-3: #ffefbc;
+  --pastel-color-4: #ffdbbc;
+  --pastel-color-5: #fd69d0;
+  --pastel-color-6: #ebebf8;
+  --pastel-color-7: #fde2f0;
 }
 
 @mixin easings {

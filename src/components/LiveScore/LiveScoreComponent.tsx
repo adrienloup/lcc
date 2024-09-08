@@ -2,30 +2,30 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ButtonComponent } from '../Button/ButtonComponent';
 import { IconComponent } from '../Icon/IconComponent';
-import { HelpComponent } from '../Help/HelpComponent';
+import { SnackbarComponent } from '../Snackbar/SnackbarComponent';
 import { SvgComponent } from '../Svg/SvgComponent';
 import styles from './LiveScoreComponent.module.scss';
 
 interface LiveScoreComponentProps {
-  name: string;
   label: string;
   value: number;
   svg: string;
+  svgClass: string;
 }
 
 export const LiveScoreComponent = ({
-  name,
   label,
   value,
   svg,
+  svgClass,
 }: LiveScoreComponentProps) => {
   const { t } = useTranslation();
-  const [help, setHelp] = useState(false);
+  const [snackbar, setSnackbar] = useState(false);
 
   return (
     <>
       <div className={styles['live-score']}>
-        <SvgComponent cssClass={svg} name={name} />
+        <SvgComponent cssClass={svgClass} svg={svg} />
         <span
           className={styles.label}
           dangerouslySetInnerHTML={{
@@ -36,12 +36,17 @@ export const LiveScoreComponent = ({
         />
         <ButtonComponent
           cssClass={styles.button}
-          onClick={() => setHelp(!help)}
+          onClick={() => setSnackbar(!snackbar)}
         >
-          <IconComponent name="help" cssClass={styles.icon} />
+          <IconComponent cssClass={styles.icon} icon="help" />
         </ButtonComponent>
       </div>
-      {help && <HelpComponent onClick={() => setHelp(false)} />}
+      {snackbar && (
+        <SnackbarComponent
+          text={t('common.help')}
+          onClick={() => setSnackbar(false)}
+        />
+      )}
     </>
   );
 };

@@ -1,26 +1,26 @@
 import { ReactNode } from 'react';
 import { ButtonComponent } from '../Button/ButtonComponent';
 import { IconComponent } from '../Icon/IconComponent';
-import styles from './InfoComponent.module.scss';
+import styles from './SnackbarComponent.module.scss';
 
-interface InfoComponentProps {
+interface SnackbarComponentProps {
   cssClass?: string;
   text: ReactNode;
   onClick: () => void;
 }
 
-export const InfoComponent = ({
+export const SnackbarComponent = ({
   cssClass,
   text,
   onClick,
-}: InfoComponentProps) => {
+}: SnackbarComponentProps) => {
   return (
-    <div className={[styles.info, cssClass ? ` ${cssClass}` : ''].join('')}>
+    <div className={[styles.snackbar, cssClass ? ` ${cssClass}` : ''].join('')}>
       <div className={styles.inner}>
-        <p className={styles.text}>{text}</p>
+        <p>{text}</p>
       </div>
       <ButtonComponent cssClass={styles.button} onClick={onClick}>
-        <IconComponent name="cancel" />
+        <IconComponent icon="cancel" />
       </ButtonComponent>
     </div>
   );

@@ -1,0 +1,57 @@
+.snackbar {
+  position: relative;
+  display: flex;
+  background-color: var(--pastel-color-7);
+  border: 0.25rem solid var(--solid-color-4);
+  border-radius: 0.25rem;
+  transform-origin: 50% 0;
+  animation: 0.25s Appear var(--ease);
+  will-change: transform, opacity;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-left: 0.75rem solid transparent;
+    border-right: 0.75rem solid transparent;
+    border-bottom: 0.75rem solid var(--solid-color-4);
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  padding: 0.75rem 1.25rem;
+  border-right: 0.25rem solid var(--solid-color-4);
+
+  p {
+    line-height: 1.35;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--solid-color-4);
+  }
+}
+
+.button {
+  padding: 0 0.25rem;
+  background-color: var(--solid-color-4);
+  font-size: 2.25rem;
+  color: var(--pastel-color-7);
+
+  &:focus-visible {
+    outline-offset: -0.35rem;
+  }
+}
+
+@keyframes Appear {
+  0% {
+    transform: translate3d(0, -0.5rem, 0);
+    opacity: 0;
+  }
+}

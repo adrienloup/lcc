@@ -16,7 +16,7 @@
   background-color: transparent;
   font-weight: bold;
   font-size: 1.25rem;
-  color: var(--primary-color);
+  color: var(--solid-color-1);
 
   @include tablet-portrait {
     gap: 0.25rem;
@@ -47,7 +47,7 @@
   padding-right: 1rem;
   font-weight: bold;
   font-size: 1rem;
-  color: var(--primary-color);
+  color: var(--solid-color-1);
 
   @include mobile-landscape {
     display: none;

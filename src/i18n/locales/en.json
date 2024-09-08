@@ -1,16 +1,27 @@
 {
   "common": {
-    "questionOrProblem": {
-      "text": "A question, a problem?",
-      "button": {
-        "label": "Discover the FAQ!",
-        "href": "#"
-      }
+    "alert": {
+      "valid": "Validate!"
     },
+    "faq": "Question, problem?",
     "button": {
+      "dark": "Dark mode",
+      "english": "English",
+      "faq": "Discover the FAQ!",
+      "french": "French",
+      "improve": "Improve my test",
+      "light": "Light mode",
       "previous": "Previous",
+      "progress": "Resume my test",
       "next": "Next",
-      "result": "Result"
+      "restarted": "Start a new test",
+      "result": "Result",
+      "save": "Update my information",
+      "start": "Start my test"
+    },
+    "underConstruction": {
+      "website": "The site is under construction, it works pretty well :)",
+      "page": "The page is under construction, the final content is coming soon :)"
     },
     "footer": {
       "accessibility": {
@@ -20,18 +31,15 @@
     "header": {
       "name": "Life Cycle<br />Calculator",
       "navigation": {
-        "tab1": "Calculator",
-        "tab2": "Models",
-        "tab3": "Documentation"
+        "calculator": "Calculator",
+        "models": "Models",
+        "documentation": "Documentation"
       },
       "profile": {
         "tooltip": "My profile"
       }
     },
-    "help": {
-      "paragraph1": "Here is your provisional score, it changes with each new answer!",
-      "paragraph2": "Browse reference models to understand your website's ecological impact on the planet."
-    },
+    "help": "Here is your provisional score, it changes with each new answer! Browse reference models to understand your website's ecological impact on the planet.",
     "highlight": {
       "actForThePlanet": {
         "subtitle": "Act for the planet",
@@ -52,7 +60,7 @@
         }
       }
     },
-    "liveScore": {
+    "LiveScore": {
       "rawMaterials": "<span>{{value}} Kg</span>of raw materials per year",
       "water": "<span>{{value}} liters</span>of water per year",
       "primaryEnergy": "<span>{{value}} MW/h</span>of primary energy per year",
@@ -71,42 +79,306 @@
       "title": "Digital accessibility"
     },
     "averageTime": {
-      "title": "What is the average time spent on the journey per user?"
+      "title": "What is the average time spent on the journey per user?",
+      "text": "The time that users spend on your digital service allows us to know the quantity of terminals, network equipment, servers necessary to serve, transit and consult the content or services that you deliver."
     },
     "home": {
       "title": "Do you know the ecological impact of your website on the planet?",
       "text": "In <span>10 minutes</span> obtain an estimate of your ecological impact at the end of the test!"
     },
+    "impact": {
+      "title": "The impact of the {{whatPurpose}} journey on the {{websiteName}} website",
+      "user": {
+        "title": "Equivalence per user",
+        "plug": "As if each user ran 1 microwave for <span>{{score}} seconds</span>",
+        "meter": "As if each user drove <span>{{score}} meters</span> on the roads",
+        "coin": "As if each user was digging to extract the equivalent of <span>{{score}} euro coins</span>",
+        "glass": "As if each user consumed the equivalent of <span>{{score}}&nbsp;glasses of water</span>"
+      },
+      "year": {
+        "title": "Equivalence by year",
+        "house": "As if every year we consumed electricity like <span>{{score}}&nbsp;French houses</span>",
+        "car": "As if every year we emit greenhouse gases like <span>{{score}} cars</span> circling the earth",
+        "desktop": "As if every year we dig to extract the equivence of <span>{{score}} laptops</span>",
+        "shower": "As if every year we take the equivalent of <span>{{score}} showers</span>"
+      },
+      "data": {
+        "title": "Raw data per year",
+        "primaryEnergy": "<span>{{score}} KWh</span> of primary energy",
+        "greenhouseGas": "<span>{{score}} Kg</span> of CO2-eq",
+        "rawMaterials": "<span>{{score}} Kg</span> of raw materials",
+        "water": "<span>{{score}} liters</span> of water"
+      }
+    },
     "mobileVisitors": {
-      "title": "What is the proportion of mobile users?"
+      "title": "What is the proportion of mobile users?",
+      "text": "The conditions of use of your digital service, on the move or in the office, have very different impacts."
     },
     "notFound": {
       "title": "The page is not found or it is under construction but don't give up :)"
     },
     "pagesViewed": {
-      "title": "What is the number of pages viewed?"
+      "title": "What is the number of pages viewed?",
+      "text": "The user journey, after identifying user needs, is the second crucial point in eco-design. The shorter the journey, between the user and the content or service for which they came, the more it reduces the ecological impact. In 2021, the average size of a web page is 2.1MB (compared to 0.013MB in 1995)."
     },
     "profile": {
-      "title": "My profile"
+      "title": "My profile",
+      "welcome": "Welcome {{name}} :)",
+      "text": {
+        "start": "Start your test to see your progress!",
+        "progress": "You have completed the test at {{percent}}% ({{value}} question{{plural}})"
+      },
+      "myInformations": "My information",
+      "myPreferences": "My preferences",
+      "name": {
+        "label": "Your name",
+        "message": "Enter your name (4 to 20 alphabetic characters)"
+      },
+      "email": {
+        "label": "Your email",
+        "message": "Saisir votre courriel (exemple.com)"
+      }
     },
     "referenceModels": {
       "title": "Reference models",
-      "text": "The life cycle calculator assesses the ecological impact of a user's journey over a year, based on website traffic, energy intensity, carbon intensity of electricity, energy source used."
+      "text": "The life cycle calculator assesses the ecological impact of a user's journey based on website traffic, energy intensity, carbon intensity of electricity and energy source used per year."
     },
     "resources": {
-      "title": "Digital and environment"
+      "title": "Digital and environment",
+      "studies": {
+        "title": "Studies",
+        "item": [
+          {
+            "label": "Empreinte environnementale du numérique mondial",
+            "date": "greenit.fr, octobre 2019",
+            "url": "https://www.greenit.fr/wp-content/uploads/2019/10/2019-10-GREENIT-etude_EENM-rapport-accessible.VF_.pdf"
+          },
+          {
+            "label": "iNUM 2020 : impacts environnementaux du numérique en France",
+            "date": "GreenIT.fr, juin 2020",
+            "url": "https://www.greenit.fr/impacts-environnementaux-du-numerique-en-france/"
+          },
+          {
+            "label": "Pour une sobriété numérique",
+            "date": "Shift Project, octobre 2018",
+            "url": "https://theshiftproject.org/article/pour-une-sobriete-numerique-rapport-shift/"
+          },
+          {
+            "label": "Climat : l’insoutenable usage de la vidéo en ligne",
+            "date": "Shift Project, juillet 2019",
+            "url": "https://theshiftproject.org/article/climat-insoutenable-usage-video/"
+          },
+          {
+            "label": "Déployer la sobriété numérique",
+            "date": "Shift Project, octobre 2020",
+            "url": "https://theshiftproject.org/article/deployer-la-sobriete-numerique-rapport-shift/"
+          },
+          {
+            "label": "Caractérisation des effets rebond induits par le télétravail",
+            "date": "ADEME, 2020 : notamment un chapitre sur l'impact de la visioconférence",
+            "url": "https://librairie.ademe.fr/mobilite-et-transport/3776-caracterisation-des-effets-rebond-induits-par-le-teletravail.html"
+          },
+          {
+            "label": "La consommation de métaux du numérique : un secteur loin d’être dématérialisé",
+            "date": "France Stratégie, 2020",
+            "url": "https://www.strategie.gouv.fr/publications/consommation-de-mentaux-numerique-un-secteur-loin-detre-dematerialise"
+          },
+          {
+            "label": "Feuille de route sur l'environnement et le numérique",
+            "date": "Conseil National du Numérique, 2020",
+            "url": "https://cnnumerique.fr/files/uploads/2020/CNNum%20-%20Feuille%20de%20route%20environnement%20%26%20numerique.pdf"
+          },
+          {
+            "label": "Pour une transition numérique écologique",
+            "date": "rapport du Sénat, 2020",
+            "url": "https://www.senat.fr/rap/r19-555/r19-555_mono.html"
+          },
+          {
+            "label": "Rapport sur l’obsolescence logicielle",
+            "date": "prévu à l’article 27 de la loi relative à la lutte contre le gaspillage et à l’économie circulaire (AGEC), février 2021",
+            "url": "https://archive-2017-2022.ecologie.gouv.fr/presse/numerique-et-environnement-remise-au-parlement-du-rapport-sur-lobsolescence-logicielle-prevu"
+          },
+          {
+            "label": "Chasing Carbon: The Elusive Environmental Footprint of Computing",
+            "date": "Harvard University, Facebook Inc., Arizona State University, 2020",
+            "url": "https://arxiv.org/pdf/2011.02839"
+          },
+          {
+            "label": "How realistic are claims about the benefits of using digital technologies for GHG emissions mitigation?",
+            "date": "par Aina Rasoldier, Jacques Combaz, Alain Girault, Kevin Marquet et Sophie Quinton, Juin 2022",
+            "url": "https://computingwithinlimits.org/2022/papers/limits22-final-Rasoldier.pdf"
+          }
+        ]
+      },
+      "ecosystem": {
+        "title": "Ecosystem",
+        "item": [
+          {
+            "label": "ADEME",
+            "date": "l'agence de la transition écologique qui publie de nombreuses études sur les impacts environnementaux du numérique et finance / subventionne des projets liés à ce sujet (Perfecto, AMI Low-Tech...)",
+            "url": "https://alliancegreenit.org/"
+          },
+          {
+            "label": "Alliance Green IT",
+            "date": "avec entre autres Thomas Mesplede, Adèle SCHNEEBERGER, Romuald Ribault, Caroline Vateau",
+            "url": "https://alliancegreenit.org/"
+          },
+          {
+            "label": "Arcep",
+            "date": "dont le rapport Pour un numérique soutenable",
+            "url": "https://www.arcep.fr/nos-sujets/numerique-et-environnement.html"
+          },
+          {
+            "label": "Clim'Foot",
+            "date": "a European project to calculate greenhouse gas emissions produced by companies and entities founded by programme LIFE 2014-2020",
+            "url": "https://climfoot-project.eu/"
+          },
+          {
+            "label": "Collectif conception numérique responsable",
+            "date": "avec entre autres Frédéric Bordage, Romuald Priol",
+            "url": "https://collectif.greenit.fr/"
+          },
+          {
+            "label": "EcoInfo",
+            "date": "pour une informatique éco-responsable, groupement de services du CNRS, avec entre autres Françoise Berthoud",
+            "url": "https://ecoinfo.cnrs.fr/"
+          },
+          {
+            "label": "Electrocycle",
+            "date": "association et laboratoire citoyen de recherche de solutions en vue de développer le réemploi des équipements électriques et électroniques en fin de vie",
+            "url": "https://www.electrocycle.co/"
+          },
+          {
+            "label": "GreenIT.fr",
+            "date": "créé par Frédéric Bordage, communauté des acteurs du numérique responsable qui s’intéressent à la sobriété numérique, à l’écoconception des services numériques, à la lowtech, et plus globalement à un avenir numérique alternatif (depuis 2004)",
+            "url": "https://www.greenit.fr/"
+          },
+          {
+            "label": "Halte à l'obsolescence programmée",
+            "date": "avec entre autres Laeticia Vasseur, Adèle Chasson, Samuel Sauvage",
+            "url": "https://www.halteobsolescence.org/"
+          },
+          {
+            "label": "Institut Numérique Responsable",
+            "date": "entre autres Jean-Christophe Chaussat (Pôle-Emploi) et Vincent Courboulay (Université de la Rochelle)",
+            "url": "https://institutnr.org/"
+          },
+          {
+            "label": "Mission interministérielle Green Tech",
+            "date": "pilotée dans le cadre du programme TECH.GOUV par le Ministère de la Transition Ecologique et la DINUM",
+            "url": "https://ecoresponsable.numerique.gouv.fr/"
+          },
+          {
+            "label": "NegaOctet",
+            "date": "projet de Recherche et Développement lauréat de l’appel à projet PERFECTO 2018 de l'Ademe, création d’outils permettant la réalisation d’Analyse du Cycle de Vie conforme ISO 14040 sur l’ensemble du périmètre Terminaux – Réseau – Datacenter, coporté par Julie Orgelet (DDemain), Frédéric Bordage (greenit.fr), Caroline Vateau (Neutreo - APL Datacenter) et Bureau Veritas",
+            "url": "https://negaoctet.org/"
+          },
+          {
+            "label": "Point de MIR",
+            "date": "maison de l'informatique responsable fondée par Bela Loto et Céline Ferre",
+            "url": "https://www.point-de-mir.com/"
+          },
+          {
+            "label": "Pôle Eco-conception",
+            "date": "association dont une des missions est sur le sujet du numérique",
+            "url": "https://www.eco-conception.fr/static/eco-conception-de-service-numerique.html"
+          },
+          {
+            "label": "Rcube",
+            "date": "Fédération du Réemploi et de la Réparation, association fondée par Benoit Varin, également directeur du Développement Durable de Recommerce",
+            "url": "https://rcube.org/"
+          },
+          {
+            "label": "RepairCafe",
+            "date": "référentiel des repair café en france et dans le monde",
+            "url": "https://www.repaircafe.org/fr/"
+          },
+          {
+            "label": "The Shift Project",
+            "date": "projet les impacts environnementaux du Numérique (depuis 2018), avec entre autres Hugues Ferreboeuf (directeur de projet) et Maxime Efoui-Hess (chargé de projet)",
+            "url": "https://theshiftproject.org/lean-ict/"
+          }
+        ]
+      },
+      "actors": {
+        "title": "Private actors",
+        "item": [
+          {
+            "label": "Commownlocation de Fairphone",
+            "date": "PC et casques audio, avec entre autres Adrien Montagut",
+            "url": "https://commown.coop/"
+          },
+          {
+            "label": "DDemain",
+            "date": "créé par Julie Orgelet, formatrice et consultante en analyse de cycle de vie",
+            "url": "https://ddemain.com/"
+          },
+          {
+            "label": "Fairphone",
+            "date": "smartphone éthique et réparable",
+            "url": "https://www.fairphone.com/fr"
+          },
+          {
+            "label": "Framework Laptop",
+            "date": "upgradeable and repairable laptop",
+            "url": "https://frame.work/fr/fr"
+          },
+          {
+            "label": "Frédéric Bordage de GreenIT.fr",
+            "date": "consultant et formateur numérique responsable et éco-conception de services numériques",
+            "url": "https://www.greenit.fr/"
+          },
+          {
+            "label": "Greenspector",
+            "date": "outil de mesure de l’empreinte environnementale des applications",
+            "url": "https://greenspector.com/fr/accueil/"
+          },
+          {
+            "label": "Greenet.io",
+            "date": "application de mesure et réduction de l’empreinte carbone de votre navigation web",
+            "url": "https://www.greenet.io/"
+          }
+        ]
+      }
     },
     "rawMaterials": {
-      "title": "Raw materials"
+      "title": "Raw materials",
+      "text": "Here is your provisional score, it changes with each new answer!",
+      "score": {
+        "rawMaterials": "{{score}} Kg of raw materials",
+        "desktop": "{{score}} computers per year",
+        "coin": "{{score}} euro coins per user"
+      },
+      "impacts": {
+        "title": "Ecological impacts per year",
+        "text": "This represents {{RawMaterialsScore}} Kg of raw materials. As if every year we dig to extract the equivalent of {{desktopScore}} laptops and each user digs to extract the equivalent of {{coinScore}} euro coins."
+      },
+      "technical": {
+        "title": "Technical information",
+        "text": "Because 1 KWh produced in China by a coal-fired power plant emits 1Kg of CO2-eq, i.e. 10x more than in France by a nuclear power plant and 5x more on average than an OECD country."
+      },
+      "calculated": {
+        "title": "How is this data calculated?",
+        "text": [
+          "Life cycle analysis is a standardized assessment method for carrying out a multi-criteria and multi-stage environmental assessment of a system over its entire life cycle.",
+          "The number of visitors per month allows us to know the quantity of user terminals, network equipment, servers necessary to consult the content or services that you deliver. If you do not know it, you can find this information in your Google Analytics tool or equivalent.",
+          "The time that users spend on your digital service allows us to know the quantity of terminals, network equipment, servers necessary to serve, transit and consult the content or services that you deliver.",
+          "The conditions of use of your digital service, on the move or in the office, have very different impacts.",
+          "Calculated from an average PUE (Power Usage Effectiveness) of a server (i.e. 1.8). If you have opted for “green” hosting, you will be better than the market average on this parameter. Count the production servers, staging, review, CDN, etc."
+        ]
+      }
     },
     "serversLocated": {
-      "title": "Where are most of the servers located?"
+      "title": "Where are most of the servers located?",
+      "text": "The energy mix of the country in which the servers are located varies the ecological impact."
     },
     "serversUsed": {
-      "title": "How many servers are used?"
+      "title": "How many servers are used?",
+      "text": "Calculated from an average PUE (Power Usage Effectiveness) of a server (i.e. 1.8). If you have opted for “green” hosting, you will be better than the market average on this parameter. Count production, staging, review, CDN servers, etc."
     },
     "visitorsLocated": {
-      "title": "Where are the majority of users located?"
+      "title": "Where are the majority of users located?",
+      "text": "The energy mix of the country in which your users are located varies the ecological impact."
     },
     "visitorsPerMonth": {
       "title": "What is the number of visitors per month?",

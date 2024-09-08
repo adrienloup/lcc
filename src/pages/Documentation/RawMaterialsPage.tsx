@@ -5,11 +5,11 @@ import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
+import { TitleComponent } from '../../components/Title/TitleComponent';
 import { BannerComponent } from '../../components/Banner/BannerComponent';
 import { ButtonComponent } from '../../components/Button/ButtonComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
-import { TitleComponent } from '../../components/Title/TitleComponent';
-import { ScoreComponent } from '../../components/Score/ScoreComponent';
+import { ScoresComponent } from '../../components/Scores/ScoresComponent';
 import getRawMaterials from '../../metrics/getRawMaterials';
 import getDesktop from '../../metrics/getDesktop';
 import getCoin from '../../metrics/getCoin';
@@ -19,7 +19,7 @@ function RawMaterialsPage() {
   const { t } = useTranslation();
   const { data } = useData();
 
-  const rawMaterialsScore = getRawMaterials(
+  const RawMaterialsScore = getRawMaterials(
     data.visitorsPerMonth,
     data.averageTime,
     data.mobileVisitors,
@@ -46,81 +46,68 @@ function RawMaterialsPage() {
     <>
       <HeaderComponent />
       <MainComponent>
+        <BannerComponent variant="secondary" icon="warning">
+          <p>{t('common.underConstruction.page')}</p>
+        </BannerComponent>
         <ArticleComponent>
           <TitleComponent cssClass={styles.title}>
             {t('page.rawMaterials.title')}
           </TitleComponent>
           <FrameComponent>
+            <p>{t('page.rawMaterials.text')}</p>
+          </FrameComponent>
+          <ScoresComponent
+            scores={[
+              {
+                text: t('page.rawMaterials.score.rawMaterials', {
+                  score: RawMaterialsScore.toFixed(),
+                }),
+                svg: 'raw-materials',
+              },
+              {
+                text: t('page.rawMaterials.score.desktop', {
+                  score: desktopScore,
+                }),
+                svg: 'desktop',
+              },
+              {
+                text: t('page.rawMaterials.score.coin', {
+                  score: coinScore,
+                }),
+                svg: 'coin',
+              },
+            ]}
+          ></ScoresComponent>
+          <FrameComponent>
+            <h2>{t('page.rawMaterials.impacts.title')}</h2>
             <p>
-              Voici votre score provisoire, il évolue à chaque nouvelle réponse
-              !
+              {t('page.rawMaterials.impacts.text', {
+                RawMaterialsScore: RawMaterialsScore.toFixed(),
+                desktopScore: desktopScore,
+                coinScore: coinScore,
+              })}
             </p>
           </FrameComponent>
-          <div className={styles.scores}>
-            <ScoreComponent
-              text={`<span>${rawMaterialsScore.toFixed(0)} Kg</span>de matières premières`}
-              name="raw-materials"
-            />
-            <ScoreComponent
-              text={`<span>${desktopScore} ordinateurs</span> par annnée`}
-              name="desktop"
-            />
-            <ScoreComponent
-              text={`<span>${coinScore} pièces de 1 euro</span> par utilisateur`}
-              name="coin"
-            />
-          </div>
           <FrameComponent>
-            <h2>Impacts écologiques par année</h2>
-            <p>
-              Cela représente {rawMaterialsScore.toFixed(0)} Kg de matières
-              premières. Comme si chaque année, nous creusons pour extraire
-              l'équivalent de {desktopScore} ordinateurs portables et que chaque
-              utilisateur creusait pour extraire l'équivalent de
-              {coinScore} pièces de 1 euro
-            </p>
-            <h2>Informations techniques</h2>
-            <p>
-              Parce qu'1 KWh produit en Chine par une centrale à charbon émet
-              1Kg de CO2-eq, soit 10x plus qu'en France par une centrale
-              nucléaire et 5x plus en moyenne qu'un pays de l'OCDE.
-            </p>
-            <h2>Comment cette donnée est-elle calculée ?</h2>
-            <p>
-              L'analyse du cycle de vie est une méthode d'évaluation normalisée
-              permettant de réaliser un bilan environnemental multicritère et
-              multi-étape d'un système sur l'ensemble de son cycle de vie.
-            </p>
-            <p>
-              Le nombre de visiteurs par mois permet de connaître la quantité de
-              teminaux utilisateur, équipements réseau, serveur nécessaire pour
-              consulter les contenus ou les services que vous délivrez. Si vous
-              ne la connaissez pas, vous pouvez trouver cette information dans
-              votre outil Google Analytics ou équivalent.
-            </p>
-            <p>
-              Le temps que les utilisateurs passent sur votre service numérique
-              permet de connaître la quantité de teminaux, équipements réseau,
-              serveur nécessaire pour servir, transiter et consulter les
-              contenus ou les services que vous délivrez.
-            </p>
-            <p>
-              Les conditions d'utilisation de votre service numérique, en
-              mobilité ou au bureau, ont des impacts bien différents.
-            </p>
-            <p>
-              Calculé à partir d'un PUE (Power Usage Effectiveness) moyen d'un
-              serveur (soit 1,8). Si vous avez opté pour un hébergement « green
-              », vous serez meilleur que la moyenne du marché sur ce paramètre.
-              Compter les serveurs de production, staging, review, CDN, etc.
-            </p>
+            <h2>{t('page.rawMaterials.technical.title')}</h2>
+            <p>{t('page.rawMaterials.technical.text')}</p>
+          </FrameComponent>
+          <FrameComponent>
+            <h2>{t('page.rawMaterials.calculated.title')}</h2>
+            <p>{t('page.rawMaterials.calculated.text.0')}</p>
+            <p>{t('page.rawMaterials.calculated.text.1')}</p>
+            <p>{t('page.rawMaterials.calculated.text.2')}</p>
+            <p>{t('page.rawMaterials.calculated.text.3')}</p>
+            <p>{t('page.rawMaterials.calculated.text.4')}</p>
           </FrameComponent>
         </ArticleComponent>
         <BannerComponent>
-          <p>{t('common.questionOrProblem.text')}</p>
-          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
-            {t('common.questionOrProblem.button.label')}
-          </ButtonComponent>
+          <p>
+            {t('common.faq')}{' '}
+            <ButtonComponent to="/lcc/faq">
+              {t('common.button.faq')}
+            </ButtonComponent>
+          </p>
         </BannerComponent>
       </MainComponent>
       <FooterComponent />

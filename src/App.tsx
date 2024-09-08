@@ -8,6 +8,7 @@ import PagesViewedPage from './pages/Question/PagesViewedPage';
 import ProfilePage from './pages/Profile/ProfilePage';
 import RawMaterialsPage from './pages/Documentation/RawMaterialsPage';
 import ReferenceModelsPage from './pages/Documentation/ReferenceModelsPage';
+import ResourcesPage from './pages/Documentation/ResourcesPage';
 import ServersLocatedPage from './pages/Question/ServersLocatedPage';
 import ServersUsedPage from './pages/Question/ServersUsedPage';
 import VisitorsLocatedPage from './pages/Question/VisitorsLocatedPage';
@@ -19,22 +20,25 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/lcc/question/average-time"
+          path="/lcc/calculator/average-time"
           element={<AverageTimePage />}
         />
-        <Route path="/lcc/ecological-impact" element={<ImpactPage />} />
+        <Route
+          path="/lcc/calculator/ecological-impact"
+          element={<ImpactPage />}
+        />
         <Route path="/lcc" element={<HomePage />} />
         <Route
-          path="/lcc/question/mobile-visitors"
+          path="/lcc/calculator/mobile-visitors"
           element={<MobileVisitorsPage />}
         />
         <Route path="/lcc/*" element={<NotFoundPage />} />
         <Route
-          path="/lcc/question/pages-viewed"
+          path="/lcc/calculator/pages-viewed"
           element={<PagesViewedPage />}
         />
         <Route
-          path="/lcc/question/mobile-visitors"
+          path="/lcc/calculator/mobile-visitors"
           element={<MobileVisitorsPage />}
         />
         <Route path="/lcc/profile" element={<ProfilePage />} />
@@ -47,22 +51,26 @@ function App() {
           element={<ReferenceModelsPage />}
         />
         <Route
-          path="/lcc/question/servers-located"
+          path="/lcc/documentation/resources"
+          element={<ResourcesPage />}
+        />
+        <Route
+          path="/lcc/calculator/servers-located"
           element={<ServersLocatedPage />}
         />
         <Route
-          path="/lcc/question/servers-used"
+          path="/lcc/calculator/servers-used"
           element={<ServersUsedPage />}
         />
         <Route
-          path="/lcc/question/visitors-located"
+          path="/lcc/calculator/visitors-located"
           element={<VisitorsLocatedPage />}
         />
         <Route
-          path="/lcc/question/visitors-per-month"
+          path="/lcc/calculator/visitors-per-month"
           element={<VisitorsPerMonthPage />}
         />
-        <Route path="/lcc/question/website" element={<WebsitePage />} />
+        <Route path="/lcc/calculator/website" element={<WebsitePage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,29 +1,27 @@
-import getEnergyLocations from './getEnergyLocations';
-
 function getMeter(
   visitorsPerMonth: number,
   averageTime: number,
-  visitorsLocated: string,
+  visitorsLocated: number,
   mobileVisitors: number,
   pagesViewed: number,
   serversUsed: number,
-  serversLocated: string
+  serversLocated: number
 ) {
   return Math.round(
     (((((visitorsPerMonth * 12 * averageTime) / 60) *
       (1 - mobileVisitors / 100)) /
       (220 * 7)) *
       75 *
-      getEnergyLocations(visitorsLocated) +
+      visitorsLocated +
       ((((visitorsPerMonth * 12 * averageTime) / 60) * (mobileVisitors / 100)) /
         (365 * 4)) *
         30 *
-        getEnergyLocations(visitorsLocated) +
+        visitorsLocated +
       ((((visitorsPerMonth * 12 * averageTime) / 60) *
         (1 - mobileVisitors / 100)) /
         (220 * 7)) *
         30.8 *
-        getEnergyLocations(visitorsLocated) +
+        visitorsLocated +
       ((((visitorsPerMonth * 12 * averageTime) / 60) *
         (1 - mobileVisitors / 100)) /
         (220 * 7)) *
@@ -37,14 +35,10 @@ function getMeter(
         (265 / 6) +
       ((visitorsPerMonth * 12 * averageTime) / 60 / (24 * 365)) *
         150 *
-        getEnergyLocations(visitorsLocated) +
+        visitorsLocated +
       ((visitorsPerMonth * 12 * averageTime) / 60 / (24 * 365)) * (83 / 5) +
       ((visitorsPerMonth * 12 * pagesViewed * 2.1) / 1024) * 0.002 +
-      ((450 * 365 * 24) / 1000) *
-        0.6 *
-        serversUsed *
-        1.8 *
-        getEnergyLocations(serversLocated) +
+      ((450 * 365 * 24) / 1000) * 0.6 * serversUsed * 1.8 * serversLocated +
       serversUsed * (756 / 5)) /
       (visitorsPerMonth * 12) /
       0.0001

@@ -2,16 +2,16 @@ import styles from './IconComponent.module.scss';
 
 interface IconComponentProps {
   cssClass?: string;
-  name: string;
+  icon: string;
 }
 
-export const IconComponent = ({ cssClass, name }: IconComponentProps) => {
+export const IconComponent = ({ cssClass, icon }: IconComponentProps) => {
   return (
     <span
       aria-hidden={false}
       className={[styles.icon, cssClass ? ` ${cssClass}` : ''].join('')}
     >
-      {name}
+      {icon}
     </span>
   );
 };

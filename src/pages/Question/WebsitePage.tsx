@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
+import { useProgress } from '../../hooks/useProgress';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
-import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
-import { RawMaterialsScoreComponent } from '../../components/RawMaterialsScore/RawMaterialsScoreComponent';
+import { DebugComponent } from '../../components/Debug/DebugComponent';
+import { PrimaryEnergyScoreComponent } from '../../components/PrimaryEnergyScore/PrimaryEnergyScoreComponent';
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
@@ -19,6 +20,7 @@ import styles from './QuestionPage.module.scss';
 function WebsitePage() {
   const { t } = useTranslation();
   const { data, setData } = useData();
+  const { progress, setProgress } = useProgress();
   const [websiteName, setWebsiteName] = useState(data.websiteName);
   const [whatPurpose, setWhatPurpose] = useState(data.whatPurpose);
 
@@ -34,13 +36,17 @@ function WebsitePage() {
     setWhatPurpose(whatPurpose);
   };
 
+  useEffect(() => {
+    setProgress({ ...progress, page: '/lcc/calculator/website' });
+  }, []);
+
   return (
     <>
       <HeaderComponent />
       <MainComponent>
         <DebugComponent />
         <ArticleComponent>
-          <RawMaterialsScoreComponent data={data} />
+          <PrimaryEnergyScoreComponent data={data} />
           <QuestionComponent
             title={t('page.website.title')}
             text={t('page.website.text')}
@@ -66,18 +72,20 @@ function WebsitePage() {
           <NavigationComponent cssClass={styles.navigation}>
             <ButtonComponent
               cssClass={[styles.button, ` ${styles.next}`].join('')}
-              to="/lcc/question/visitors-per-month"
+              to="/lcc/calculator/visitors-per-month"
             >
               {t('common.button.next')}
-              <IconComponent cssClass={styles.icon} name="chevron_right" />
+              <IconComponent cssClass={styles.icon} icon="chevron_right" />
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>
         <BannerComponent>
-          <p>{t('common.questionOrProblem.text')}</p>
-          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
-            {t('common.questionOrProblem.button.label')}
-          </ButtonComponent>
+          <p>
+            {t('common.faq')}{' '}
+            <ButtonComponent to="/lcc/faq">
+              {t('common.button.faq')}
+            </ButtonComponent>
+          </p>
         </BannerComponent>
       </MainComponent>
       <FooterComponent />

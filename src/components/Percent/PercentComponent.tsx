@@ -1,3 +1,4 @@
+import { IconComponent } from '../Icon/IconComponent';
 import styles from './PercentComponent.module.scss';
 
 export const PercentComponent = ({ percent }: { percent: number }) => {
@@ -5,11 +6,15 @@ export const PercentComponent = ({ percent }: { percent: number }) => {
     <div
       className={[
         styles.percent,
-        percent > 0 ? ` ${styles.positive}` : ` ${styles.negative}`,
+        percent > 0 ? ` ${styles.wrong}` : ` ${styles.true}`,
       ].join('')}
     >
-      {/* {percent > 0 ? `+${percent.toFixed(0)}` : percent.toFixed(0)} % */}
-      {percent && percent.toFixed(0)}%
+      <IconComponent
+        cssClass={styles.icon}
+        icon={percent > 0 ? 'mood_bad' : 'mood'}
+      />
+      {percent > 0 ? '+' : percent < -1 ? '-' : ''}
+      {Math.abs(percent).toFixed()}%
     </div>
   );
 };

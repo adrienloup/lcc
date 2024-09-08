@@ -1,146 +1,66 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
+import { useScore } from '../../hooks/useScore';
+import { useProgress } from '../../hooks/useProgress';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
-import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
+import { TitleComponent } from '../../components/Title/TitleComponent';
+import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
 import { BannerComponent } from '../../components/Banner/BannerComponent';
+import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
 import { ButtonComponent } from '../../components/Button/ButtonComponent';
-import { TitleComponent } from '../../components/Title/TitleComponent';
-import getCar from '../../metrics/getCar';
-import getCoin from '../../metrics/getCoin';
-import getDesktop from '../../metrics/getDesktop';
-import getGlass from '../../metrics/getGlass';
-import getGreenhouseGas from '../../metrics/getGreenhouseGas';
-import getHouse from '../../metrics/getHouse';
-import getMeter from '../../metrics/getMeter';
-import getPlug from '../../metrics/getPlug';
-import getPrimaryEnergy from '../../metrics/getPrimaryEnergy';
-import getRawMaterials from '../../metrics/getRawMaterials';
-import getShower from '../../metrics/getShower';
-import getWater from '../../metrics/getWater';
-import styles from './ImpactPage.module.scss';
+import { IconComponent } from '../../components/Icon/IconComponent';
+import { CardsComponent } from '../../components/Cards/CardsComponent';
 import { CardComponent } from '../../components/Card/CardComponent';
+import styles from './ImpactPage.module.scss';
 
 function ImpactPage() {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { data, setData } = useData();
+  // const { score, setScore } = useScore();
+  const { setProgress } = useProgress();
 
   useTitlePage(t('page.home.title'));
 
-  const plugScore = getPlug(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.mobileVisitors,
-    data.serversUsed
-  );
+  // const newScore: ScoreType = {
+  //   plug: plugScore,
+  //   meter: meterScore,
+  //   coin: coinScore,
+  //   glass: glassScore,
+  //   house: houseScore,
+  //   car: carScore,
+  //   desktop: desktopScore,
+  //   shower: showerScore,
+  //   energy: PrimaryEnergyScore,
+  //   gas: GreenhouseGasScore,
+  //   materials: RawMaterialsScore,
+  //   water: WaterScore,
+  // };
 
-  const meterScore = getMeter(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.visitorsLocated,
-    data.mobileVisitors,
-    data.pagesViewed,
-    data.serversUsed,
-    data.serversLocated
-  );
+  // const percents: number[] = [];
 
-  const coinScore = getCoin(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.mobileVisitors,
-    data.serversUsed
-  );
+  // let percent: number = 0;
 
-  const glassScore = getGlass(data.visitorsPerMonth, data.pagesViewed);
-
-  const houseScore = getHouse(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.mobileVisitors,
-    data.serversUsed
-  );
-
-  const carScore = getCar(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.visitorsLocated,
-    data.mobileVisitors,
-    data.pagesViewed,
-    data.serversUsed,
-    data.serversLocated
-  );
-
-  const desktopScore = getDesktop(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.mobileVisitors,
-    data.serversUsed
-  );
-
-  const showerScore = getShower(data.visitorsPerMonth, data.pagesViewed);
-
-  const primaryEnergyScore = getPrimaryEnergy(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.mobileVisitors,
-    data.serversUsed
-  );
-
-  const greenhouseGasScore = getGreenhouseGas(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.visitorsLocated,
-    data.mobileVisitors,
-    data.pagesViewed,
-    data.serversUsed,
-    data.serversLocated
-  );
-
-  const rawMaterialsScore = getRawMaterials(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.mobileVisitors,
-    data.serversUsed
-  );
-
-  const waterScore = getWater(data.visitorsPerMonth, data.pagesViewed);
-
-  const newScore: any = {
-    plug: plugScore,
-    meter: meterScore,
-    coin: coinScore,
-    glass: glassScore,
-    house: houseScore,
-    car: carScore,
-    desktop: desktopScore,
-    shower: showerScore,
-    energy: primaryEnergyScore,
-    gas: greenhouseGasScore,
-    materials: rawMaterialsScore,
-    water: waterScore,
-  };
-
-  const percents: number[] = [];
-
-  let percent: number = 0;
-
-  for (const property in data.scores) {
-    percent =
-      ((newScore[property] - data.scores[property]) / data.scores[property]) *
-      100;
-    percents.push(percent);
-  }
+  // for (const score in data.score) {
+  //   percent = ((newScore[score] - data.score[score]) / data.score[score]) * 100;
+  //   percents.push(percent);
+  // }
 
   const onClick = () => {
-    setData({ ...data, scores: newScore });
-    navigate('/lcc/question/website');
+    // setData({ ...data, score: newScore });
+    navigate('/lcc/calculator/website');
   };
+
+  useEffect(() => {
+    setProgress({ value: 8, page: '/lcc/calculator/ecological-impact' });
+  }, []);
 
   return (
     <>
@@ -149,75 +69,124 @@ function ImpactPage() {
         <DebugComponent />
         <ArticleComponent>
           <TitleComponent cssClass={styles.title}>
-            L'impact du parcours «{data.whatPurpose}» sur le site Web
-            {data.websiteName}
+            {t('page.impact.title', {
+              whatPurpose: data.whatPurpose,
+              websiteName: data.websiteName,
+            })}
           </TitleComponent>
-          <FrameComponent>Équivalence par utilisateur</FrameComponent>
-          <div className={styles.cards}>
+          <FrameComponent>
+            <h2>{t('page.impact.user.title')}</h2>
+          </FrameComponent>
+          {/* <CardsComponent>
             <CardComponent
               percent={percents[0]}
-              text={`Comme si chaque utilisateur faisait fonctionner 1 micro-ondes pendant ${plugScore} secondes`}
-              name="plug"
-              to="/lcc/documentation/reference-models/raw-materials"
+              text={t('page.impact.user.plug', {
+                score: score.plug,
+              })}
+              svg="plug"
             />
             <CardComponent
               percent={percents[1]}
-              text={`Comme si chaque utilisateur faisait ${meterScore} mètres en voiture`}
-              name="map"
-              to="/lcc/documentation/reference-models/greenhouse-gas"
+              text={t('page.impact.user.meter', {
+                score: score.meter,
+              })}
+              svg="meter"
             />
             <CardComponent
               percent={percents[2]}
-              text={`Comme si chaque utilisateur creusait pour extraire l'équivalent de ${coinScore} pièces de 1 euro`}
-              name="coin"
-              to="/lcc/documentation/reference-models/primary-energy"
+              text={t('page.impact.user.coin', {
+                score: score.coin.toFixed(),
+              })}
+              svg="coin"
             />
             <CardComponent
               percent={percents[3]}
-              text={`Comme si chaque utilisateur consommait l'équivalent de ${glassScore.toFixed(1)} verres d'eau`}
-              name="glass"
-              to="/lcc/documentation/reference-models/water"
+              text={t('page.impact.user.glass', {
+                score: score.glass.toFixed(),
+              })}
+              svg="glass"
             />
-          </div>
-          <div>
-            <FrameComponent>Équivalence par année</FrameComponent>
-            <div>{percents[4]} house</div>
-            <div>
-              Comme si chaque année on consommait de l'électricité comme
-              {houseScore} maisons françaises
-            </div>
-            <div>{percents[5]} car</div>
-            <div>
-              Comme si chaque année on émettait des gaz à effet de serre comme
-              {carScore} voitures faisant le tour de la terre
-            </div>
-            <div>{percents[6]} desktop</div>
-            <div>
-              Comme si chaque année on creusait pour extraire l'équivence de
-              {desktopScore} ordinateurs portables
-            </div>
-            <div>{percents[7]} shower</div>
-            <div>
-              Comme si chaque année on prenait l'équivalent de {showerScore}
-              douches
-            </div>
-            <FrameComponent>Données brutes par année</FrameComponent>
-            <div>{percents[8]} energy</div>
-            <div>{primaryEnergyScore} KWh d'énergie primaire</div>
-            <div>{percents[9]} cloud</div>
-            <div>{greenhouseGasScore.toFixed(0)} Kg de CO2-eq</div>
-            <div>{percents[10]} materials</div>
-            <div>{rawMaterialsScore.toFixed(0)} Kg de matières premières</div>
-            <div>{percents[11]} water</div>
-            <div>{waterScore}&nbsp;litres d'eau</div>
-            <button onClick={() => onClick()}>button</button>
-          </div>
+          </CardsComponent> */}
+          <FrameComponent>
+            <h2>{t('page.impact.year.title')}</h2>
+          </FrameComponent>
+          {/* <CardsComponent>
+            <CardComponent
+              percent={percents[4]}
+              text={t('page.impact.year.house', {
+                score: score.house,
+              })}
+              svg="house"
+            />
+            <CardComponent
+              percent={percents[5]}
+              text={t('page.impact.year.car', {
+                score: score.car,
+              })}
+              svg="car"
+            />
+            <CardComponent
+              percent={percents[6]}
+              text={t('page.impact.year.desktop', {
+                score: score.desktop,
+              })}
+              svg="desktop"
+            />
+            <CardComponent
+              percent={percents[7]}
+              text={t('page.impact.year.shower', {
+                score: score.shower,
+              })}
+              svg="shower"
+            />
+          </CardsComponent> */}
+          <FrameComponent>
+            <h2>{t('page.impact.data.title')}</h2>
+          </FrameComponent>
+          {/* <CardsComponent>
+            <CardComponent
+              percent={percents[8]}
+              text={t('page.impact.data.primaryEnergy', {
+                score: score.primaryEnergy,
+              })}
+              svg="primary-energy"
+            />
+            <CardComponent
+              percent={percents[9]}
+              text={t('page.impact.data.greenhouseGas', {
+                score: score.greenhouseGas.toFixed(1),
+              })}
+              svg="greenhouse-gas"
+            />
+            <CardComponent
+              percent={percents[10]}
+              text={t('page.impact.data.rawMaterials', {
+                score: score.rawMaterials.toFixed(),
+              })}
+              svg="raw-materials"
+            />
+            <CardComponent
+              percent={percents[11]}
+              text={t('page.impact.data.water', {
+                score: score.water,
+              })}
+              svg="water"
+            />
+          </CardsComponent> */}
+          <NavigationComponent cssClass={styles.navigation}>
+            <ButtonComponent cssClass={styles.button} onClick={() => onClick()}>
+              {t('common.button.improve')}
+              <IconComponent cssClass={styles.icon} icon="restart_alt" />
+            </ButtonComponent>
+          </NavigationComponent>
         </ArticleComponent>
         <BannerComponent>
-          <p>{t('common.questionOrProblem.text')}</p>
-          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
-            {t('common.questionOrProblem.button.label')}
-          </ButtonComponent>
+          <p>
+            {t('common.faq')}{' '}
+            <ButtonComponent to="/lcc/faq">
+              {t('common.button.faq')}
+            </ButtonComponent>
+          </p>
         </BannerComponent>
       </MainComponent>
       <FooterComponent />

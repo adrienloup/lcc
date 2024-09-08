@@ -2,7 +2,7 @@ import { ReactNode, useState } from 'react';
 import { ButtonComponent } from '../Button/ButtonComponent';
 import { TitleComponent } from '../Title/TitleComponent';
 import { IconComponent } from '../Icon/IconComponent';
-import { InfoComponent } from '../Info/InfoComponent';
+import { SnackbarComponent } from '../Snackbar/SnackbarComponent';
 import styles from './QuestionComponent.module.scss';
 
 interface QuestionComponentProps {
@@ -11,7 +11,7 @@ interface QuestionComponentProps {
 }
 
 export const QuestionComponent = ({ title, text }: QuestionComponentProps) => {
-  const [info, setInfo] = useState(false);
+  const [snackbar, setSnackbar] = useState(false);
 
   return (
     <>
@@ -19,12 +19,14 @@ export const QuestionComponent = ({ title, text }: QuestionComponentProps) => {
         <TitleComponent cssClass={styles.title}>{title}</TitleComponent>
         <ButtonComponent
           cssClass={styles.button}
-          onClick={() => setInfo(!info)}
+          onClick={() => setSnackbar(!snackbar)}
         >
-          <IconComponent name="info" cssClass={styles.icon} />
+          <IconComponent cssClass={styles.icon} icon="info" />
         </ButtonComponent>
       </div>
-      {info && <InfoComponent text={text} onClick={() => setInfo(false)} />}
+      {snackbar && (
+        <SnackbarComponent text={text} onClick={() => setSnackbar(false)} />
+      )}
     </>
   );
 };

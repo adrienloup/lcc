@@ -1,0 +1,29 @@
+.formfield {
+  display: flex;
+  flex-direction: column;
+}
+
+.label,
+.message,
+.helper {
+  line-height: 1.25;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.label {
+  margin-bottom: 1rem;
+}
+
+.message,
+.helper {
+  margin-top: 0.25rem;
+}
+
+.helper {
+  color: var(--solid-color-9);
+}
+
+.message {
+  color: var(--solid-color-11);
+}

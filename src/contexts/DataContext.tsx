@@ -3,7 +3,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 import { ChildrenType } from '../models/ChildrenType';
 import { DataType } from '../models/DataType';
 
-const initialValue = {
+const initialValue: DataType = {
   websiteName: 'Website Name',
   whatPurpose: 'Read a page of content',
   visitorsPerMonth: 2500,
@@ -13,37 +13,14 @@ const initialValue = {
   pagesViewed: 5,
   serversUsed: 2,
   serversLocated: 'eu',
-  scores: [0],
 };
 
 export const DataContext = createContext<{
   data: DataType;
-  setData: (data: {
-    websiteName: string;
-    whatPurpose: string;
-    visitorsPerMonth: number;
-    averageTime: number;
-    visitorsLocated: string;
-    mobileVisitors: number;
-    pagesViewed: number;
-    serversUsed: number;
-    serversLocated: string;
-    scores: number[];
-  }) => void;
+  setData: (data: DataType) => void;
 }>({
   data: initialValue,
-  setData: (data: {
-    websiteName: string;
-    whatPurpose: string;
-    visitorsPerMonth: number;
-    averageTime: number;
-    visitorsLocated: string;
-    mobileVisitors: number;
-    pagesViewed: number;
-    serversUsed: number;
-    serversLocated: string;
-    scores: number[];
-  }) => data,
+  setData: (data: DataType) => data,
 });
 
 export function DataProvider({ children }: ChildrenType) {

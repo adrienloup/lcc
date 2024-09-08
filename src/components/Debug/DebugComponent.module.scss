@@ -1,18 +1,18 @@
 .debug {
-  background-color: var(--neutral-color-3);
+  background-color: var(--pastel-color-7);
 }
 
 .inner {
   max-width: 90rem;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  gap: 0.25rem;
   padding: 1rem;
   line-height: 1.25;
   font-weight: bold;
   font-size: 1.25rem;
-  color: var(--secondary-color);
+  color: var(--solid-color-4);
+
+  span {
+    padding-right: 1rem;
+  }
 }

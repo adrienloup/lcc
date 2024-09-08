@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
+import { useProgress } from '../../hooks/useProgress';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
-import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
+import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { GreenhouseGasScoreComponent } from '../../components/GreenhouseGasScore/GreenhouseGasScoreComponent';
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
@@ -20,6 +21,7 @@ import styles from './QuestionPage.module.scss';
 function ServersLocatedPage() {
   const { t } = useTranslation();
   const { data, setData } = useData();
+  const { setProgress } = useProgress();
   const [serversLocated, setServersLocated] = useState(data.serversLocated);
 
   useTitlePage(t('page.serversLocated.title'));
@@ -43,6 +45,10 @@ function ServersLocatedPage() {
     </div>
   ));
 
+  useEffect(() => {
+    setProgress({ value: 7, page: '/lcc/calculator/servers-located' });
+  }, []);
+
   return (
     <>
       <HeaderComponent />
@@ -52,7 +58,7 @@ function ServersLocatedPage() {
           <GreenhouseGasScoreComponent data={data} />
           <QuestionComponent
             title={t('page.serversLocated.title')}
-            text="Le mix énergétique du pays dans lequel se situent les serveurs fait varier l’impact écologique."
+            text={t('page.serversLocated.text')}
           />
           <FrameComponent>
             <form className="form" action="">
@@ -64,25 +70,27 @@ function ServersLocatedPage() {
           <NavigationComponent cssClass={styles.navigation}>
             <ButtonComponent
               cssClass={[styles.button, ` ${styles.previous}`].join('')}
-              to="/lcc/question/servers-used"
+              to="/lcc/calculator/servers-used"
             >
-              <IconComponent cssClass={styles.icon} name="chevron_left" />
+              <IconComponent cssClass={styles.icon} icon="chevron_left" />
               {t('common.button.previous')}
             </ButtonComponent>
             <ButtonComponent
               cssClass={[styles.button, ` ${styles.result}`].join('')}
-              to="/lcc/ecological-impact"
+              to="/lcc/calculator/ecological-impact"
             >
-              <IconComponent cssClass={styles.icon} name="done_all" />
+              <IconComponent cssClass={styles.icon} icon="done_all" />
               {t('common.button.result')}
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>
         <BannerComponent>
-          <p>{t('common.questionOrProblem.text')}</p>
-          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
-            {t('common.questionOrProblem.button.label')}
-          </ButtonComponent>
+          <p>
+            {t('common.faq')}{' '}
+            <ButtonComponent to="/lcc/faq">
+              {t('common.button.faq')}
+            </ButtonComponent>
+          </p>
         </BannerComponent>
       </MainComponent>
       <FooterComponent />

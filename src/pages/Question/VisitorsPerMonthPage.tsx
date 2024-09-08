@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
+import { useProgress } from '../../hooks/useProgress';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
 import { FooterComponent } from '../../components/Footer/FooterComponent';
-import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { ArticleComponent } from '../../components/Article/ArticleComponent';
+import { DebugComponent } from '../../components/Debug/DebugComponent';
 import { WaterScoreComponent } from '../../components/WaterScore/WaterScoreComponent';
 import { QuestionComponent } from '../../components/Question/QuestionComponent';
 import { FrameComponent } from '../../components/Frame/FrameComponent';
@@ -19,6 +20,7 @@ import styles from './QuestionPage.module.scss';
 function VisitorsPerMonthPage() {
   const { t } = useTranslation();
   const { data, setData } = useData();
+  const { setProgress } = useProgress();
   const [visitorsPerMonth, setVisitorsPerMonth] = useState(
     data.visitorsPerMonth
   );
@@ -26,10 +28,13 @@ function VisitorsPerMonthPage() {
   useTitlePage(t('page.visitorsPerMonth.title'));
 
   const changeVisitorsPerMonth = (value: string) => {
-    const visitorsPerMonth = Number(value);
-    setData({ ...data, visitorsPerMonth });
-    setVisitorsPerMonth(visitorsPerMonth);
+    setData({ ...data, visitorsPerMonth: +value });
+    setVisitorsPerMonth(+value);
   };
+
+  useEffect(() => {
+    setProgress({ value: 1, page: '/lcc/calculator/visitors-per-month' });
+  }, []);
 
   return (
     <>
@@ -37,7 +42,7 @@ function VisitorsPerMonthPage() {
       <MainComponent>
         <DebugComponent />
         <ArticleComponent>
-          <WaterScoreComponent data={data} />
+          <WaterScoreComponent />
           <QuestionComponent
             title={t('page.visitorsPerMonth.title')}
             text={t('page.visitorsPerMonth.text')}
@@ -63,25 +68,27 @@ function VisitorsPerMonthPage() {
           <NavigationComponent cssClass={styles.navigation}>
             <ButtonComponent
               cssClass={[styles.button, ` ${styles.previous}`].join('')}
-              to="/lcc/question/website"
+              to="/lcc/calculator/website"
             >
-              <IconComponent cssClass={styles.icon} name="chevron_left" />
+              <IconComponent cssClass={styles.icon} icon="chevron_left" />
               {t('common.button.previous')}
             </ButtonComponent>
             <ButtonComponent
               cssClass={[styles.button, ` ${styles.next}`].join('')}
-              to="/lcc/question/average-time"
+              to="/lcc/calculator/average-time"
             >
               {t('common.button.next')}
-              <IconComponent cssClass={styles.icon} name="chevron_right" />
+              <IconComponent cssClass={styles.icon} icon="chevron_right" />
             </ButtonComponent>
           </NavigationComponent>
         </ArticleComponent>
         <BannerComponent>
-          <p>{t('common.questionOrProblem.text')}</p>
-          <ButtonComponent href={t('common.questionOrProblem.button.href')}>
-            {t('common.questionOrProblem.button.label')}
-          </ButtonComponent>
+          <p>
+            {t('common.faq')}{' '}
+            <ButtonComponent to="/lcc/faq">
+              {t('common.button.faq')}
+            </ButtonComponent>
+          </p>
         </BannerComponent>
       </MainComponent>
       <FooterComponent />

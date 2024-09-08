@@ -14,7 +14,7 @@ export const FooterComponent = () => {
         cssClass={styles.button}
         to="/lcc/documentation/accessibility"
       >
-        <IconComponent cssClass={styles.icon} name="accessibility_new" />
+        <IconComponent cssClass={styles.icon} icon="accessibility_new" />
         {t('common.footer.accessibility.button')}
       </ButtonComponent>
       <span className={styles.text}>&copy; LCC {version}</span>

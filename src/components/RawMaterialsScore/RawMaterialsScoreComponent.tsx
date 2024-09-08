@@ -1,22 +1,16 @@
-import { DataType } from '../../models/DataType';
 import { LiveScoreComponent } from '../LiveScore/LiveScoreComponent';
-import getRawMaterials from '../../metrics/getRawMaterials';
+import { useScore } from '../../hooks/useScore';
 import styles from './RawMaterialsScoreComponent.module.scss';
 
-export const RawMaterialsScoreComponent = ({ data }: { data: DataType }) => {
-  const rawMaterialsScore = getRawMaterials(
-    data.visitorsPerMonth,
-    data.averageTime,
-    data.mobileVisitors,
-    data.serversUsed
-  );
+export const RawMaterialsScoreComponent = () => {
+  const { score } = useScore();
 
   return (
     <LiveScoreComponent
-      name="raw-materials"
-      label="common.liveScore.rawMaterials"
-      value={Number(rawMaterialsScore.toFixed(0))}
-      svg={styles.svg}
+      label="common.LiveScore.rawMaterials"
+      value={Number(score.rawMaterials.toFixed())}
+      svg="raw-materials"
+      svgClass={styles.svg}
     />
   );
 };

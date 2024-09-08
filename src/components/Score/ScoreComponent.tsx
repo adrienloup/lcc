@@ -4,17 +4,17 @@ import styles from './ScoreComponent.module.scss';
 interface ScoreComponentProps {
   cssClass?: string;
   text: string;
-  name: string;
+  svg: string;
 }
 
 export const ScoreComponent = ({
   cssClass,
   text,
-  name,
+  svg,
 }: ScoreComponentProps) => {
   return (
     <div className={[styles.score, cssClass ? ` ${cssClass}` : ''].join('')}>
-      <SvgComponent name={name} cssClass={styles.icon} />
+      <SvgComponent cssClass={styles.svg} svg={svg} />
       <span
         className={styles.text}
         dangerouslySetInnerHTML={{ __html: text }}

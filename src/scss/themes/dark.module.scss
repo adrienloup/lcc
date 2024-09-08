@@ -5,9 +5,9 @@
 }
 
 @mixin dark {
-  --color-1: var(--neutral-color-5);
+  --color-1: var(--neutral-color-2);
   --color-2: var(--neutral-color-1);
-  --color-3: var(--neutral-color-4);
+  --color-3: var(--solid-color-10);
 }
 
 :root {
