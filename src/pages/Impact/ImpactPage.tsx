@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useTitlePage } from '../../hooks/useTitlePage';
 import { useData } from '../../hooks/useData';
-import { useScore } from '../../hooks/useScore';
+// import { useScore } from '../../hooks/useScore';
 import { useProgress } from '../../hooks/useProgress';
 import { HeaderComponent } from '../../components/Header/HeaderComponent';
 import { MainComponent } from '../../components/Main/MainComponent';
@@ -16,14 +16,15 @@ import { BannerComponent } from '../../components/Banner/BannerComponent';
 import { NavigationComponent } from '../../components/Navigation/NavigationComponent';
 import { ButtonComponent } from '../../components/Button/ButtonComponent';
 import { IconComponent } from '../../components/Icon/IconComponent';
-import { CardsComponent } from '../../components/Cards/CardsComponent';
-import { CardComponent } from '../../components/Card/CardComponent';
+// import { CardsComponent } from '../../components/Cards/CardsComponent';
+// import { CardComponent } from '../../components/Card/CardComponent';
 import styles from './ImpactPage.module.scss';
 
 function ImpactPage() {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const { data, setData } = useData();
+  const { data } = useData();
+  // const { data, setData } = useData();
   // const { score, setScore } = useScore();
   const { setProgress } = useProgress();
 
